@@ -1,6 +1,6 @@
 # 🏛️ The Agentic Trivium: A Framework for Living Governance
 
-![Header](https://raw.githubusercontent.com)
+![Contract-Style-Comments README.md](file:///C:/Users/jsaba/OneDrive/Desktop/Dev/Contract-Style-Comments/CONTRACT-Style-Comments/contract-style-comments-readme.png "Contract-Style-Comments README.md")
 
 > **"A stale contract is worse than no contract."**
 
