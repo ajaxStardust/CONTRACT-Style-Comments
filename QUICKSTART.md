@@ -1,4 +1,4 @@
-```# QUICKSTART.md — The Map (Operational Truth)
+# QUICKSTART.md — The Map (Operational Truth)
 
 > **"A map is not the territory, but without one, the traveler is lost. In an agentic system, the map is the interface between intent and execution."**
 
