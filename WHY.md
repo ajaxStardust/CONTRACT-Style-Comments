@@ -1,4 +1,4 @@
-```# WHY.md — The Systems-Thinking Pedagogy
+# WHY.md — The Systems-Thinking Pedagogy
 
 > **"A stale contract is worse than no contract because it creates false confidence in a failing system."**
 
