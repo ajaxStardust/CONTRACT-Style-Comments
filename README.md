@@ -1,5 +1,9 @@
 # 🏛️ contract-style-comments: The Agentic Trivium
 
+[![The Agentic Trivium – Contract-Style Comments](https://img.youtube.com/vi/5a1NLhIiefY/maxresdefault.jpg)](https://www.youtube.com/watch?v=5a1NLhIiefY)
+
+> ▶️ Click to watch: *The Agentic Trivium explained*
+
 > **"A system is more than the sum of its parts; it is the product of their interactions."**
 
 This repository provides a **systems-thinking framework** for managing the interaction between human intent and AI execution. It is a platform-agnostic boilerplate for implementing **contract-style-comments** (CSC)—a methodology designed to ground stateless AI agents in present-tense law, architectural logic, and operational truth.
