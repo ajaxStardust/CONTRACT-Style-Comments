@@ -1,4 +1,4 @@
-```# CONTRACT.md — The Invariants (The Law)
+# CONTRACT.md — The Invariants (The Law)
 
 > **"A system's boundaries define its identity. To change the system, you must first understand its constraints."**
 
