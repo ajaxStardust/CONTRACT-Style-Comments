@@ -1,94 +1,72 @@
-# QUICKSTART.md
+```# QUICKSTART.md — The Map (Operational Truth)
 
-WRITTEN FOR: human onboarding + AI agent onboarding
-LAST REVIEWED: 2026-03-23
-REVIEW TRIGGER: Update when entrypoints, template chain, or verification steps change.
+> **"A map is not the territory, but without one, the traveler is lost. In an agentic system, the map is the interface between intent and execution."**
 
-## Session Start
+## 🏛️ Purpose of This Artifact
 
-Read in order:
+In the **contract-style-comments** (CSC) framework, `QUICKSTART.md` serves as the system's **Empirical Interface**. While `CONTRACT.md` defines the laws (invariants), `QUICKSTART.md` defines the reality—how the system actually runs, where the critical components live, and how to prove that the system is still functioning as intended.
 
-1. [CONTRACT.md](CONTRACT.md)
-2. [WHY.md](WHY.md)
-3. [QUICKSTART.md](QUICKSTART.md)
+For a stateless AI agent, this file is the "Onboarding Manual" that prevents wasteful exploration and ensures every change is verified against a known-good baseline.
 
-## Live Routes to Check
+---
 
-1. Path-to-URL app: /public/default.php
-2. File browser shell: /public/index.php
-3. Editable template: /public/template-editable.php
-4. Unicode utility: /public/unicode-easteregg.php
+## 🧩 Required Reading Order (The Synchronization)
 
-## Root Redirects
+To prevent "Contextual Drift" and ensure the agent understands the system's operational boundaries, this sequence is mandatory at the start of every session:
 
-1. [default.php](default.php) -> /public/default.php
-2. [template.php](template.php) -> /public/template-editable.php
-3. [template-editable.php](template-editable.php) -> /public/template-editable.php
-4. [unicode.php](unicode.php) -> /public/unicode-easteregg.php
+1.  **[CONTRACT.md](CONTRACT.md)**: Internalize the laws and invariants.
+2.  **[WHY.md](WHY.md)**: Understand the governance and pedagogy.
+3.  **[QUICKSTART.md](QUICKSTART.md)**: Synchronize with the operational map and verification steps.
 
-## Key Files
+---
 
-| Area | Canonical file(s) | Notes |
+## 🗺️ The System Map (Key Components)
+
+*Modify this table to reflect the specific architecture of your project.*
+
+| Area | Canonical File(s) | Role / System Interaction |
 |---|---|---|
-| Root default route | [default.php](default.php) | Thin redirect |
-| Public default bootstrap | [public/default.php](public/default.php) | Requires src view stack |
-| Main transform page | [src/View/Main.page.php](src/View/Main.page.php) | Active Tool A layout + Vue output |
-| Iframe nav click behavior | [public/assets/js/addlistener.js](public/assets/js/addlistener.js) | Guards against loading index.php into main iframe; remaps to /public/default.php |
-| Browser header layout | [src/View/html-header.page.php](src/View/html-header.page.php) | Active nav/header styling |
-| Navigation generation | [src/Model/Dirhandler.php](src/Model/Dirhandler.php), [src/Model/Navfactor.php](src/Model/Navfactor.php), [src/Model/PathNormalizer.php](src/Model/PathNormalizer.php) | Dot files hidden; top-level label normalized for common hosting paths |
-| Masthead SVG title | [public/assets/css/masthead.php](public/assets/css/masthead.php), [src/Model/PathNormalizer.php](src/Model/PathNormalizer.php) | Uses normalized project/domain name instead of raw install directory prefixes |
-| Environment summary display | [src/View/Main.page.php](src/View/Main.page.php), [src/Model/PathNormalizer.php](src/Model/PathNormalizer.php) | Location and base path are shown in normalized project-relative form |
-| Main style surface | [public/assets/css/tachyons-extended.css](public/assets/css/tachyons-extended.css) | Active nav/header overrides appended here |
-| Off-site link rendering | [src/Model/Localsites.php](src/Model/Localsites.php) | Renders config-backed cards, preview imagery, and visit counts |
-| Off-site link preview fetch | [src/Model/OpenGraphPreview.php](src/Model/OpenGraphPreview.php), [public/api_link_preview.php](public/api_link_preview.php) | Pulls OGP/title/image metadata for editor enrichment |
-| Off-site click counting | [src/Model/Jsonconfigmanager.php](src/Model/Jsonconfigmanager.php), [public/api_link_click.php](public/api_link_click.php) | Persists `count` updates back into config.json |
-| Editable template bootstrap | [public/template-editable.php](public/template-editable.php) | Preferred template entrypoint |
-| Editable template doctype | [public/doctype/doctype-tachyons.php](public/doctype/doctype-tachyons.php) | Uses dynamic title variable |
-| Editable template content | [public/template/editable-html.php](public/template/editable-html.php) | User-editable boilerplate chunk |
-| Shared footer | [public/footer/footer-jquery.php](public/footer/footer-jquery.php) | Closes body/html and scripts |
-| Unicode utility route | [public/unicode-easteregg.php](public/unicode-easteregg.php) | Kept utilitarian page |
-| Curated unicode route | [curated-unicode.php](curated-unicode.php), [public/curated-unicode.php](public/curated-unicode.php) | Root redirect + public page |
+| **Entry Point** | `index.php` / `main.py` | The primary bootstrap for the system state. |
+| **Business Logic** | `src/Model/` | Where the core transformations and invariants are implemented. |
+| **Data Layer** | `schema.sql` / `config.json` | The persistent state that the system must respect. |
+| **API/Interface** | `src/API/` | The boundary through which the system interacts with external agents. |
 
-## Proven Checks (Manual)
+---
 
-1. Open /public/index.php and verify:
-- left nav renders grouped letters
-- dotfiles are hidden
-- filetype icons align in left gutter
-- clicking index.php from nav does not recurse; iframe loads /public/default.php instead
+## 🧪 Proven Checks (Verification Loop)
 
-2. Open /public/default.php and verify:
-- transform form works
-- header composition still balanced
-- Go Home link escapes iframe context (target top window)
-- masthead title shows project/domain name rather than `wwwroot` or `public_html`
-- environment Location and Base Path show normalized project-relative paths
+A system is only as reliable as its verification process. Every session must conclude with a "Proven Check" to ensure the `CONTRACT.md` remains intact.
 
-3. Open the off-site links details panel and verify:
-- cards render title, optional preview image, and current visit count
-- clicking a link opens it in a new tab and increments the visible visit count immediately
-- refreshing after a click shows the updated persisted count from `config.json`
+1.  **Automated Tests**: Run `npm test` or `pytest` and verify 100% pass rate.
+2.  **State Verification**: Verify that a specific input (e.g., `X`) results in the expected output (e.g., `Y`) without violating any invariants.
+3.  **Governance Check**: Ensure that if a scope-affecting change was made, the matching documentation artifact has been updated.
 
-4. Open /public/config_editor.html and verify:
-- Fetch OGP populates preview title/image fields for a row
-- Fetch Missing Previews fills empty preview metadata where available
-- Save Changes persists added preview metadata and updated counts cleanly
+---
 
-5. Open /public/template-editable.php and verify:
-- page title comes from $title in bootstrap
-- h1 uses $page_heading from editable content include
+## ⚖️ The Narrowest-Scope Rule (Operational)
 
-6. Open /public/unicode-easteregg.php and verify:
-- Unicode dashboard loads
-- historical carousel appears
+In the CSC framework, this file owns **operational truth**.
 
-## Asset Notes
+- **Update this file** when a file is moved, a new script is added, or a new verification step is discovered.
+- **Do NOT update this file** for architectural changes or laws—those belong in `CONTRACT.md`.
+- **Instruction**: "If you add a tool, register it in the Key Files table. If you find a new way to break the system, add it to the Proven Checks."
 
-- Current canonical favicon is [public/favicon.png](public/favicon.png).
-- Prior plaidicon references were migrated to favicon references in active source/public files.
+---
 
-## What Not To Do
+## 🤝 The Agentic Handshake (Proof of Work)
 
-- Do not remove [public/default.php](public/default.php) route chain.
-- Do not edit multiple governance artifacts for one narrow change when one artifact fully contains it.
-- Do not reintroduce deleted template-picnic chain unless explicitly requested.
+**The Verification Steward**: Within an active user session, the AI agent is authorized to update this map. 
+
+-   **Responsibility**: No code change is considered "Proven" until it has passed the checks listed here.
+-   **Drift Prevention**: If an agent discovers that a listed check is obsolete, it is expected to update the check immediately to reflect the new system reality.
+
+---
+
+## 🕒 Last Reviewed & Trigger
+
+-   **LAST REVIEWED**: 2026-03-24
+-   **REVIEW TRIGGER**: Update this file whenever the project structure changes, new tools are introduced, or a more effective verification method is developed.
+
+---
+
+*Part of the `contract-style-comments` framework. For the full architectural manifesto, visit [WhatsOnYourBrain.com](https://whatsonyourbrain.com).*
