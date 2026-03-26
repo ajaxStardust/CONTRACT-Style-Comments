@@ -28,16 +28,19 @@ To ensure the agent is fully synchronized with the system's current state, the f
 - **Rule**: Define the "What" and the "Must."
 - **Example**: "The frontend must communicate with the backend exclusively through the `/api/v1` namespace."
 - **Invariant**: Do not introduce direct database calls from the view layer.
+- **Customization Tip**: For a web app, add: "User authentication must use JWT tokens; no session-based auth."
 
 ### 2. Data Integrity & State
 - **Rule**: Define the shape and expectations of data.
 - **Example**: "The `User` object must always contain a verified `uuid` before reaching the billing service."
 - **Invariant**: Do not modify the `User` schema without updating the matching validation contract.
+- **Customization Tip**: For an e-commerce site, add: "Product prices must be stored in cents (integer) to avoid floating-point errors."
 
 ### 3. Critical Route/Logic Chains
 - **Rule**: Identify the paths that must not be blocked.
 - **Example**: "The `/health` check must return a `200 OK` even if the database is in read-only mode."
 - **Invariant**: Do not add middleware to the health-check route that requires a database connection.
+- **Customization Tip**: For a CMS, add: "Admin login must remain accessible even during maintenance mode."
 
 ---
 

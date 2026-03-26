@@ -79,4 +79,26 @@ Using this framework changes your relationship with the AI. You are no longer ju
 
 ---
 
+## 🛠️ Customization Quickstart
+
+To adapt this boilerplate for your project:
+
+1. **Update CONTRACT.md**:
+   - Replace the "System Invariants" section with your project's specific rules. For example, if building a web app, add: "API endpoints must return JSON; database queries must use prepared statements."
+   - Customize the "Architectural Boundaries" with real constraints (e.g., "Frontend must not access the database directly; use API layer only.").
+
+2. **Update QUICKSTART.md**:
+   - Fill the "System Map" table with your actual file paths (e.g., Entry Point: `app/main.py` for a Python app).
+   - Add project-specific "Proven Checks" (e.g., "Run `pytest` and ensure 90% coverage").
+
+3. **Update WHY.md** (if needed):
+   - Adjust reading order or ownership if your project has additional docs.
+
+4. **Onboard AI Agents**:
+   - Use prompts like: "Before coding, read CONTRACT.md for invariants, WHY.md for governance, QUICKSTART.md for operations."
+
+This turns the generic template into a project-specific guide quickly.
+
+---
+
 *This framework is a product of the **Missing Axiom** theory. For a deep dive into the systems-thinking approach to AI collaboration, visit [WhatsOnYourBrain.com](https://whatsonyourbrain.com).*

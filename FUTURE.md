@@ -17,17 +17,17 @@ FUTURE.md is planned intent.
 - Produce orphan map for public/doctype and public/content variants.
 - Keep current canonical template chain intact.
 
-2. CSS surface stabilization
-- Keep nav/header look stable in tachyons-extended overrides.
+2. UI/Asset Consistency Checks
+- Keep nav/header look stable in CSS frameworks (e.g., Tachyons or Tailwind).
 - Remove only dead duplicate override blocks after explicit verification.
 
-3. Off-site links caching and polish
-- Add a cache window or stored refresh timestamp for OGP preview fetches to avoid unnecessary repeat requests.
-- Refine off-site card styling now that preview images and visit counts are first-class.
+3. External Link Handling
+- Add a cache window or stored refresh timestamp for remote metadata fetches to avoid unnecessary repeat requests.
+- Refine external link styling now that preview images and visit counts are first-class.
 
-4. Unicode utility hardening
-- Keep PHP route as canonical.
-- Optionally split large unicode content areas into scoped content partials.
+4. Utility Function Robustness
+- Keep core utility route as canonical.
+- Optionally split large utility content areas into scoped partials.
 
 ## Medium-Term Candidates
 
@@ -35,20 +35,20 @@ FUTURE.md is planned intent.
 - Consider adding ASSETS.CONTRACT.md if asset invariants become dense.
 - Consider adding UI.CONTRACT.md if UI-specific invariants outgrow root contract.
 
-2. Characterization tests for model layer
-- Add baseline behavior checks for P2u2/Newmethod output shapes before deep refactors.
+2. Baseline Behavior Tests
+- Add characterization tests for core logic output shapes before deep refactors.
 
-3. Performance and UX checks
-- Evaluate nav rendering performance on large directories.
-- Document expected limits in QUICKSTART once measured.
+3. Performance and UX Evaluations
+- Evaluate rendering performance on large datasets.
+- Document expected limits once measured.
 
 ## Deferred / Discussion Items
 
-1. Default off-site link data policy
-- Decide whether the built-in fallback site entries should remain hardcoded in [src/Model/Localsites.php](src/Model/Localsites.php) or move fully into `config.json`.
+1. Default external data policy
+- Decide whether built-in fallback entries should remain hardcoded or move fully into config.
 
-2. Preview fetch resilience
-- Decide whether remote metadata fetch failures should be cached, retried, or surfaced more explicitly in the editor UI.
+2. Remote Fetch Resilience
+- Decide whether remote metadata fetch failures should be cached, retried, or surfaced more explicitly in the UI.
 
 ## Operating Rule
 

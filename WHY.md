@@ -16,7 +16,7 @@ The system is maintained through three primary artifacts:
 
 1.  **[CONTRACT.md](CONTRACT.md) — The Law**: Owns the invariants. These are the system's hard boundaries — what it *is* and what must *never* break. This changes the least.
 2.  **[QUICKSTART.md](QUICKSTART.md) — The Map**: Owns the operational truth. This is the empirical interface — how to run, how to verify, and where things live. This changes frequently as the system grows.
-3.  **THIS FILE ([WHY.md](WHY.md)) — The Reasoning**: Owns the logic. It defines the relationship between the other two and the governance rules that keep them accurate.
+3.  **THIS FILE ([WHY.md](WHY.md)) — The Reasoning**: Owns the logic. It defines the relationship between the other two and the governance rules that keep them accurate. (Teleology here means the study of purpose or goals—why these docs exist and how they connect.)
 
 ---
 

@@ -31,6 +31,34 @@ To prevent "Contextual Drift" and ensure the agent understands the system's oper
 | **Data Layer** | `schema.sql` / `config.json` | The persistent state that the system must respect. |
 | **API/Interface** | `src/API/` | The boundary through which the system interacts with external agents. |
 
+### Common Stacks Examples
+
+To get started, here are pre-filled examples for popular frameworks. Replace with your project's details.
+
+**For a Node.js/Express App:**
+| Area | Canonical File(s) | Role / System Interaction |
+|---|---|---|
+| **Entry Point** | `server.js` | Starts the Express server and loads routes. |
+| **Business Logic** | `src/controllers/` | Handles request logic and data processing. |
+| **Data Layer** | `models/` | Defines database schemas and queries. |
+| **API/Interface** | `routes/` | Exposes endpoints for client interactions. |
+
+**For a Python/Django App:**
+| Area | Canonical File(s) | Role / System Interaction |
+|---|---|---|
+| **Entry Point** | `manage.py` | Django's command-line utility for running the app. |
+| **Business Logic** | `views.py` | Processes requests and returns responses. |
+| **Data Layer** | `models.py` | Defines ORM models for the database. |
+| **API/Interface** | `urls.py` | Maps URLs to views. |
+
+**For a React App:**
+| Area | Canonical File(s) | Role / System Interaction |
+|---|---|---|
+| **Entry Point** | `src/index.js` | Renders the root React component. |
+| **Business Logic** | `src/components/` | Reusable UI components and logic. |
+| **Data Layer** | `src/services/` | API calls and state management. |
+| **API/Interface** | `public/` | Static assets served to users. |
+
 ---
 
 ## 🧪 Proven Checks (Verification Loop)
