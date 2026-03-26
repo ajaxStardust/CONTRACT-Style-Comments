@@ -35,6 +35,27 @@ To prevent "contextual drift" and "confident guessing," this framework enforces 
 *   **Systems View**: The empirical interface. It lists the key files and the "Proven Checks" required to verify that the system is still functioning as intended.
 *   **Instruction**: "Read this to know how to run the system and how to prove your changes work."
 
+### Visual: The Reading Order & Handshake
+
+```mermaid
+graph TD
+    A["1. CONTRACT.md<br/>The Law<br/>invariants • boundaries • prohibitions"] 
+    B["2. WHY.md<br/>The Reasoning<br/>teleology • governance • reading order"]
+    C["3. QUICKSTART.md<br/>The Map<br/>how to run • key files • proven checks"]
+    D["Stateless AI Agent<br/>cold start"]
+    E["Governed Code Changes<br/>Narrowest-scope update on exit"]
+    
+    A --> B --> C
+    C --> D
+    D --> E
+    
+    style A fill:#1e5a96,color:#fff,stroke:#fff
+    style B fill:#8b6914,color:#fff,stroke:#fff
+    style C fill:#2d5016,color:#fff,stroke:#fff
+    style D fill:#2a3f5f,color:#fff,stroke:#fff
+    style E fill:#2a3f5f,color:#fff,stroke:#fff
+```
+
 ---
 
 ## 🤝 The Agentic Handshake: A New Pedagogy
