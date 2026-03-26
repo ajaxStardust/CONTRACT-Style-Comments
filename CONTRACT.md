@@ -2,15 +2,15 @@
 
 > **"A system's boundaries define its identity. To change the system, you must first understand its constraints."**
 
-## 🏛️ Purpose of This Artifact
+## Purpose of This Artifact
 
-In the **contract-style-comments** (CSC) framework, `CONTRACT.md` serves as the system's **Persistent Memory Layer**. It defines the "No-Fly Zones"—the critical invariants, architectural boundaries, and logical guarantees that must remain true across all development sessions.
+In the **contract-style-comments** (CSC) framework, `CONTRACT.md` serves as the system's **Persistent Memory Layer**. It defines the critical invariants, architectural boundaries, and logical guarantees that must remain true across all development sessions.
 
-While code changes rapidly, the **Contract** represents the stable laws of the system. For a stateless AI agent, this file is the "Pre-flight Checklist" that prevents hallucinations and architectural drift.
+While code changes rapidly, the **Contract** represents the stable laws of the system. For a stateless AI agent, this file is the pre-flight checklist that prevents hallucinations and architectural drift.
 
 ---
 
-## 🧩 Required Reading Order (The Synchronization)
+## Required Reading Order
 
 To ensure the agent is fully synchronized with the system's current state, the following sequence is mandatory at the start of every session:
 
@@ -20,9 +20,9 @@ To ensure the agent is fully synchronized with the system's current state, the f
 
 ---
 
-## ⚖️ System Invariants (The Law)
+## System Invariants (The Law)
 
-*Modify this section to define the "laws" of your specific project.*
+> **Modify this section to define the laws of your specific project.**
 
 ### 1. Architectural Boundaries
 - **Rule**: Define the "What" and the "Must."
@@ -35,27 +35,27 @@ To ensure the agent is fully synchronized with the system's current state, the f
 - **Invariant**: Do not modify the `User` schema without updating the matching validation contract.
 
 ### 3. Critical Route/Logic Chains
-- **Rule**: Identify the "Paths of Least Resistance" that must not be blocked.
+- **Rule**: Identify the paths that must not be blocked.
 - **Example**: "The `/health` check must return a `200 OK` even if the database is in read-only mode."
 - **Invariant**: Do not add middleware to the health-check route that requires a database connection.
 
 ---
 
-## 🤝 The Agentic Handshake (Governance)
+## Governance
 
-**The Governance Steward**: Within an active user session, the AI agent is authorized—and expected—to act as the **Steward of the Contract**.
+**The Governance Steward**: Within an active session, the AI agent is authorized — and expected — to act as the steward of this file.
 
-1.  **Authorization**: The agent may propose updates to this file when a new system invariant is discovered or an old one is intentionally retired.
+1.  **Authorization**: The agent may propose updates when a new system invariant is discovered or an old one is intentionally retired.
 2.  **Responsibility**: No scope-affecting code change is complete until the corresponding invariant is reflected here.
-3.  **The Narrowest-Scope Rule**: Update this file only if the change affects an **Invariant, Route, or Boundary**. If the change is operational, use `QUICKSTART.md`.
+3.  **The Narrowest-Scope Rule**: Update this file only if the change affects an invariant, route, or boundary. If the change is operational, use `QUICKSTART.md`.
 
 ---
 
-## 🕒 Last Reviewed & Trigger
+## Last Reviewed & Trigger
 
--   **LAST REVIEWED**: 2026-03-24
--   **REVIEW TRIGGER**: Update this file whenever a core system invariant, architectural boundary, or critical logic chain is modified.
+- **LAST REVIEWED**: 2026-03-24
+- **REVIEW TRIGGER**: Update this file whenever a core system invariant, architectural boundary, or critical logic chain is modified.
 
 ---
 
-*Part of the `contract-style-comments` framework. For the full architectural manifesto, visit [WhatsOnYourBrain.com](https://whatsonyourbrain.com).*```
+*Part of the `contract-style-comments` framework. For the full architectural manifesto, visit [WhatsOnYourBrain.com](https://whatsonyourbrain.com).*
