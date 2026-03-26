@@ -6,10 +6,16 @@ REVIEW TRIGGER: Update when roadmap priorities are completed, dropped, or reorde
 
 ## Purpose
 
-Track forward-looking work without polluting CONTRACT.md invariants.
+Track forward-looking work without polluting Triumvirate governance artifacts.
 
-CONTRACT.md is present-tense law.
-FUTURE.md is planned intent.
+The Triumvirate (`CONTRACT.md`, `WHY.md`, `QUICKSTART.md`) is governing authority.
+`FUTURE.md` is standby planned intent.
+
+## Theory Note: Why this artifact exists
+
+In mature agentic workflows, governance authority is often granted mid-session after trust is established. When that happens, the agent needs a place to capture forward direction without corrupting present-tense truth. `FUTURE.md` is that place.
+
+Use this artifact to preserve intent discovered during collaboration (for example, "show moderated update times when they differ from submission times") until implementation is chosen and validated.
 
 ## Near-Term Priorities
 

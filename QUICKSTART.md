@@ -17,6 +17,7 @@ To prevent "Contextual Drift" and ensure the agent understands the system's oper
 1.  **[CONTRACT.md](CONTRACT.md)**: Internalize the laws and invariants.
 2.  **[WHY.md](WHY.md)**: Understand the governance and pedagogy.
 3.  **[QUICKSTART.md](QUICKSTART.md)**: Synchronize with the operational map and verification steps.
+4.  **[FUTURE.md](FUTURE.md)**: Optionally review roadmap intent after operational synchronization (standby, non-binding).
 
 ---
 
@@ -77,6 +78,7 @@ In the CSC framework, this file owns **operational truth**.
 
 - **Update this file** when a file is moved, a new script is added, or a new verification step is discovered.
 - **Do NOT update this file** for architectural changes or laws—those belong in `CONTRACT.md`.
+- **Do NOT update this file** for planning-only ideas—those belong in `FUTURE.md`.
 - **Instruction**: "If you add a tool, register it in the Key Files table. If you find a new way to break the system, add it to the Proven Checks."
 
 ---

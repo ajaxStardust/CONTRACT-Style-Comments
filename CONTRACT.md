@@ -17,6 +17,7 @@ To ensure the agent is fully synchronized with the system's current state, the f
 1.  **[CONTRACT.md](CONTRACT.md)**: Establish the invariants and boundaries.
 2.  **[WHY.md](WHY.md)**: Understand the relationship between artifacts and the governance rules.
 3.  **[QUICKSTART.md](QUICKSTART.md)**: Verify the current operational state and key file map.
+4.  **[FUTURE.md](FUTURE.md)**: Optionally review planned intent after governing synchronization (non-binding queue).
 
 ---
 
@@ -51,6 +52,8 @@ To ensure the agent is fully synchronized with the system's current state, the f
 1.  **Authorization**: The agent may propose updates when a new system invariant is discovered or an old one is intentionally retired.
 2.  **Responsibility**: No scope-affecting code change is complete until the corresponding invariant is reflected here.
 3.  **The Narrowest-Scope Rule**: Update this file only if the change affects an invariant, route, or boundary. If the change is operational, use `QUICKSTART.md`.
+4.  **Planning Boundary**: Planned ideas and non-implemented direction belong in `FUTURE.md`, not in this law artifact.
+5.  **Authority Boundary**: Governance authority remains with the Triumvirate (`CONTRACT.md`, `WHY.md`, `QUICKSTART.md`); `FUTURE.md` does not override law or runbook.
 
 ---
 

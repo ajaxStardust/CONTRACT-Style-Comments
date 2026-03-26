@@ -16,9 +16,9 @@ When you work with an AI agent (like Cursor, Zed, or Copilot), the agent is a pa
 
 ---
 
-## 🛠️ The Triumvirate (Core Artifacts)
+## 🛠️ The Governing Triumvirate + Standby Queue
 
-To prevent "contextual drift" and "confident guessing," this framework enforces a **Required Reading Order**. Think of these as the three inputs required for the AI to successfully "re-synchronize" with your system state.
+To prevent "contextual drift" and "confident guessing," this framework enforces a **Required Reading Order**. The governance core is the **Triumvirate** (`CONTRACT.md`, `WHY.md`, `QUICKSTART.md`). `FUTURE.md` is a standby planning queue consulted after core synchronization.
 
 ### 1. [CONTRACT.md](CONTRACT.md) — The Law (Invariants)
 *   **Purpose**: Defines the "What" and the "Must."
@@ -35,6 +35,12 @@ To prevent "contextual drift" and "confident guessing," this framework enforces 
 *   **Systems View**: The empirical interface. It lists the key files and the "Proven Checks" required to verify that the system is still functioning as intended.
 *   **Instruction**: "Read this to know how to run the system and how to prove your changes work."
 
+### 4. [FUTURE.md](FUTURE.md) — Planned Intent (Roadmap)
+*   **Purpose**: Defines the "What next."
+*   **Systems View**: A planning buffer that captures near-term priorities, medium-term candidates, and deferred items without polluting present-tense law or run instructions.
+*   **Authority**: Non-governing and non-binding until promoted through the narrowest-scope rule.
+*   **Instruction**: "Read this after core synchronization to understand queued direction and candidate improvements."
+
 ### Visual: The Reading Order & Handshake
 
 ```mermaid
@@ -42,18 +48,20 @@ graph TD
     A["1. CONTRACT.md<br/>The Law<br/>invariants • boundaries • prohibitions"] 
     B["2. WHY.md<br/>The Reasoning<br/>teleology • governance • reading order"]
     C["3. QUICKSTART.md<br/>The Map<br/>how to run • key files • proven checks"]
-    D["Stateless AI Agent<br/>cold start"]
-    E["Governed Code Changes<br/>Narrowest-scope update on exit"]
+    D["4. FUTURE.md<br/>Standby Queue<br/>priorities • candidates • deferred"]
+    E["Stateless AI Agent<br/>cold start"]
+    F["Governed Code Changes<br/>Narrowest-scope update on exit"]
     
-    A --> B --> C
-    C --> D
+    A --> B --> C --> D
     D --> E
+    E --> F
     
     style A fill:#1e5a96,color:#fff,stroke:#fff
     style B fill:#8b6914,color:#fff,stroke:#fff
     style C fill:#2d5016,color:#fff,stroke:#fff
-    style D fill:#2a3f5f,color:#fff,stroke:#fff
+    style D fill:#5b2d75,color:#fff,stroke:#fff
     style E fill:#2a3f5f,color:#fff,stroke:#fff
+    style F fill:#2a3f5f,color:#fff,stroke:#fff
 ```
 
 ---
@@ -64,9 +72,23 @@ Using this framework changes your relationship with the AI. You are no longer ju
 
 *   **Authorization**: The agent is authorized—and expected—to act as a **Governance Steward**.
 *   **Responsibility**: If the agent discovers a "Missing Axiom" (a logic gap) or makes a scope-affecting change, it must update the narrowest owning artifact before the session ends.
+*   **Stewardship Escalation**: If a human explicitly grants governance authority in-session (for example: "you have authority to modify CONTRACT as needed"), the agent should formalize artifact ownership boundaries immediately, then execute the narrowest-scope updates.
 *   **Illustration by Example**: 
     > *Human*: "Add a new billing route."
     > *Agent*: "I've added the route. I also updated `QUICKSTART.md` with the new endpoint and `CONTRACT.md` to reflect the new 'no-unauthorized-access' invariant for this path."
+
+---
+
+## 🧠 Theory Example: Stewardship Escalation Pattern
+
+This framework includes a repeatable governance pattern surfaced from real collaboration:
+
+1. Human grants explicit authority to the agent to perform governance edits.
+2. Agent accepts accountability and updates documentation ownership boundaries.
+3. Agent records planned-but-not-yet-true ideas in `FUTURE.md` (not in `CONTRACT.md`).
+4. Agent links all artifacts so future sessions can discover the roadmap without treating it as law.
+
+This closes a common gap in agentic systems: good ideas are often either lost or incorrectly promoted to invariant status. `FUTURE.md` preserves intent while the Triumvirate remains the governing authority.
 
 ---
 
@@ -75,7 +97,7 @@ Using this framework changes your relationship with the AI. You are no longer ju
 1.  **Clone/Template**: Initialize your project with this structure.
 2.  **Define Invariants**: Populate `CONTRACT.md` with the "Laws" of your specific system.
 3.  **Onboard the Agent**: Start every session by pointing the AI to these files:
-    > *"Read the Trivium (`CONTRACT.md` -> `WHY.md` -> `QUICKSTART.md`) in order. Internalize the system invariants before proposing any code changes."*
+    > *"Read the core docs (`CONTRACT.md` -> `WHY.md` -> `QUICKSTART.md` -> `FUTURE.md`) in order. Internalize invariants first, then operations, then planned intent."*
 
 ---
 
@@ -94,8 +116,11 @@ To adapt this boilerplate for your project:
 3. **Update WHY.md** (if needed):
    - Adjust reading order or ownership if your project has additional docs.
 
-4. **Onboard AI Agents**:
-   - Use prompts like: "Before coding, read CONTRACT.md for invariants, WHY.md for governance, QUICKSTART.md for operations."
+4. **Add FUTURE.md**:
+   - Track prioritized ideas, candidates, and deferred topics without marking them as current system truth.
+
+5. **Onboard AI Agents**:
+   - Use prompts like: "Before coding, read CONTRACT.md for invariants, WHY.md for governance, QUICKSTART.md for operations, FUTURE.md for planned direction."
 
 This turns the generic template into a project-specific guide quickly.
 

@@ -6,17 +6,18 @@
 
 This file explains the **teleology** — the "why" — of the `contract-style-comments` framework. In a systems-thinking approach, a complex codebase is a set of interacting parts that tend toward entropy. To manage this, information is separated based on its **rate of change** and its **logical scope**.
 
-By splitting the project's memory into three distinct artifacts (the Agentic Trivium), we create a stable feedback loop for AI agents and human collaborators alike.
+By splitting the project's memory into distinct artifacts, we create a stable feedback loop for AI agents and human collaborators alike.
 
 ---
 
 ## The Core Relationship (The Agentic Trivium)
 
-The system is maintained through three primary artifacts:
+The system is governed by a Triumvirate plus one standby planning artifact:
 
 1.  **[CONTRACT.md](CONTRACT.md) — The Law**: Owns the invariants. These are the system's hard boundaries — what it *is* and what must *never* break. This changes the least.
 2.  **[QUICKSTART.md](QUICKSTART.md) — The Map**: Owns the operational truth. This is the empirical interface — how to run, how to verify, and where things live. This changes frequently as the system grows.
-3.  **THIS FILE ([WHY.md](WHY.md)) — The Reasoning**: Owns the logic. It defines the relationship between the other two and the governance rules that keep them accurate. (Teleology here means the study of purpose or goals—why these docs exist and how they connect.)
+3.  **THIS FILE ([WHY.md](WHY.md)) — The Reasoning**: Owns the logic. It defines the relationship between the governing artifacts and the governance rules that keep them accurate. (Teleology here means the study of purpose or goals—why these docs exist and how they connect.)
+4.  **[FUTURE.md](FUTURE.md) — Planned Intent (Standby)**: Owns roadmap priorities, medium-term candidates, and deferred discussion items. It is deliberately not present-tense truth and not a governing artifact.
 
 ---
 
@@ -27,6 +28,7 @@ To prevent contextual drift — where an agent begins making confident guesses b
 1.  **CONTRACT.md**: Establish the constraints. Know what must not break.
 2.  **WHY.md**: Understand the governance. Know how to update the system's memory.
 3.  **QUICKSTART.md**: Synchronize with the current state. Know how to prove the system works.
+4.  **FUTURE.md**: Optionally inspect planned direction. Know what is proposed but not yet law.
 
 ---
 
@@ -37,6 +39,7 @@ Changes should have the minimal necessary impact on documentation. This rule pre
 - **Change to an invariant, route, or boundary?** → Update `CONTRACT.md`.
 - **Change to a run command, key file, or verification check?** → Update `QUICKSTART.md`.
 - **Change to the relationship between docs or the governance policy?** → Update `WHY.md`.
+- **Change to priorities, candidate ideas, or deferred plans?** → Update `FUTURE.md` (standby queue only).
 
 ---
 
@@ -47,6 +50,7 @@ Within an active session, the AI agent is not merely a coder — it is a **Gover
 - **Authorization**: The agent is authorized to update these artifacts autonomously when it detects a change in the system's state.
 - **Responsibility**: No code change is considered done until the corresponding update has been made to the narrowest owning artifact.
 - **Missing Axioms**: If the agent discovers a hidden assumption that was not documented, it is expected to surface the axiom by adding it to `CONTRACT.md`.
+- **Stewardship Escalation Pattern**: If a human grants explicit governance authority mid-session, the agent should formalize ownership boundaries and cross-link discoverability in the same change so future sessions inherit the policy.
 
 ---
 
