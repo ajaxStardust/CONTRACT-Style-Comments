@@ -12,7 +12,7 @@ This repository provides a **systems-thinking framework** for managing the inter
 
 In a traditional development loop, documentation is often a static "afterthought." In an **Agentic System**, documentation is a **live component** of the feedback loop. 
 
-When you work with an AI agent (like Cursor, Zed, or Copilot), the agent is a part of your system. If the agent lacks "memory" of your invariants, the system fails. **contract-style-comments** serve as the **persistent memory layer** that ensures the agent's actions remain coupled to the system's goals.
+When you work with an AI agent (like Cursor, Zed, or Copilot), the agent is a part of your system. If the agent is not grounded in your invariants, preconditions, and postconditions, the system fails. **contract-style-comments** provide the governing law/operations structure (Triumvirate), while project memory and chronology remain in **version control** (`.git`).
 
 ---
 
@@ -40,6 +40,12 @@ To prevent "contextual drift" and "confident guessing," this framework enforces 
 *   **Systems View**: A planning buffer that captures near-term priorities, medium-term candidates, and deferred items without polluting present-tense law or run instructions.
 *   **Authority**: Non-governing and non-binding until promoted through the narrowest-scope rule.
 *   **Instruction**: "Read this after core synchronization to understand queued direction and candidate improvements."
+
+### Method Status (important)
+
+CSC is a governance standard and documentation discipline. It is not, by itself, an execution engine.  
+The Triumvirate defines law/reasoning/operations; `.git` holds chronology and memory.  
+Enforceability comes from practice and tooling: tests, probes, linters, CI checks, and human review.
 
 ### Visual: The Reading Order & Handshake
 
@@ -89,6 +95,17 @@ This framework includes a repeatable governance pattern surfaced from real colla
 4. Agent links all artifacts so future sessions can discover the roadmap without treating it as law.
 
 This closes a common gap in agentic systems: good ideas are often either lost or incorrectly promoted to invariant status. `FUTURE.md` preserves intent while the Triumvirate remains the governing authority.
+
+---
+
+## 🔬 Enforceability Transition Path
+
+To move from conceptual framework to operational standard:
+
+1. **Write narrow contract claims** (invariant/precondition/postcondition/prohibition).
+2. **Define falsifiers** (what would prove each claim wrong).
+3. **Bind claims to checks** (tests, `curl` probes, lint/static rules, runtime assertions).
+4. **Run checks in workflow** (local and CI) and treat failures as governance violations, not commentary disagreements.
 
 ---
 

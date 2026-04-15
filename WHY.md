@@ -6,7 +6,7 @@
 
 This file explains the **teleology** — the "why" — of the `contract-style-comments` framework. In a systems-thinking approach, a complex codebase is a set of interacting parts that tend toward entropy. To manage this, information is separated based on its **rate of change** and its **logical scope**.
 
-By splitting the project's memory into distinct artifacts, we create a stable feedback loop for AI agents and human collaborators alike.
+By splitting project governance into distinct artifacts, we create a stable feedback loop for AI agents and human collaborators alike. Chronological memory remains in version control (`.git`).
 
 ---
 
@@ -26,7 +26,7 @@ The system is governed by a Triumvirate plus one standby planning artifact:
 To prevent contextual drift — where an agent begins making confident guesses based on incomplete data — the following reading order is mandatory at the start of every session:
 
 1.  **CONTRACT.md**: Establish the constraints. Know what must not break.
-2.  **WHY.md**: Understand the governance. Know how to update the system's memory.
+2.  **WHY.md**: Understand the governance. Know how to update the system's law/operations docs correctly.
 3.  **QUICKSTART.md**: Synchronize with the current state. Know how to prove the system works.
 4.  **FUTURE.md**: Optionally inspect planned direction. Know what is proposed but not yet law.
 
@@ -43,6 +43,19 @@ Changes should have the minimal necessary impact on documentation. This rule pre
 
 ---
 
+## Enforceability & Falsifiability Boundary
+
+CSC is a governance methodology first. Its strength is semantic constraint and recoverable intent; its risk is unenforced prose. To keep contracts operational:
+
+- **Falsifiability rule**: every strong contract claim should be testable or disprovable by evidence.
+- **Operational semantics**: define what constitutes a violation for critical claims (what failed, where, under which conditions).
+- **Granularity discipline**: keep claims narrow (function/module/system scopes should be explicit).
+- **Execution pathway**: when feasible, bind claims to checks (tests, linters, probes, CI gates, reproducible scripts).
+
+If a claim cannot be tested at all, mark it as guidance, not law.
+
+---
+
 ## Ownership & Governance
 
 Within an active session, the AI agent is not merely a coder — it is a **Governance Steward**.
@@ -56,7 +69,7 @@ Within an active session, the AI agent is not merely a coder — it is a **Gover
 
 ## Last Reviewed & Trigger
 
-- **LAST REVIEWED**: 2026-03-24
+- **LAST REVIEWED**: 2026-04-15
 - **REVIEW TRIGGER**: Update this file when the relationship between artifacts or the governance ownership policy changes.
 
 ---

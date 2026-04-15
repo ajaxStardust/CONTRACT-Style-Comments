@@ -70,6 +70,19 @@ A system is only as reliable as its verification process. Every session must con
 2.  **State Verification**: Verify that a specific input (e.g., `X`) results in the expected output (e.g., `Y`) without violating any invariants.
 3.  **Governance Check**: Ensure that if a scope-affecting change was made, the matching documentation artifact has been updated.
 
+### Falsifiability Checklist (apply to critical claims)
+
+For each high-impact contract statement, define:
+
+1. **Claim**: the exact invariant/precondition/postcondition being asserted.
+2. **Counterexample**: what evidence would prove the claim false.
+3. **Check Method**: how to test it (test case, `curl` probe, linter/static check, runtime assertion).
+4. **Owner Artifact**: where the claim is governed (`CONTRACT.md`) and where checks are runbooked (`QUICKSTART.md`).
+
+### First-Party Verification Preference
+
+Before asking humans for browser screenshots or DevTools dumps, run first-party checks when possible (`curl`, endpoint probes, reproducible shell commands, code-path inspection). Ask for human-captured evidence only when the required signal is browser-only or account-specific.
+
 ---
 
 ## ⚖️ The Narrowest-Scope Rule (Operational)
@@ -94,7 +107,7 @@ In the CSC framework, this file owns **operational truth**.
 
 ## 🕒 Last Reviewed & Trigger
 
--   **LAST REVIEWED**: 2026-03-24
+-   **LAST REVIEWED**: 2026-04-15
 -   **REVIEW TRIGGER**: Update this file whenever the project structure changes, new tools are introduced, or a more effective verification method is developed.
 
 ---
