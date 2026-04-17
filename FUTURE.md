@@ -64,3 +64,42 @@ When a future item is executed, update the narrowest owning artifact:
 - Reading-order/ownership changed -> WHY.md
 - Run steps/proven checks changed -> QUICKSTART.md
 - Plan/prospective work changed -> FUTURE.md
+
+---
+
+## Open Questions (Unresolved Governance Risks)
+
+Surface governance risks here without resolving them. This is a "parking lot" for paradoxes, enforcement gaps, or decisions that require human judgment. Each question should be named and dated so future sessions can track whether it has been resolved.
+
+**Format:**
+```
+### N. [Short title]
+**Raised:** YYYY-MM-DD
+**Status:** Open | Resolved (see YYYY-MM-DD-QUALIFIER)
+**The question:** [What is uncertain or unguarded?]
+**Governance risk:** [What could go wrong if this is not resolved?]
+```
+
+**Example:**
+```
+### 1. The trust paradox
+**Raised:** 2026-04-15
+**Status:** Open
+**The question:** Is human git diff review the only real enforcement preventing an agent from updating CONTRACT.md to legalize its own unauthorized changes?
+**Governance risk:** Without a technical gate, CSC relies on social contract — human review is the only safeguard against contract drift via agent.
+```
+
+---
+
+## Governance Corrections (Stamp Format)
+
+When a governance artifact is corrected (not a feature change, but a fix to the governance itself), record it with the incident naming convention:
+
+```
+**Governance correction (YYYY-MM-DD-QUALIFIER):** [What was wrong in the governance docs and what was corrected.]
+```
+
+**Example:**
+```
+**Governance correction (2026-04-07-STACK-NPM):** CONTRACT.md §AI-assisted development hardened to prohibit node_modules introduction without explicit maintainer authorization. Prior policy was implicit.
+```

@@ -79,6 +79,14 @@ For each high-impact contract statement, define:
 3. **Check Method**: how to test it (test case, `curl` probe, linter/static check, runtime assertion).
 4. **Owner Artifact**: where the claim is governed (`CONTRACT.md`) and where checks are runbooked (`QUICKSTART.md`).
 
+**Concrete Example:**
+```
+Claim: The /health endpoint returns 200 OK even when the database is in read-only mode.
+Counterexample: /health returns 503 or times out when DB is read-only.
+Check: curl -f https://example.com/health returns 0; grep -q "200" in response.
+Owner: CONTRACT.md §3 (Critical Route/Logic Chains); QUICKSTART.md (this section).
+```
+
 ### First-Party Verification Preference
 
 Before asking humans for browser screenshots or DevTools dumps, run first-party checks when possible (`curl`, endpoint probes, reproducible shell commands, code-path inspection). Ask for human-captured evidence only when the required signal is browser-only or account-specific.

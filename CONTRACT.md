@@ -70,8 +70,21 @@ Use explicit labels where possible so claims are easy to test, audit, and disput
 
 ## Last Reviewed & Trigger
 
-- **LAST REVIEWED**: 2026-04-15
+- **LAST REVIEWED**: YYYY-MM-DD-QUALIFIER
 - **REVIEW TRIGGER**: Update this file whenever a core system invariant, architectural boundary, or critical logic chain is modified.
+
+**REVIEW TRIGGER Structure Example:**
+```
+REVIEW TRIGGER: Changing #chordmode, #degree, or #tonic IDs;
+  changing note object shape ({degree, relSemitones, semitones, note});
+  changing entry point (index.html); …
+```
+
+This shows the REVIEW TRIGGER is a **scanable list of touch-points**, not prose. Each item names what must be checked when that artifact changes.
+
+**Stamp Signature Rule (mandatory):** Every `LAST REVIEWED` and `LAST UPDATED` line must end with `SIGNATURE: <agent-or-human identity>`. For LLM edits/reviews, include both tool identity and model when known (example: `SIGNATURE: GitHub Copilot (GPT-5.3-Codex)`). For direct human-only edits/reviews, use `SIGNATURE: Human maintainer`.
+
+**Incident Naming Convention:** When documenting governance corrections or incident responses, use the stamp format `YYYY-MM-DD-INCIDENT-NAME` (example: `2026-04-07-STACK-NPM`). This creates a searchable, timestamped reference that maps to git history.
 
 ---
 
