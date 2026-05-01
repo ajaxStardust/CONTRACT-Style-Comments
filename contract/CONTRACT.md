@@ -1,3 +1,52 @@
+<!--
+═══════════════════════════════════════════════════════════════════
+                        CONTRACT.md
+              The Invariants — The Law Layer of CSC
+═══════════════════════════════════════════════════════════════════
+
+PROJECT CONTEXT:
+────────────────
+This file IS the law artifact for the contract-style-comments (CSC)
+framework repo itself. It governs the governance system.
+
+CRITICAL INVARIANTS — DO NOT BREAK THESE:
+──────────────────────────────────────────
+
+1. THE TRIUMVIRATE IS THE GOVERNING AUTHORITY.
+   • CONTRACT.md, WHY.md, and QUICKSTART.md are the three governing
+     artifacts. FUTURE.md is standby/non-binding.
+   • DO NOT promote FUTURE.md items to law without explicit human
+     authorization and a narrowest-scope update.
+   • BREAKING THIS conflates planned intent with present-tense law.
+
+2. THE CONTRACT IS NOT A PROSE COPY OF GIT HISTORY.
+   • .git holds chronology. CONTRACT.md holds invariants.
+   • DO NOT add change-log entries or session narratives here.
+   • DO NOT timestamp every edit — use LAST REVIEWED stamps only.
+   • BREAKING THIS causes contract bloat and contextual drift.
+
+3. EVERY LAST REVIEWED LINE MUST CARRY A SIGNATURE.
+   • Format: LAST REVIEWED: YYYY-MM-DD-QUALIFIER  SIGNATURE: <identity>
+   • For LLM edits: include tool name and model when known.
+   • NEVER use future dates unless the reason is explicitly documented.
+   • BREAKING THIS makes authorship and review history unverifiable.
+
+4. NARROWEST-SCOPE RULE IS MANDATORY.
+   • Invariant/boundary change → this file only.
+   • Operational/run-step change → QUICKSTART.md only.
+   • Governance/relationship change → WHY.md only.
+   • Roadmap/candidate change → FUTURE.md only.
+   • DO NOT scatter a single concern across multiple artifacts.
+
+KNOWN ISSUES & TECHNICAL DEBT:
+───────────────────────────────
+• System Invariants section below contains generic template examples.
+  They are intentional scaffolding for adopters — do not remove them,
+  but do not treat them as active law for this repo.
+
+═══════════════════════════════════════════════════════════════════
+-->
+
 # CONTRACT.md — The Invariants (The Law)
 
 > **"A system's boundaries define its identity. To change the system, you must first understand its constraints."**
@@ -23,7 +72,7 @@ To ensure the agent is fully synchronized with the system's current state, the f
 
 ## System Invariants (The Law)
 
-> **Modify this section to define the laws of your specific project.**
+> **Scaffolding below is intentional template guidance for adopters. It is not active law for this repo.**
 
 ### Contract Statement Forms (recommended)
 - **INVARIANT**: A condition that must always hold while the system operates.
@@ -70,19 +119,20 @@ Use explicit labels where possible so claims are easy to test, audit, and disput
 
 ## Last Reviewed & Trigger
 
-- **LAST REVIEWED**: YYYY-MM-DD-QUALIFIER
+- **LAST REVIEWED**: 2026-04-30-STEWARDSHIP  SIGNATURE: Kiro (Amazon Kiro)
 - **REVIEW TRIGGER**: Update this file whenever a core system invariant, architectural boundary, or critical logic chain is modified.
 
-**REVIEW TRIGGER Structure Example:**
+**REVIEW TRIGGER touch-points (scannable):**
 ```
-REVIEW TRIGGER: Changing #chordmode, #degree, or #tonic IDs;
-  changing note object shape ({degree, relSemitones, semitones, note});
-  changing entry point (index.html); …
+REVIEW TRIGGER: Adding or retiring a Triumvirate artifact;
+  changing the Narrowest-Scope Rule ownership mapping;
+  changing the Stamp Signature Rule or date convention;
+  changing the Enforcement Boundary definition.
 ```
-
-This shows the REVIEW TRIGGER is a **scanable list of touch-points**, not prose. Each item names what must be checked when that artifact changes.
 
 **Stamp Signature Rule (mandatory):** Every `LAST REVIEWED` and `LAST UPDATED` line must end with `SIGNATURE: <agent-or-human identity>`. For LLM edits/reviews, include both tool identity and model when known (example: `SIGNATURE: GitHub Copilot (GPT-5.3-Codex)`). For direct human-only edits/reviews, use `SIGNATURE: Human maintainer`.
+
+**Date Convention (mandatory):** Identifiers follow `YYYY-MM-DD-QUALIFIER` shape. Multiple notations may share the same date. NEVER use future dates unless the reason is explicitly documented inline.
 
 **Incident Naming Convention:** When documenting governance corrections or incident responses, use the stamp format `YYYY-MM-DD-INCIDENT-NAME` (example: `2026-04-07-STACK-NPM`). This creates a searchable, timestamped reference that maps to git history.
 

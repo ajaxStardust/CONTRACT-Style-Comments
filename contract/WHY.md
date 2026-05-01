@@ -1,3 +1,42 @@
+<!--
+═══════════════════════════════════════════════════════════════════
+                          WHY.md
+              The Reasoning — Teleology Layer of CSC
+═══════════════════════════════════════════════════════════════════
+
+PROJECT CONTEXT:
+────────────────
+This file owns the governance logic of the CSC framework itself.
+It explains why the artifact split exists and how the Narrowest-Scope
+Rule keeps each artifact honest. It is the second file in the
+mandatory reading order.
+
+CRITICAL INVARIANTS — DO NOT BREAK THESE:
+──────────────────────────────────────────
+
+1. THIS FILE OWNS GOVERNANCE LOGIC, NOT OPERATIONAL TRUTH.
+   • Relationship between artifacts → this file.
+   • How to run or verify the system → QUICKSTART.md.
+   • DO NOT add run commands, file paths, or verification steps here.
+   • BREAKING THIS blurs the boundary between reasoning and operations.
+
+2. THE READING ORDER IS FIXED AND MANDATORY.
+   • CONTRACT.md → WHY.md → QUICKSTART.md → FUTURE.md.
+   • DO NOT reorder without updating all four artifacts and README.md.
+   • BREAKING THIS causes contextual drift in stateless AI agents.
+
+3. FUTURE.md IS NOT A GOVERNING ARTIFACT.
+   • It is standby planned intent only.
+   • DO NOT reference FUTURE.md as authority in governance decisions.
+   • BREAKING THIS promotes unvalidated plans to law.
+
+KNOWN ISSUES:
+─────────────
+• None at time of first stewardship pass (2026-04-30).
+
+═══════════════════════════════════════════════════════════════════
+-->
+
 # WHY.md — The Reasoning (Teleology)
 
 > **"A stale contract is worse than no contract because it creates false confidence in a failing system."**
@@ -69,7 +108,7 @@ Within an active session, the AI agent is not merely a coder — it is a **Gover
 
 ## Last Reviewed & Trigger
 
-- **LAST REVIEWED**: 2026-04-15
+- **LAST REVIEWED**: 2026-04-30-STEWARDSHIP  SIGNATURE: Kiro (Amazon Kiro)
 - **REVIEW TRIGGER**: Update this file when the relationship between artifacts or the governance ownership policy changes.
 
 ---
