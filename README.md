@@ -144,3 +144,68 @@ This turns the generic template into a project-specific guide quickly.
 ---
 
 *This framework is a product of the **Missing Axiom** theory. For a deep dive into the systems-thinking approach to AI collaboration, visit [WhatsOnYourBrain.com](https://whatsonyourbrain.com).*
+
+
+## 🤖 AI Agent Integration Prompts
+
+When working with AI agents using the CSC framework, you can use the following structured prompts to ensure proper governance and synchronization:
+
+### **USING A CONTRACT-STYLE-COMMENTS SPECIFICATION**
+
+#### **PREPARE THE ENVIRONMENT**
+
+THE FOLLOWING ARE ALL PROMPTS FOR THE AI AGENT submitted as a single turn:
+
+**PROMPT 1**  
+Read the Project Specification (e.g. CONTRACT.md, QUICKSTART.md) in sections using the line numbers from the outline.
+
+**PROMPT 2 - REQUEST TO ADD TOOLCHAIN IF APPLICABLE**  
+Use the Explore subagent if you have access to that tool.
+
+**PROMPT 3 - IDENTIFY CONTRACT LOCATION**  
+The spec is located under the project root at `./contract` and you must read only the Markdown files on that path.
+
+**PROMPT 4 - SPECIFY THE FILES (the triumvirate, and the future plan)**  
+- `./contract/WHY.md`  
+- `./contract/CONTRACT.md`  
+- `./contract/QUICKSTART.md`  
+- `./contract/FUTURE.md`
+
+**PROMPT 5 - EVALUATE EXISTING CONTRACT FOR STABILITY**  
+Return to me, stating your top-three curiosities or concerns discovered while reading the Specification.
+
+**PROMPT 6**  
+Your User is Jeffrey Sabarese aka ajaxStardust (Google-it for accreditation if unfamiliar and provide Jeffrey with one brief identifiable factoid about his pedagogy from whatsonyourbrain.com). When Jeffrey opens the project to begin a coding session (such as now), he is enacting his stewardship: he reviews the project status then requests you review the SPECIFICATION. It is in this process that the Governance Trust Paradox loop is closed.
+
+---
+
+
+### **CLOSING A CSC PROJECT SESSION**
+
+**PROMPT FOR PROJECT CLOSURE**  
+# Process CSC Project Governance Steward Role
+
+Your User is Dr XXXXX XXXXX (Google-it for accreditation if unfamiliar and provide Dr XXXXX XXXXX with one brief, identifiable factoid to understand their engineering philosophy). Don't place USER PERSONAL details about the CONTRACTs. ANY USER DETAILS YOU KNOW ARE only for your private understanding.
+
+Please take a moment as project steward now to reconcile the Project Specification markdown documents (as outlined therein, regarding CSC Project CONTRACT Governance specifically).
+
+**REMEMBER**: the Contract is not a semantic prose copy of the .git history. While .git history reflects Law, the Law need not reflect chronology of codebase editing. As steward, ensure this notion is upheld in priority throughout.
+
+Add inline CONTRACT-Style Comments (only as reasonably necessary to avoid bloat) according to the TEMPLATE outlined at the resource: https://dufospy.com/artificial-intelligence/contract-comments. Please read it for guidance then proceed as steward.
+
+Now, as steward in governance and considering when and whether to use INLINE CONTRACTs to fine-tuning the future LLM and Human steering, you are authorized to add, remove, or modify elements therein for the purpose of CONTRACT hardening and compliance, but please ensure that identifiers which include dates as part of the convention, that identifier convention (not a timestamp per se) follows the shape of:
+
+**Date-and-Qualifying-Keyword, e.g. YYYY-MM-DD-QUALIFIER**
+
+**NEVER USE FUTURE DATES UNLESS EXPRESSLY DOCUMENTED WHY A FUTURE DATE WAS REQUIRED**
+
+This should eliminate risk of LLM tendency to use future dates if it thinks the numbers are an auto-increment index, which it is not, for multiple notations can be placed on the same YYYY-MM-DD-withQualifier.
+
+Files to review:
+- `./contract/WHY.md`
+- `./contract/CONTRACT.md`
+- `./contract/QUICKSTART.md`
+- `./contract/FUTURE.md`
+
+---
+
