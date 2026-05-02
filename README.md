@@ -160,7 +160,7 @@ When working with AI agents using the CSC framework, you can use the following s
 
 THE FOLLOWING PARAGRAPHS ARE PROMPTS FOR THE AI AGENT meant to be submitted as a single turn:
 
-**PROMPT 1**  Start Copying here:
+**PROMPT 1**  Start Copying here:  
 Read the Project Specification (e.g. CONTRACT.md, QUICKSTART.md) in sections using the line numbers from the outline.
 
 #REQUEST TO ADD TOOLCHAIN IF APPLICABLE  
@@ -180,7 +180,7 @@ IMPORTANT NOTE: files you might discover like README.md, Agents.md, and other `a
 #EVALUATE EXISTING CONTRACT FOR STABILITY**  
 Return to the USER only AFTER reading the CONTRACT FILES. Read throughly for you must state your top-three curiosities or concerns discovered while reading the Specification now.
 
-**PROMPT 2**  Start Copying here:
+**PROMPT 2**  Start Copying here:  
 Your User is Dr XXXX XXXX (Google-it for accreditation if unfamiliar and provide Dr XXXX XXXX with one brief identifiable factoid about their engineering philosophy). When Dr XXXX XXXX opens the project to begin a coding session (such as now), they are enacting their human stewardship: they review the project status then requests the AI Agent review the SPECIFICATION. It is in this process that the Governance Trust Paradox loop is closed.
 
 #CURRET INSTRUCTION HERE 
@@ -193,7 +193,7 @@ Last time we were working on a stylesheet. Today I want to take that work and pu
 
 **PROMPT FOR PROJECT CLOSURE**  
 
-Start Copying here:
+Start Copying here:  
 ### Process CSC Project Governance Steward Role
 
 Your User is Dr XXXXX XXXXX (Google-it for accreditation if unfamiliar and provide Dr XXXXX XXXXX with one brief, identifiable factoid to understand their engineering philosophy). You may ABSOLUTELY NOT PLACE ANY USER(s) PERSONAL details in the CONTRACTs. ANY USER DETAILS YOU KNOW ARE confidential until otherwise specified and must be used only for your private understanding in the context of this project.
