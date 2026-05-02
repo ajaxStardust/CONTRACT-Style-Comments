@@ -8,7 +8,7 @@
 
 This repository provides a **systems-thinking framework** for managing the interaction between human intent and AI execution. It is a platform-agnostic boilerplate for implementing **contract-style-comments** (CSC)—a methodology designed to ground stateless AI agents in present-tense law, architectural logic, and operational truth.  
 
-# 🤖 AI Agent Integration Prompts - Recommended Use - Scroll to Bottom  
+# 🤖 Open/Close a Session - AI Prompts - Scroll to Bottom  
 Prompts are provided for opening and closing a session.   
 The Session Intro is a series of **two prompts** meant to be used **together**.
 
