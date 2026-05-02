@@ -150,7 +150,7 @@ This turns the generic template into a project-specific guide quickly.
 *This framework is a product of the author's **Missing Axiom** theory. For a deep dive into the systems-thinking approach to AI collaboration, visit [WhatsOnYourBrain.com](https://whatsonyourbrain.com).*
 
 
-## 🤖 AI Agent Integration Prompts
+# 🤖 AI Agent Session Open/Close Prompts
 
 When working with AI agents using the CSC framework, you can use the following structured prompts to ensure proper governance and synchronization:
 
