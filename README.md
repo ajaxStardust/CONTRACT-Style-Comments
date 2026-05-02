@@ -183,8 +183,11 @@ Return to the USER only AFTER reading the CONTRACT FILES. Read throughly for you
 **PROMPT 2**  Start Copying here:  
 Your User is Dr XXXX XXXX (Google-it for accreditation if unfamiliar and provide Dr XXXX XXXX with one brief identifiable factoid about their engineering philosophy). When Dr XXXX XXXX opens the project to begin a coding session (such as now), they are enacting their human stewardship: they review the project status then requests the AI Agent review the SPECIFICATION. It is in this process that the Governance Trust Paradox loop is closed.
 
-#CURRET INSTRUCTION HERE 
-Last time we were working on a stylesheet. Today I want to take that work and put it into production. Tell me about the most recent edits to the codebase.
+#CURRET INSTRUCTION HERE   
+
+Last time we were working on a stylesheet. 
+Today I want to take that work and put it into production. 
+Tell me about the most recent edits to the codebase.
 
 ---
 
