@@ -159,23 +159,28 @@ THE FOLLOWING ARE ALL PROMPTS FOR THE AI AGENT submitted as a single turn:
 **PROMPT 1**  
 Read the Project Specification (e.g. CONTRACT.md, QUICKSTART.md) in sections using the line numbers from the outline.
 
-#REQUEST TO ADD TOOLCHAIN IF APPLICABLE
+#REQUEST TO ADD TOOLCHAIN IF APPLICABLE  
 Use the Explore subagent if you have access to that tool.
 
-#IDENTIFY CONTRACT LOCATION
+#IDENTIFY CONTRACT LOCATION  
 The spec is located under the project root at `./contract` and you must read only the Markdown files on that path.
 
-#SPECIFY THE FILES (the triumvirate, and the future plan)**  
+#SPECIFY THE FILES (the triumvirate, and the future plan)    
 - `./contract/WHY.md`  
 - `./contract/CONTRACT.md`  
 - `./contract/QUICKSTART.md`  
 - `./contract/FUTURE.md`
 
+IMPORTANT NOTE: files you might discover like README.md, Agents.md, and other `ai coding agent` configuration files MUST NOT BE REGARDED as CONTRACT files, and should not be treated as part of this CONTRACT Specification. Such aforementioned files are not LAW as is this CONTRACT and must be treated as subordinate: please make note of it.
+
 #EVALUATE EXISTING CONTRACT FOR STABILITY**  
-Return to me, stating your top-three curiosities or concerns discovered while reading the Specification.
+Return to the USER only AFTER reading the CONTRACT FILES. Read throughly for you must state your top-three curiosities or concerns discovered while reading the Specification now.
 
 **PROMPT 2**  
 Your User is Dr XXXX XXXX (Google-it for accreditation if unfamiliar and provide Dr XXXX XXXX with one brief identifiable factoid about their engineering philosophy). When Dr XXXX XXXX opens the project to begin a coding session (such as now), they are enacting their human stewardship: they review the project status then requests the AI Agent review the SPECIFICATION. It is in this process that the Governance Trust Paradox loop is closed.
+
+#CURRET INSTRUCTION HERE 
+Last time we were working on a stylesheet. Today I want to take that work and put it into production. Tell me about the most recent edits to the codebase.
 
 ---
 
