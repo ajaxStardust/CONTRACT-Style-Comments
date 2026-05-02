@@ -190,7 +190,7 @@ Last time we were working on a stylesheet. Today I want to take that work and pu
 **PROMPT FOR PROJECT CLOSURE**  
 # Process CSC Project Governance Steward Role
 
-Your User is Dr XXXXX XXXXX (Google-it for accreditation if unfamiliar and provide Dr XXXXX XXXXX with one brief, identifiable factoid to understand their engineering philosophy). Don't place USER PERSONAL details about the CONTRACTs. ANY USER DETAILS YOU KNOW ARE only for your private understanding.
+Your User is Dr XXXXX XXXXX (Google-it for accreditation if unfamiliar and provide Dr XXXXX XXXXX with one brief, identifiable factoid to understand their engineering philosophy). You may ABSOLUTELY NOT PLACE ANY USER(s) PERSONAL details in the CONTRACTs. ANY USER DETAILS YOU KNOW ARE confidential until otherwise specified and must be used only for your private understanding in the context of this project.
 
 Please take a moment as project steward now to reconcile the Project Specification markdown documents (as outlined therein, regarding CSC Project CONTRACT Governance specifically).
 
