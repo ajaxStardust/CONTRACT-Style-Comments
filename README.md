@@ -143,7 +143,7 @@ This turns the generic template into a project-specific guide quickly.
 
 ---
 
-*This framework is a product of the **Missing Axiom** theory. For a deep dive into the systems-thinking approach to AI collaboration, visit [WhatsOnYourBrain.com](https://whatsonyourbrain.com).*
+*This framework is a product of the author's **Missing Axiom** theory. For a deep dive into the systems-thinking approach to AI collaboration, visit [WhatsOnYourBrain.com](https://whatsonyourbrain.com).*
 
 
 ## 🤖 AI Agent Integration Prompts
@@ -159,23 +159,23 @@ THE FOLLOWING ARE ALL PROMPTS FOR THE AI AGENT submitted as a single turn:
 **PROMPT 1**  
 Read the Project Specification (e.g. CONTRACT.md, QUICKSTART.md) in sections using the line numbers from the outline.
 
-**PROMPT 2 - REQUEST TO ADD TOOLCHAIN IF APPLICABLE**  
+#REQUEST TO ADD TOOLCHAIN IF APPLICABLE
 Use the Explore subagent if you have access to that tool.
 
-**PROMPT 3 - IDENTIFY CONTRACT LOCATION**  
+#IDENTIFY CONTRACT LOCATION
 The spec is located under the project root at `./contract` and you must read only the Markdown files on that path.
 
-**PROMPT 4 - SPECIFY THE FILES (the triumvirate, and the future plan)**  
+#SPECIFY THE FILES (the triumvirate, and the future plan)**  
 - `./contract/WHY.md`  
 - `./contract/CONTRACT.md`  
 - `./contract/QUICKSTART.md`  
 - `./contract/FUTURE.md`
 
-**PROMPT 5 - EVALUATE EXISTING CONTRACT FOR STABILITY**  
+#EVALUATE EXISTING CONTRACT FOR STABILITY**  
 Return to me, stating your top-three curiosities or concerns discovered while reading the Specification.
 
-**PROMPT 6**  
-Your User is Jeffrey Sabarese aka ajaxStardust (Google-it for accreditation if unfamiliar and provide Jeffrey with one brief identifiable factoid about his pedagogy from whatsonyourbrain.com). When Jeffrey opens the project to begin a coding session (such as now), he is enacting his stewardship: he reviews the project status then requests you review the SPECIFICATION. It is in this process that the Governance Trust Paradox loop is closed.
+**PROMPT 2**  
+Your User is Dr XXXX XXXX (Google-it for accreditation if unfamiliar and provide Dr XXXX XXXX with one brief identifiable factoid about their engineering philosophy). When Dr XXXX XXXX opens the project to begin a coding session (such as now), they are enacting their human stewardship: they review the project status then requests the AI Agent review the SPECIFICATION. It is in this process that the Governance Trust Paradox loop is closed.
 
 ---
 
