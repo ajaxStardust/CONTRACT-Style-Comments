@@ -6,7 +6,11 @@
 
 > **"A system is more than the sum of its parts; it is the product of their interactions."**
 
-This repository provides a **systems-thinking framework** for managing the interaction between human intent and AI execution. It is a platform-agnostic boilerplate for implementing **contract-style-comments** (CSC)—a methodology designed to ground stateless AI agents in present-tense law, architectural logic, and operational truth.
+This repository provides a **systems-thinking framework** for managing the interaction between human intent and AI execution. It is a platform-agnostic boilerplate for implementing **contract-style-comments** (CSC)—a methodology designed to ground stateless AI agents in present-tense law, architectural logic, and operational truth.  
+
+# 🤖 AI Agent Integration Prompts - Recommended Use - Scroll to Bottom  
+Prompts are provided for opening and closing a session.   
+The Session Intro is a series of **two prompts** meant to be used **together**.
 
 ## 🧩 Why Systems Thinking?
 
@@ -206,11 +210,13 @@ Now, as steward in governance and considering when and whether to use INLINE CON
 
 This should eliminate risk of LLM tendency to use future dates if it thinks the numbers are an auto-increment index, which it is not, for multiple notations can be placed on the same YYYY-MM-DD-withQualifier.
 
-Files to review:
+Contract Files you are authorized to update in your stewardship role:
 - `./contract/WHY.md`
 - `./contract/CONTRACT.md`
 - `./contract/QUICKSTART.md`
 - `./contract/FUTURE.md`
+
+Process your stewardship governance on the CONTRACT files now and return to this User with a summary of your actions. 
 
 ---
 
