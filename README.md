@@ -255,4 +255,4 @@ please pause for clairifcation as needed for any items you dont feel 100% confid
 
 ---
 
-> *This framework is a product of the author's **Missing Axiom** theory. For a deep dive into the systems-thinking approach to AI collaboration, visit [WhatsOnYourBrain.com](https://whatsonyourbrain.com).*
+> *This framework is a product of the author's **Missing Axiom** theory. For a deep dive into the systems-thinking approach to AI collaboration, visit [WhatsOnYourBrain.com](https://whatsonyourbrain.com) | [DufoSPY Ollama Tips](https://dufospy.com/artificial-intelligence/ollama-etc) (not to be confused with Beef-tips)*
