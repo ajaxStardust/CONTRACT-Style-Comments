@@ -199,13 +199,17 @@ Begin reading now, but pause for clarification as needed throughout.
 **PROMPT 2**  Start Copying here:  
 
 ```
-Your User is `HUMAN PERSON` (Google-it for accreditation if unfamiliar and provide `HUMAN A. PERSON` with one brief identifiable factoid about their engineering philosophy). When `HUMAN PERSON` opens the project to begin a coding session (such as now), they are Human-in-the-Loop, enacting their governance of the project prior to handing it off to you: HUMAN PERSON reviews the project status then requests the AI Agent review the SPECIFICATION. It is in this process that the Governance Trust Paradox loop is closed via Human-in-the-Loop.
+Your User is `HUMAN PERSON`.
+When `HUMAN PERSON` opens the project to begin a coding session (such as now), they are Human-in-the-Loop, commencing their review of the project codebase prior to handing it off to an AI or other Human.
+HUMAN PERSON opens the project, cursory reviews its status, then requests the AI Agent review the complete SPECIFICATION to ensure context alignment.
+It is the Human-in-the-Loop in this process that the Governance Trust Paradox becomes a trusted governance stewardship.
 
-`_Please analyze X in the code, A/B commode, droopy-face tomato-nose. Cook dinner. The previous LLM was a big fat dookie-brain so lets point and laugh. you first._`(2)
+`_Please analyze X in the code, Y in commode, and droopy-face tomato-nose. Cook dinner. The previous LLM was an NSFW! Lets point and laugh. you first._`(2)
 ```
 
-(2) For example, but you should come up with something more _befitting_ your codebase. 
-right? 😆
+(2) For example, that is.
+Try to come up with something more _befitting_ your own codebase. 😆
+
 
 ---
 
