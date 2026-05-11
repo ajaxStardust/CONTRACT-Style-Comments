@@ -125,10 +125,19 @@ To move from conceptual framework to operational standard:
 ## 🛠️ Customization Quickstart
 
 You **literally can tell the AI Agent** to clone this repo into ./contract and review your code to update the template. say something like:
-> Clone https://github.com/ajaxstardust/CONTRACT-Style-Comments into ./comments . Review the codebase at ./ and fill in the CONTRACT template accordingly. Please request clarification for guidance for any element of the CONTRACT which you are not 100% confident to modify befitting the existing codebase.
+
+### Tell the agent:
+
+>
+> Clone https://github.com/ajaxstardust/CONTRACT-Style-Comments into ./contract in the project root 
+>
+> Review the codebase at ./ and fill in the CONTRACT template accordingly.
+> Request clarification for guidance for any element of the CONTRACT which you are not 100% confident to modify befitting the existing codebase.
 >
 
-**Alternatively**, adapt this boilerplate for your project with specific granularity:
+### Alternatively
+
+Adapt this **boilerplate** for your project with specific granularity:
 
 1. **Update CONTRACT.md**:
    - Replace the "System Invariants" section with your project's specific rules. For example, if building a web app, add: "API endpoints must return JSON; database queries must use prepared statements."
