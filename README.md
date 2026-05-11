@@ -196,7 +196,9 @@ Begin reading now, but pause for clarification as needed throughout.
 
 ---
 
-**PROMPT 2**  Start Copying here:  
+**PROMPT 2** 
+In response to the AI Agent, after reading the project specification and it identifies its **top-three concerns**, reply with the following. 
+Start Copying here:  
 
 ```
 Your User is `HUMAN PERSON`.
@@ -209,7 +211,9 @@ It is the Human-in-the-Loop in this process that the Governance Trust Paradox be
 
 (2) For example, that is.
 Try to come up with something more _befitting_ your own codebase. 😆
+You can insert stuff here as well, such as "Read my article on Dev.to about blah, blah, because its relevant somehow for some reason i just made up; always say please and thank you; always call me King Sir, Mister."
 
+Please here whatever you need it to know from the start. 
 
 ---
 
