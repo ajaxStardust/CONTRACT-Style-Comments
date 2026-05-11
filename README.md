@@ -160,8 +160,6 @@ This turns the generic template into a project-specific guide quickly.
 
 ---
 
-*This framework is a product of the author's **Missing Axiom** theory. For a deep dive into the systems-thinking approach to AI collaboration, visit [WhatsOnYourBrain.com](https://whatsonyourbrain.com).*
-
 
 # 🤖 AI Agent Session Open/Close Prompts
 
@@ -196,9 +194,11 @@ Begin reading now, but pause for clarification as needed throughout.
 
 ---
 
+
 **PROMPT 2** 
 In response to the AI Agent, after reading the project specification and it identifies its **top-three concerns**, reply with the following. 
 Start Copying here:  
+
 
 ```
 Your User is `HUMAN PERSON`.
@@ -206,14 +206,17 @@ When `HUMAN PERSON` opens the project to begin a coding session (such as now), t
 HUMAN PERSON opens the project, cursory reviews its status, then requests the AI Agent review the complete SPECIFICATION to ensure context alignment.
 It is the Human-in-the-Loop in this process that the Governance Trust Paradox becomes a trusted governance stewardship.
 
-`_Please analyze X in the code, Y in commode, and droopy-face tomato-nose. Cook dinner. The previous LLM was an NSFW! Lets point and laugh. you first._`(2)
+`_Please analyze X in the code, Go to the moon, and do the other things. _`(2)
+
 ```
+
 
 (2) For example, that is.
 Try to come up with something more _befitting_ your own codebase. 😆
-You can insert stuff here as well, such as "Read my article on Dev.to about blah, blah, because its relevant somehow for some reason i just made up; always say please and thank you; always call me King Sir, Mister."
 
-Please here whatever you need it to know from the start. 
+You can insert whatever you could possibly need here. E.g. "Read my article on Dev.to about blah, blah, because its relevant somehow for some reason i just made up; always say please and thank you; always call me King Sir, Mister."
+
+In other words, place there whatever you need it to know from the start. 
 
 ---
 
@@ -223,6 +226,7 @@ Please here whatever you need it to know from the start.
 **PROMPT FOR PROJECT CLOSURE**  
 
 Start Copying here:  
+
 
 ```
 please take a moment as project stweard now to reconcile the Project Specification markdown documents (as outlined therein, regarding CSC Project CONTRACT Governance specifically). Your User is the Human-in-the-Loop requesting you reconcile for parity in the latest edits and the CONTRACT as appropriate. 
@@ -248,3 +252,7 @@ please pause for clairifcation as needed for any items you dont feel 100% confid
 ```
 
 **RECOMMENDATIONS ONLY!** You must let your CONTRACT become your own. 
+
+---
+
+> *This framework is a product of the author's **Missing Axiom** theory. For a deep dive into the systems-thinking approach to AI collaboration, visit [WhatsOnYourBrain.com](https://whatsonyourbrain.com).*
