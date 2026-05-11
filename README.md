@@ -167,7 +167,7 @@ This turns the generic template into a project-specific guide quickly.
 
 When working with AI agents using the CSC framework, you can use the following structured prompts to ensure proper governance and synchronization:
 
-## **USING A CONTRACT-STYLE-COMMENTS SPECIFICATION**
+## **Teach a Man to Fish - USING a CSC SPEC**
 
 **PREPARE THE ENVIRONMENT**
 
@@ -185,7 +185,7 @@ The spec is located under the project root at `./contract` and you must read onl
 - `./contract/QUICKSTART.md`  
 - `./contract/FUTURE.md`
 
-IMPORTANT NOTE: Files named README.md, MEMORY.md, TODO.md, Agents.md, and other `ai coding agent` configuration files (e.g. contents of folders like ./.kiro/ ; ./.windsurf/ ; ./.cursor/ , etc.) MUST NOT BE REGARDED as CONTRACT files, and should not be treated as part of this CONTRACT Specification. Such aforementioned files are not a part of this CONTRACT and must be treated as subordinate; this contract is the LAW of the PROJECT and the fundamental source of truth.
+IMPORTANT NOTE: Files named README.md, MEMORY.md, TODO.md, Agents.md, and other `ai coding agent` configuration files (e.g. contents of folders like ./.kiro/ ; ./.windsurf/ ; ./.cursor/ , etc.) MUST NOT BE REGARDED as CONTRACT files, and should not be treated as part of this CONTRACT Specification. Such aforementioned files are not a part of this CONTRACT and must be treated as subordinate; this contract is the LAW of the PROJECT and the foundational source of truth, and must be treated as such: One Source of Truth.
 
 Return to the USER AFTER reading the CONTRACT FILES and STATE your TOP-THREE Curiosities or Concerns discovered while reading the Specification now.
 Begin reading now, but pause for clarification as needed throughout. 
@@ -200,36 +200,33 @@ Your User is `HUMAN PERSON` (Google-it for accreditation if unfamiliar and provi
 ---
 
 
-## **CLOSING A CSC PROJECT SESSION**
+## Master of the Lake - **Close the coding Session**
 
 **PROMPT FOR PROJECT CLOSURE**  
 
 Start Copying here:  
-### Process CSC Project Governance Steward Role
 
-Your User is HUMAN PERSON performing stewardship role on the codebase. You may NOT PLACE ANY `Human Person` or USER(s) PERSONAL details in the CONTRACTs. ANY USER DETAILS YOU KNOW ARE confidential until otherwise specified and must be used only for your private understanding in the context of this project.
+```
+please take a moment as project stweard now to reconcile the Project Specification markdown documents (as outlined therein, regarding CSC Project CONTRACT Governance specifically). Your User is the Human-in-the-Loop requesting you reconcile for parity in the latest edits and the CONTRACT as appropriate. 
 
-Please take a moment as project steward now to reconcile the Project Specification markdown documents (as outlined therein, regarding CSC Project CONTRACT Governance specifically).
+REMEMBER: the Contract is not a semantic prose copy of the .git history. While .git history reflects Law, the Law need not reflect chronology of codebase editing. As steward, ensure the notion is upheld in priority throughout. 
 
-**REMEMBER**: the Contract is not a semantic prose copy of the .git history. While .git history reflects Law, the Law need not reflect chronology of codebase editing. As steward, ensure this notion is upheld in priority throughout.
-
-Add inline CONTRACT-Style Comments (only as reasonably necessary to avoid bloat) according to the TEMPLATE outlined at the resource: https://dufospy.com/artificial-intelligence/contract-comments. Please read it for guidance then proceed as steward.
+INLINE CONTRACT-Style Comments are meant to be placed in the CODEBASE SOURCE such as .js and .py files, and .css etc (only as reasonably necessary to avoid bloat) accoding to the TEMPLATE outlined as you'll find at the resource: https://dufospy.com/artificial-intelligence/contract-comments . Please read it for guidance then proceed as steward:
 
 Now, as steward in governance and considering when and whether to use INLINE CONTRACTs to fine-tuning the future LLM and Human steering, you are authorized to add, remove, or modify elements therein for the purpose of CONTRACT hardening and compliance, but please ensure that identifiers which include dates as part of the convention, that identifier convention (not a timestamp per se) follows the shape of:
+Date-and-Qualifying-Keyword, e.g. YYYY-MM-DD-QUALIFIER
 
-**Date-and-Qualifying-Keyword, e.g. YYYY-MM-DD-QUALIFIER**
+**NEVER USE FUTRE DATES UNLESS EXPRESSLY DOCUMENTED WHY A FUTURE DATE WAS REQURED**
 
-**NEVER USE FUTURE DATES UNLESS EXPRESSLY DOCUMENTED WHY A FUTURE DATE WAS REQUIRED**
+This should eliminate risk of LLM tendency to use future dates if it thinks the numbers are an auto-increment index, which it is not, for multiple notations can be places on the same YYYY-MM-DD-withQualifier
 
-This should eliminate risk of LLM tendency to use future dates if it thinks the numbers are an auto-increment index, which it is not, for multiple notations can be placed on the same YYYY-MM-DD-withQualifier.
+please pause for clairifcation as needed for any items you dont feel 100% confident in updating. 
 
-Contract Files you are authorized to update in your stewardship role:
-- `./contract/WHY.md`
-- `./contract/CONTRACT.md`
-- `./contract/QUICKSTART.md`
-- `./contract/FUTURE.md`
+./contract/WHY.md
+./contract/CONTRACT.md
+./contract/QUICKSTART.md
+./contract/FUTURE.md
 
-Process your stewardship governance on the CONTRACT files now and return to `HUMAN PERSON` with a summary of your reconciliation. If no edits were made, please advise. 
+```
 
----
-
+**RECOMMENDATIONS ONLY!** You must let your CONTRACT become your own. 
