@@ -124,7 +124,11 @@ To move from conceptual framework to operational standard:
 
 ## 🛠️ Customization Quickstart
 
-To adapt this boilerplate for your project:
+You **literally can tell the AI Agent** to clone this repo into ./contract and review your code to update the template. say something like:
+> Clone https://github.com/ajaxstardust/CONTRACT-Style-Comments into ./comments . Review the codebase at ./ and fill in the CONTRACT template accordingly. Please request clarification for guidance for any element of the CONTRACT which you are not 100% confident to modify befitting the existing codebase.
+>
+
+**Alternatively**, adapt this boilerplate for your project with specific granularity:
 
 1. **Update CONTRACT.md**:
    - Replace the "System Invariants" section with your project's specific rules. For example, if building a web app, add: "API endpoints must return JSON; database queries must use prepared statements."
@@ -160,35 +164,29 @@ When working with AI agents using the CSC framework, you can use the following s
 
 THE FOLLOWING PARAGRAPHS ARE PROMPTS FOR THE AI AGENT meant to be submitted as a single turn:
 
+---
+
 **PROMPT 1**  Start Copying here:  
 Read the Project Specification (e.g. CONTRACT.md, QUICKSTART.md) in sections using the line numbers from the outline.
 
-#REQUEST TO ADD TOOLCHAIN IF APPLICABLE  
-Use the Explore subagent if you have access to that tool.
-
-#IDENTIFY CONTRACT LOCATION  
 The spec is located under the project root at `./contract` and you must read only the Markdown files on that path.
 
-#SPECIFY THE FILES (the triumvirate, and the future plan)    
 - `./contract/WHY.md`  
 - `./contract/CONTRACT.md`  
 - `./contract/QUICKSTART.md`  
 - `./contract/FUTURE.md`
 
-IMPORTANT NOTE: files you might discover like README.md, Agents.md, and other `ai coding agent` configuration files MUST NOT BE REGARDED as CONTRACT files, and should not be treated as part of this CONTRACT Specification. Such aforementioned files are not LAW as is this CONTRACT and must be treated as subordinate: please make note of it.
+IMPORTANT NOTE: Files named README.md, MEMORY.md, TODO.md, Agents.md, and other `ai coding agent` configuration files (e.g. contents of folders like ./.kiro/ ; ./.windsurf/ ; ./.cursor/ , etc.) MUST NOT BE REGARDED as CONTRACT files, and should not be treated as part of this CONTRACT Specification. Such aforementioned files are not a part of this CONTRACT and must be treated as subordinate; this contract is the LAW of the PROJECT and the fundamental source of truth.
 
-#EVALUATE EXISTING CONTRACT FOR STABILITY**  
-Return to the USER only AFTER reading the CONTRACT FILES. Read throughly for you must state your top-three curiosities or concerns discovered while reading the Specification now.
+Return to the USER AFTER reading the CONTRACT FILES and STATE your TOP-THREE Curiosities or Concerns discovered while reading the Specification now.
+Begin reading now, but pause for clarification as needed throughout. 
+
+---
 
 **PROMPT 2**  Start Copying here:  
-Your User is Dr XXXX XXXX (Google-it for accreditation if unfamiliar and provide Dr XXXX XXXX with one brief identifiable factoid about their engineering philosophy). When Dr XXXX XXXX opens the project to begin a coding session (such as now), they are enacting their human stewardship: they review the project status then requests the AI Agent review the SPECIFICATION. It is in this process that the Governance Trust Paradox loop is closed.
+Your User is `HUMAN PERSON` (Google-it for accreditation if unfamiliar and provide `HUMAN A. PERSON` with one brief identifiable factoid about their engineering philosophy). When `HUMAN PERSON` opens the project to begin a coding session (such as now), they are Human-in-the-Loop, enacting their governance of the project prior to handing it off to you: HUMAN PERSON reviews the project status then requests the AI Agent review the SPECIFICATION. It is in this process that the Governance Trust Paradox loop is closed via Human-in-the-Loop.
 
-#CURRET INSTRUCTION HERE pasted with Prompt 2 above to tell the LLM you are ready to begin and where.  
-```E.g. 
-Last time we were working on a stylesheet. 
-Today I want to take that work and put it into production. 
-Tell me about the most recent edits to the codebase.
-```
+`i want to talk about X, Y, and Z of the previous L B C. Yo diggity! (shizzle)`
 
 ---
 
@@ -200,7 +198,7 @@ Tell me about the most recent edits to the codebase.
 Start Copying here:  
 ### Process CSC Project Governance Steward Role
 
-Your User is Dr XXXXX XXXXX (Google-it for accreditation if unfamiliar and provide Dr XXXXX XXXXX with one brief, identifiable factoid to understand their engineering philosophy). You may ABSOLUTELY NOT PLACE ANY USER(s) PERSONAL details in the CONTRACTs. ANY USER DETAILS YOU KNOW ARE confidential until otherwise specified and must be used only for your private understanding in the context of this project.
+Your User is HUMAN PERSON performing stewardship role on the codebase. You may NOT PLACE ANY `Human Person` or USER(s) PERSONAL details in the CONTRACTs. ANY USER DETAILS YOU KNOW ARE confidential until otherwise specified and must be used only for your private understanding in the context of this project.
 
 Please take a moment as project steward now to reconcile the Project Specification markdown documents (as outlined therein, regarding CSC Project CONTRACT Governance specifically).
 
@@ -222,7 +220,7 @@ Contract Files you are authorized to update in your stewardship role:
 - `./contract/QUICKSTART.md`
 - `./contract/FUTURE.md`
 
-Process your stewardship governance on the CONTRACT files now and return to this User with a summary of your actions. 
+Process your stewardship governance on the CONTRACT files now and return to `HUMAN PERSON` with a summary of your reconciliation. If no edits were made, please advise. 
 
 ---
 
