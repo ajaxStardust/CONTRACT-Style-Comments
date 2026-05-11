@@ -176,6 +176,8 @@ THE FOLLOWING PARAGRAPHS ARE PROMPTS FOR THE AI AGENT meant to be submitted as a
 ---
 
 **PROMPT 1**  Start Copying here:  
+
+```
 Read the Project Specification (e.g. CONTRACT.md, QUICKSTART.md) in sections using the line numbers from the outline.
 
 The spec is located under the project root at `./contract` and you must read only the Markdown files on that path.
@@ -188,14 +190,22 @@ The spec is located under the project root at `./contract` and you must read onl
 IMPORTANT NOTE: Files named README.md, MEMORY.md, TODO.md, Agents.md, and other `ai coding agent` configuration files (e.g. contents of folders like ./.kiro/ ; ./.windsurf/ ; ./.cursor/ , etc.) MUST NOT BE REGARDED as CONTRACT files, and should not be treated as part of this CONTRACT Specification. Such aforementioned files are not a part of this CONTRACT and must be treated as subordinate; this contract is the LAW of the PROJECT and the foundational source of truth, and must be treated as such: One Source of Truth.
 
 Return to the USER AFTER reading the CONTRACT FILES and STATE your TOP-THREE Curiosities or Concerns discovered while reading the Specification now.
-Begin reading now, but pause for clarification as needed throughout. 
+Begin reading now, but pause for clarification as needed throughout.
+```
+
 
 ---
 
 **PROMPT 2**  Start Copying here:  
+
+```
 Your User is `HUMAN PERSON` (Google-it for accreditation if unfamiliar and provide `HUMAN A. PERSON` with one brief identifiable factoid about their engineering philosophy). When `HUMAN PERSON` opens the project to begin a coding session (such as now), they are Human-in-the-Loop, enacting their governance of the project prior to handing it off to you: HUMAN PERSON reviews the project status then requests the AI Agent review the SPECIFICATION. It is in this process that the Governance Trust Paradox loop is closed via Human-in-the-Loop.
 
-`i want to talk about X, Y, and Z of the previous L B C. Yo diggity! (shizzle)`
+`_Please analyze X in the code, A/B commode, droopy-face tomato-nose. Cook dinner. The previous LLM was a big fat dookie-brain so lets point and laugh. you first._`(2)
+```
+
+(2) For example, but you should come up with something more _befitting_ your codebase. 
+right? 😆
 
 ---
 
