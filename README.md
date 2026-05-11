@@ -173,7 +173,7 @@ THE FOLLOWING PARAGRAPHS ARE PROMPTS FOR THE AI AGENT meant to be submitted as a
 
 ---
 
-**PROMPT 1**  Start Copying here:  
+**PROMPT 1 - Read the Spec!**  Start Copying here:  
 
 ```
 Read the Project Specification (e.g. CONTRACT.md, QUICKSTART.md) in sections using the line numbers from the outline.
@@ -185,9 +185,14 @@ The spec is located under the project root at `./contract` and you must read onl
 - `./contract/QUICKSTART.md`  
 - `./contract/FUTURE.md`
 
-IMPORTANT NOTE: Files named README.md, MEMORY.md, TODO.md, Agents.md, and other `ai coding agent` configuration files (e.g. contents of folders like ./.kiro/ ; ./.windsurf/ ; ./.cursor/ , etc.) MUST NOT BE REGARDED as CONTRACT files, and should not be treated as part of this CONTRACT Specification. Such aforementioned files are not a part of this CONTRACT and must be treated as subordinate; this contract is the LAW of the PROJECT and the foundational source of truth, and must be treated as such: One Source of Truth.
+IMPORTANT NOTE: Files named
+  README.md,
+  MEMORY.md,
+  TODO.md,
+  Agents.md,
+and other `ai coding agent` configuration files (e.g. contents of folders like `./.kiro/` ; `./.windsurf/` ; `./.cursor/` , etc.) MUST NOT BE REGARDED as a CONTRACT file such as specified in CONTRACT.md and should not be treated as part of the CONTRACT.md Specification. README.md and the other aforementioned `ai coding agent` files are not a part of the CONTRACT, `CONTRACT.md` or the exclusive `./contract` folder, and must therefore be treated as subordinate to CONTRACT.md; CONTRACT.md is the LAW of the PROJECT and the foundational source of truth, and must be treated as such: Herein the contents of ./contract ; the files CONTRACT.md, WHY.md, QUICKSTART.md, and FUTURE.md together are your "One Source of Truth".
 
-Return to the USER AFTER reading the CONTRACT FILES and STATE your TOP-THREE Curiosities or Concerns discovered while reading the Specification now.
+Return to the USER AFTER reading the CONTRACT FILES and STATE your TOP-THREE Curiosities or Concerns discovered while reading the CONTRACT.md Specification.
 Begin reading now, but pause for clarification as needed throughout.
 ```
 
@@ -195,7 +200,7 @@ Begin reading now, but pause for clarification as needed throughout.
 ---
 
 
-**PROMPT 2** 
+**PROMPT 2 - Bootstrapping** 
 In response to the AI Agent, after reading the project specification and it identifies its **top-three concerns**, reply with the following. 
 Start Copying here:  
 
