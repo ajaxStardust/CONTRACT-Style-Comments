@@ -1,7 +1,7 @@
 <!--
 ═══════════════════════════════════════════════════════════════════
                         ASSETS.md
-           The Visual & Binary Invariants of the CSC Repo
+           The Resource & Binary Invariants of the CSC Repo
 ═══════════════════════════════════════════════════════════════════
 
 PROJECT CONTEXT:
@@ -29,13 +29,13 @@ CRITICAL INVARIANTS — DO NOT BREAK THESE:
 ═══════════════════════════════════════════════════════════════════
 -->
 
-# ASSETS.md — The Visual & Binary Plane (CSC Repo Assets)
+# ASSETS.md — The Resource & Binary Plane (CSC Repo Assets)
 
 ## Purpose of This Artifact
 
 This is the active `ASSETS.md` contract for the `contract-style-comments` framework repository. It governs the visual media, diagrams, and asset mappings that support the educational and onboarding content.
 
-It resolves **Visual Silent Regressions (VSRs)** and **Sensory Deficits of Stateless Development** for this repository.
+It resolves **Presentation & Binary Silent Regressions (PBSRs)** and **Sensory Deficits of Stateless Development** for this repository.
 
 ---
 
