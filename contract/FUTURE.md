@@ -104,6 +104,7 @@ When a future item is executed, update the narrowest owning artifact:
 - Invariants changed → CONTRACT.md
 - Reading-order/ownership changed → WHY.md
 - Run steps/proven checks changed → QUICKSTART.md
+- Presentation/visual assets changed → ASSETS.md
 - Plan/prospective work changed → FUTURE.md
 
 ---

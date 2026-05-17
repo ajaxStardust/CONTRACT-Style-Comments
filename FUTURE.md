@@ -37,24 +37,24 @@ Use this artifact to preserve intent discovered during collaboration (for exampl
 
 ## Medium-Term Candidates
 
-1. Scoped contract addenda
-- Consider adding ASSETS.CONTRACT.md if asset invariants become dense.
-- Consider adding UI.CONTRACT.md if UI-specific invariants outgrow root contract.
+1. **Scoped contract addenda**
+   - **Resolved (2026-05-17-ASSETS-STANDARD):** ASSETS.md has been officially standardized as a first-class visual and binary invariant supplement to resolve VSRs and Stateless Sensory Deficits.
+   - Consider adding `UI.CONTRACT.md` if UI-specific invariants outgrow root contract.
 
-2. Baseline Behavior Tests
-- Add characterization tests for core logic output shapes before deep refactors.
+2. **Baseline Behavior Tests**
+   - Add characterization tests for core logic output shapes before deep refactors.
 
-3. Performance and UX Evaluations
-- Evaluate rendering performance on large datasets.
-- Document expected limits once measured.
+3. **Performance and UX Evaluations**
+   - Evaluate rendering performance on large datasets.
+   - Document expected limits once measured.
 
 ## Deferred / Discussion Items
 
 1. Default external data policy
-- Decide whether built-in fallback entries should remain hardcoded or move fully into config.
+   - Decide whether built-in fallback entries should remain hardcoded or move fully into config.
 
 2. Remote Fetch Resilience
-- Decide whether remote metadata fetch failures should be cached, retried, or surfaced more explicitly in the UI.
+   - Decide whether remote metadata fetch failures should be cached, retried, or surfaced more explicitly in the UI.
 
 ## Operating Rule
 
@@ -63,6 +63,7 @@ When a future item is executed, update the narrowest owning artifact:
 - Invariants changed -> CONTRACT.md
 - Reading-order/ownership changed -> WHY.md
 - Run steps/proven checks changed -> QUICKSTART.md
+- Presentation/visual assets changed -> ASSETS.md
 - Plan/prospective work changed -> FUTURE.md
 
 ---

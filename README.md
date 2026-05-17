@@ -16,13 +16,17 @@ The Session Intro is a series of **two prompts** meant to be used **together**.
 
 In a traditional development loop, documentation is often a static "afterthought." In an **Agentic System**, documentation is a **live component** of the feedback loop. 
 
-When you work with an AI agent (like Cursor, Zed, or Copilot), the agent is a part of your system. If the agent is not grounded in your invariants, preconditions, and postconditions, the system fails. **contract-style-comments** provide the governing law/operations structure (Triumvirate), while project memory and chronology remain in **version control** (`.git`).
+When you work with an AI agent (like Cursor, Zed, or Copilot), the agent is a part of your system. If the agent is not grounded in your invariants, preconditions, and postconditions, the system fails. **contract-style-comments** provide the governing law/operations structure, while project memory and chronology remain in **version control** (`.git`).
+
+This methodology is specifically engineered to resolve two critical system failure modes:
+*   **Visual Silent Regressions (VSRs):** Incidents where the codebase compiles perfectly and unit tests pass, but visual primitives (logos, color palettes, sizing parameters, SVG viewboxes) break silently, diluting or fracturing the brand.
+*   **Sensory Deficit of Stateless Development:** The absolute inability of stateless AI coding agents to "see" or verify visual layout correctness, causing them to confidently hallucinate asset paths, dimensions, or styling attributes.
 
 ---
 
-## 🛠️ The Governing Triumvirate + Standby Queue
+## 🛠️ The Governing Triumvirate + Supplemental Invariants
 
-To prevent "contextual drift" and "confident guessing," this framework enforces a **Required Reading Order**. The governance core is the **Triumvirate** (`CONTRACT.md`, `WHY.md`, `QUICKSTART.md`). `FUTURE.md` is a standby planning queue consulted after core synchronization.
+To prevent "contextual drift" and "confident guessing," this framework enforces a **Required Reading Order**. The governance core is the **Triumvirate** (`CONTRACT.md`, `WHY.md`, `QUICKSTART.md`), supported by the **Visual Supplement** (`ASSETS.md`) and the planning queue (`FUTURE.md`).
 
 ### 1. [CONTRACT.md](CONTRACT.md) — The Law (Invariants)
 *   **Purpose**: Defines the "What" and the "Must."
@@ -30,7 +34,7 @@ To prevent "contextual drift" and "confident guessing," this framework enforces 
 *   **Instruction**: "Read this to know what you are **not** allowed to break."
 
 ### 2. [WHY.md](WHY.md) — The Reasoning (Teleology)
-*   **Purpose**: Defines the "Why" and the "Relationship."
+*   **Purpose**: Defines the "Why" and the relationship between artifacts.
 *   **Systems View**: Explains the interconnections between artifacts. It prevents the agent from misunderstanding the *purpose* of the documentation itself.
 *   **Instruction**: "Read this to understand the logic behind the split and the **Narrowest-Scope Update Rule**."
 
@@ -39,7 +43,12 @@ To prevent "contextual drift" and "confident guessing," this framework enforces 
 *   **Systems View**: The empirical interface. It lists the key files and the "Proven Checks" required to verify that the system is still functioning as intended.
 *   **Instruction**: "Read this to know how to run the system and how to prove your changes work."
 
-### 4. [FUTURE.md](FUTURE.md) — Planned Intent (Roadmap)
+### 4. [ASSETS.md](ASSETS.md) — The Visual Law (Presentation Invariants)
+*   **Purpose**: Defines the "Who" and the "Scale."
+*   **Systems View**: The visual and binary plane. It bridges the logic-presentation gap, treating design assets, OGP social cards, host mappings, and graphic primitives with the exact same contract discipline as executable code to eliminate VSRs and stateless sensory blindness.
+*   **Instruction**: "Read this if the task touches branding, favicons, OGP cards, stylesheets, or UI media."
+
+### 5. [FUTURE.md](FUTURE.md) — Planned Intent (Roadmap)
 *   **Purpose**: Defines the "What next."
 *   **Systems View**: A planning buffer that captures near-term priorities, medium-term candidates, and deferred items without polluting present-tense law or run instructions.
 *   **Authority**: Non-governing and non-binding until promoted through the narrowest-scope rule.
@@ -58,17 +67,19 @@ graph TD
     A["1. CONTRACT.md<br/>The Law<br/>invariants • boundaries • prohibitions"] 
     B["2. WHY.md<br/>The Reasoning<br/>teleology • governance • reading order"]
     C["3. QUICKSTART.md<br/>The Map<br/>how to run • key files • proven checks"]
-    D["4. FUTURE.md<br/>Standby Queue<br/>priorities • candidates • deferred"]
+    G["4. ASSETS.md<br/>The Visual Law<br/>presentation invariants • OGP • logos"]
+    D["5. FUTURE.md<br/>Standby Queue<br/>priorities • candidates • deferred"]
     E["Stateless AI Agent<br/>cold start"]
     F["Governed Code Changes<br/>Narrowest-scope update on exit"]
     
-    A --> B --> C --> D
+    A --> B --> C --> G --> D
     D --> E
     E --> F
     
     style A fill:#1e5a96,color:#fff,stroke:#fff
     style B fill:#8b6914,color:#fff,stroke:#fff
     style C fill:#2d5016,color:#fff,stroke:#fff
+    style G fill:#961e4c,color:#fff,stroke:#fff
     style D fill:#5b2d75,color:#fff,stroke:#fff
     style E fill:#2a3f5f,color:#fff,stroke:#fff
     style F fill:#2a3f5f,color:#fff,stroke:#fff
@@ -183,6 +194,7 @@ The spec is located under the project root at `./contract` and you must read onl
 - `./contract/WHY.md`  
 - `./contract/CONTRACT.md`  
 - `./contract/QUICKSTART.md`  
+- `./contract/ASSETS.md`
 - `./contract/FUTURE.md`
 
 IMPORTANT NOTE: Files named
@@ -190,7 +202,7 @@ IMPORTANT NOTE: Files named
   MEMORY.md,
   TODO.md,
   Agents.md,
-and other `ai coding agent` configuration files (e.g. contents of folders like `./.kiro/` ; `./.windsurf/` ; `./.cursor/` , etc.) MUST NOT BE REGARDED as a CONTRACT file such as specified in CONTRACT.md and should not be treated as part of the CONTRACT.md Specification. README.md and the other aforementioned `ai coding agent` files are not a part of the CONTRACT, `CONTRACT.md` or the exclusive `./contract` folder, and must therefore be treated as subordinate to CONTRACT.md; CONTRACT.md is the LAW of the PROJECT and the foundational source of truth, and must be treated as such: Herein the contents of ./contract ; the files CONTRACT.md, WHY.md, QUICKSTART.md, and FUTURE.md together are your "One Source of Truth".
+and other `ai coding agent` configuration files (e.g. contents of folders like `./.kiro/` ; `./.windsurf/` ; `./.cursor/` , etc.) MUST NOT BE REGARDED as a CONTRACT file such as specified in CONTRACT.md and should not be treated as part of the CONTRACT.md Specification. README.md and the other aforementioned `ai coding agent` files are not a part of the CONTRACT, `CONTRACT.md` or the exclusive `./contract` folder, and must therefore be treated as subordinate to CONTRACT.md; CONTRACT.md is the LAW of the PROJECT and the foundational source of truth, and must be treated as such: Herein the contents of ./contract ; the files CONTRACT.md, WHY.md, QUICKSTART.md, ASSETS.md, and FUTURE.md together are your "One Source of Truth".
 
 Return to the USER AFTER reading the CONTRACT FILES and STATE your TOP-THREE Curiosities or Concerns discovered while reading the CONTRACT.md Specification.
 Begin reading now, but pause for clarification as needed throughout.
@@ -252,6 +264,7 @@ please pause for clairifcation as needed for any items you dont feel 100% confid
 ./contract/WHY.md
 ./contract/CONTRACT.md
 ./contract/QUICKSTART.md
+./contract/ASSETS.md
 ./contract/FUTURE.md
 
 ```

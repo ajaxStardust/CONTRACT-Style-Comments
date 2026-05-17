@@ -10,14 +10,15 @@ By splitting project governance into distinct artifacts, we create a stable feed
 
 ---
 
-## The Core Relationship (The Agentic Trivium)
+## The Core Relationship (The Agentic Trivium + Supplements)
 
-The system is governed by a Triumvirate plus one standby planning artifact:
+The system is governed by a Triumvirate, supported by a Visual Invariants supplement and a standby planning artifact:
 
 1.  **[CONTRACT.md](CONTRACT.md) — The Law**: Owns the invariants. These are the system's hard boundaries — what it *is* and what must *never* break. This changes the least.
 2.  **[QUICKSTART.md](QUICKSTART.md) — The Map**: Owns the operational truth. This is the empirical interface — how to run, how to verify, and where things live. This changes frequently as the system grows.
 3.  **THIS FILE ([WHY.md](WHY.md)) — The Reasoning**: Owns the logic. It defines the relationship between the governing artifacts and the governance rules that keep them accurate. (Teleology here means the study of purpose or goals—why these docs exist and how they connect.)
-4.  **[FUTURE.md](FUTURE.md) — Planned Intent (Standby)**: Owns roadmap priorities, medium-term candidates, and deferred discussion items. It is deliberately not present-tense truth and not a governing artifact.
+4.  **[ASSETS.md](ASSETS.md) — The Visual Law**: Owns the presentation invariants (favicons, OGP cards, branding assets, host mappings) to eliminate Visual Silent Regressions (VSRs) and bridge stateless AI sensory blindness.
+5.  **[FUTURE.md](FUTURE.md) — Planned Intent (Standby)**: Owns roadmap priorities, medium-term candidates, and deferred discussion items. It is deliberately not present-tense truth and not a governing artifact.
 
 ---
 
@@ -28,7 +29,8 @@ To prevent contextual drift — where an agent begins making confident guesses b
 1.  **CONTRACT.md**: Establish the constraints. Know what must not break.
 2.  **WHY.md**: Understand the governance. Know how to update the system's law/operations docs correctly.
 3.  **QUICKSTART.md**: Synchronize with the current state. Know how to prove the system works.
-4.  **FUTURE.md**: Optionally inspect planned direction. Know what is proposed but not yet law.
+4.  **ASSETS.md**: Check presentation laws and brand identifiers if visual or styling parts are touched.
+5.  **FUTURE.md**: Optionally inspect planned direction. Know what is proposed but not yet law.
 
 ---
 
@@ -38,6 +40,7 @@ Changes should have the minimal necessary impact on documentation. This rule pre
 
 - **Change to an invariant, route, or boundary?** → Update `CONTRACT.md`.
 - **Change to a run command, key file, or verification check?** → Update `QUICKSTART.md`.
+- **Change to visual branding, design styling, OGP cards, or media assets?** → Update `ASSETS.md`.
 - **Change to the relationship between docs or the governance policy?** → Update `WHY.md`.
 - **Change to priorities, candidate ideas, or deferred plans?** → Update `FUTURE.md` (standby queue only).
 

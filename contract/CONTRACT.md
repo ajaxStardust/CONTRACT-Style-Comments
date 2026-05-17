@@ -12,9 +12,10 @@ framework repo itself. It governs the governance system.
 CRITICAL INVARIANTS — DO NOT BREAK THESE:
 ──────────────────────────────────────────
 
-1. THE TRIUMVIRATE IS THE GOVERNING AUTHORITY.
+1. THE TRIUMVIRATE + SUPPLEMENTS IS THE GOVERNING AUTHORITY.
    • CONTRACT.md, WHY.md, and QUICKSTART.md are the three governing
-     artifacts. FUTURE.md is standby/non-binding.
+     artifacts, supported by ASSETS.md for presentation invariants.
+     FUTURE.md is standby/non-binding.
    • DO NOT promote FUTURE.md items to law without explicit human
      authorization and a narrowest-scope update.
    • BREAKING THIS conflates planned intent with present-tense law.
@@ -34,6 +35,7 @@ CRITICAL INVARIANTS — DO NOT BREAK THESE:
 4. NARROWEST-SCOPE RULE IS MANDATORY.
    • Invariant/boundary change → this file only.
    • Operational/run-step change → QUICKSTART.md only.
+   • Presentation/visual-asset change → ASSETS.md only.
    • Governance/relationship change → WHY.md only.
    • Roadmap/candidate change → FUTURE.md only.
    • DO NOT scatter a single concern across multiple artifacts.
@@ -66,7 +68,8 @@ To ensure the agent is fully synchronized with the system's current state, the f
 1.  **[CONTRACT.md](CONTRACT.md)**: Establish the invariants and boundaries.
 2.  **[WHY.md](WHY.md)**: Understand the relationship between artifacts and the governance rules.
 3.  **[QUICKSTART.md](QUICKSTART.md)**: Verify the current operational state and key file map.
-4.  **[FUTURE.md](FUTURE.md)**: Optionally review planned intent after governing synchronization (non-binding queue).
+4.  **[ASSETS.md](ASSETS.md)**: Establish presentation and visual boundaries to resolve VSRs and stateless sensory blindness.
+5.  **[FUTURE.md](FUTURE.md)**: Optionally review planned intent after governing synchronization (non-binding queue).
 
 ---
 
@@ -108,9 +111,9 @@ Use explicit labels where possible so claims are easy to test, audit, and disput
 
 1.  **Authorization**: The agent may propose updates when a new system invariant is discovered or an old one is intentionally retired.
 2.  **Responsibility**: No scope-affecting code change is complete until the corresponding invariant is reflected here.
-3.  **The Narrowest-Scope Rule**: Update this file only if the change affects an invariant, route, or boundary. If the change is operational, use `QUICKSTART.md`.
+3.  **The Narrowest-Scope Rule**: Update this file only if the change affects an invariant, route, or boundary. If the change is operational, use `QUICKSTART.md`. If it affects visual branding or media assets, use `ASSETS.md`.
 4.  **Planning Boundary**: Planned ideas and non-implemented direction belong in `FUTURE.md`, not in this law artifact.
-5.  **Authority Boundary**: Governance authority remains with the Triumvirate (`CONTRACT.md`, `WHY.md`, `QUICKSTART.md`); `FUTURE.md` does not override law or runbook.
+5.  **Authority Boundary**: Governance authority remains with the Triumvirate (`CONTRACT.md`, `WHY.md`, `QUICKSTART.md`), supported by `ASSETS.md` for the presentation plane; `FUTURE.md` does not override law or runbook.
 6.  **Verification Efficiency Rule**: Before asking maintainers for browser screenshots or DevTools/network captures, the agent should attempt first-party verification (`curl`, endpoint probes, config/code-path checks, reproducible shell evidence). Ask humans for browser-captured artifacts only when direct verification is genuinely unavailable (e.g., account-specific UI state, manual consent screens, or browser-only behavior).
 
 **Enforcement Boundary (explicit):** This contract is governance law, not an auto-enforcing runtime. If a claim cannot be challenged by evidence (tests, probes, logs, reproducible checks), it risks becoming non-binding prose.
