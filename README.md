@@ -95,25 +95,71 @@ Using CSC changes your relationship with AI. You are no longer merely asking for
 
 ## 🤖 AI Agent Session Prompts
 
-### 📥 1. Session Initialization (Submit at Cold Start)
+> 📘 **Inline Contract Reference Standard:** For the precise visual formatting and visual hierarchy of inline codebase contracts, refer to the authoritative [DufoSPY Specification Template](https://dufospy.com/artificial-intelligence/contract-comments).
+
+### 🧠 The Human-Centric Grounding Handshake (Cognitive Anchoring)
+Before presenting specific technical directions, it is highly recommended to introduce your **cognitive working environment** to the LLM. 
+
+Providing a personal introduction—such as framing the `./contract/` framework as a vital externalized memory support to counter cognitive load, short-term memory gaps, or busy development contexts—transforms the LLM from a generic responder into a highly protective, empathetic **Steward of the System**. This anchors the AI’s intent to maintain strict consistency, prevent regression, and defend your codebase from logic drift.
+
+---
+
+### 📥 PHASE 1: Project Context Initialization (Cold Start)
+*Submit this prompt at the start of a session to establish strict spec ingestion.*
 
 ```
-Please read the project specification markdown documents located under the project root at `./contract/` in their strict required sequence:
-1. `./contract/CONTRACT.md` (The Law / Invariants)
-2. `./contract/WHY.md` (The Reasoning / Teleology)
-3. `./contract/QUICKSTART.md` (The Map / Operational Truth)
-4. `./contract/ASSETS.md` (The Resource Law / Presentation & Binary Invariants)
-5. `./contract/FUTURE.md` (The Standby Queue / Roadmap)
+Initialize Project Context using the Contract-Style-Comments (CSC) methodology. Read the following Markdown files located in the project's `./contract/` directory using line-number indexing to ensure full ingestion of the active system Specification:
 
-IMPORTANT: Files outside `./contract/` (such as root README.md, MEMORY.md, TODO.md, or other agent-specific config files) are subordinate to the `./contract/` specification. The files inside `./contract/` represent your "One Source of Truth" and the governing law of this project.
+    ./contract/WHY.md (Intent & Philosophy)
+    ./contract/CONTRACT.md (The Law / Invariants)
+    ./contract/QUICKSTART.md (Implementation Entry)
+    ./contract/ASSETS.md (Presentation & Resource Invariants)
+    ./contract/FUTURE.md (Roadmap & Scaling)
 
-After reading the specification, return to the user and state:
-1. A brief 2-sentence summary of your understanding of this system's invariants.
-2. Your top-three engineering curiosities or concerns discovered while auditing these files against the current codebase.
-3. A live system verification report: Auditing the active status of the local runtime (e.g. checking running processes, active ports, database connections/schemas, package managers, virtual environments, or container boundaries described in QUICKSTART.md) to ensure the execution plane matches the documented map.
+DIRECTIONS:
+1. Verify the integrity of these files.
+2. Once read, DO NOT return a verbose summary of the files.
+3. Instead, identify and return the top-three technical curiosities or structural concerns where the current project state might conflict with the 'Law' established in these documents.
+
+Confirm you have completed this step, and present any concerns before we proceed to Phase 2.
 ```
 
-### 📤 2. Session Closure (Submit on Exit)
+---
+
+### ⚙️ PHASE 2: Live Codebase and Pipeline Audit
+*Submit this prompt to verify the system's operational and structural state.*
+
+```
+We will now run a comprehensive audit of the active repository state.
+
+DIRECTIONS:
+1. Run `git status` to provide a clean repository report (but do not commit or push yet).
+2. Verify you are using the most recent specification of CSC by cross-referencing your findings with the authoritative blueprint at: https://github.com/ajaxstardust/CONTRACT-Style-Comments
+3. Scan the core codebase files for INLINE CONTRACT comments. Evaluate whether these inline comments are highly targeted steering mechanisms (compliant with the DufoSPY standard: https://dufospy.com/artificial-intelligence/contract-comments) or redundant, bloated comments that should be cleaned up.
+4. Verify the active status of all critical environment pipelines and database connections relevant to this project (such as Python virtual environments, Gunicorn proxies, local SQLite databases, Nginx/Apache bindings, or Node.js packages).
+
+SUMMARY REPORT FORMAT:
+- Provide a concise 2-sentence summary of your overall discoveries.
+- State the top-three curiosities or concerns regarding the current operational state versus the ideal specification state.
+- List the verified status of all system pipelines and active local runtime boundaries.
+```
+
+---
+
+### 💡 Pro-Tips for "Contract-Style" Prompting
+
+#### ⚓ 1. The "Law" Anchor (Short-Circuiting Drift)
+If the LLM begins to hallucinate, introduce bloated code, or drift from the design system, use this **Short-Circuit Prompt**:
+> *"Check Section [X] of `contract/CONTRACT.md`. Does your last suggestion violate the established Law of this system? Realign your response with the invariants."*
+
+#### ⚡ 2. Performance & Hardware Constraints
+Add hardware-specific runtime requirements directly to Phase 2 to optimize model output:
+> *"Optimize all code suggestions for [Your Framework, e.g., Laravel 12 / React 19] standards, and tailor execution efficiency for local CPU/GPU model processing."*
+
+---
+
+### 📤 Session Closure (Stewardship Handshake on Exit)
+*Submit this prompt when wrapping up development to commit the session's learnings.*
 
 ```
 Please take a moment as a project steward to reconcile the Project Specification documents under `./contract/`. Review the codebase edits from this session and update the spec files to reflect any new invariants, file structures, or resource targets introduced.
@@ -131,4 +177,4 @@ CRITICAL DIRECTIVES:
 
 ---
 
-> *This framework is a product of the author's **Missing Axiom** theory. For a deep systems-thinking deep dive into AI collaboration, read the **[manifesto article](https://whatsonyourbrain.com/contract-style-comments-part-4-governance-ownership-and-scope)**.*
+> *This framework is a product of the **Missing Axiom** theory. For a deep systems-thinking deep dive into AI collaboration, read the **[manifesto article](https://whatsonyourbrain.com/contract-style-comments-part-4-governance-ownership-and-scope)**.*
