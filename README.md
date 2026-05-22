@@ -110,7 +110,7 @@ IMPORTANT: Files outside `./contract/` (such as root README.md, MEMORY.md, TODO.
 After reading the specification, return to the user and state:
 1. A brief 2-sentence summary of your understanding of this system's invariants.
 2. Your top-three engineering curiosities or concerns discovered while auditing these files against the current codebase.
-3. A verification report on the live status of the runtime environment, active database connections, and backend services mapped in QUICKSTART.md (ensuring no silent dynamic outages or schema drift).
+3. A live system verification report: Auditing the active status of the local runtime (e.g. checking running processes, active ports, database connections/schemas, package managers, virtual environments, or container boundaries described in QUICKSTART.md) to ensure the execution plane matches the documented map.
 ```
 
 ### 📤 2. Session Closure (Submit on Exit)
