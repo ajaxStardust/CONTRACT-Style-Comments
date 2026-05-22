@@ -21,6 +21,17 @@ To prevent "Contextual Drift" and ensure the agent understands the system's oper
 
 ---
 
+## 🏛️ STAGING URL and LIVE HTTP URL
+
+Primary Entry Point:
+ - LIVE: https://example.com
+ - STAGING: https://example.localhost
+
+Secondary Entry Point:
+  exists because of feature x.
+
+---
+
 ## 🗺️ The System Map (Key Components)
 
 *Modify this table to reflect the specific architecture of your project.*
