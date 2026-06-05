@@ -93,19 +93,21 @@ Using CSC changes your relationship with AI. You are no longer merely asking for
 
 ---
 
+# Initial Session Prompts for Contract-Style-Comments (CSC)
+
 ## 🤖 AI Agent Session Prompts
 
-> 📘 **Inline Contract Reference Standard:** For the precise visual formatting and visual hierarchy of inline codebase contracts, refer to the authoritative [DufoSPY Specification Template](https://dufospy.com/artificial-intelligence/contract-comments).
+📘 **Inline Contract Reference Standard:** For the precise visual formatting and visual hierarchy of inline codebase contracts, refer to the authoritative DufoSPY Specification Template.
 
 ### 🧠 The Human-Centric Grounding Handshake (Cognitive Anchoring)
-Before presenting specific technical directions, it is highly recommended to introduce your **cognitive working environment** to the LLM. 
+
+Before presenting specific technical directions, it is highly recommended to introduce your **cognitive working environment** to the LLM.
 
 Providing a personal introduction—such as framing the `./contract/` framework as a vital externalized memory support to counter cognitive load, short-term memory gaps, or busy development contexts—transforms the LLM from a generic responder into a highly protective, empathetic **Steward of the System**. This anchors the AI’s intent to maintain strict consistency, prevent regression, and defend your codebase from logic drift.
 
----
-
 ### 📥 PHASE 1: Project Context Initialization (Cold Start)
-*Submit this prompt at the start of a session to establish strict spec ingestion.*
+
+_Submit this prompt at the start of a session to establish strict spec ingestion._
 
 ```
 Initialize Project Context using the Contract-Style-Comments (CSC) methodology. Read the following Markdown files located in the project's `./contract/` directory using line-number indexing to ensure full ingestion of the active system Specification:
@@ -117,62 +119,77 @@ Initialize Project Context using the Contract-Style-Comments (CSC) methodology. 
     ./contract/FUTURE.md (Roadmap & Scaling)
 
 DIRECTIONS:
-1. Verify the integrity of these files.
-2. Once read, DO NOT return a verbose summary of the files.
-3. Instead, identify and return the top-three technical curiosities or structural concerns where the current project state might conflict with the 'Law' established in these documents.
+> IMPORTANT: Please hold your concerns until Phase 2. This ensures that all governance artifacts are ingested before evaluating alignment, preventing premature conclusions based on partial context.
 
-Confirm you have completed this step, and present any concerns before we proceed to Phase 2.
+CONSTRAINTS:
+  - Do NOT return a verbose summary of the files.
+  - Do NOT attempt to run the app or access database files unless requested.
+  - Do NOT scan the codebase yet; this will be covered in Phase 2.
+
+TASKS:
+1. Verify the integrity of these files by confirming their presence and readability.
+2. Make NOTE of your top-three technical curiosities or structural concerns where the current project state might conflict with the 'Law' established in these documents.
+
+[ STOP ]
 ```
 
----
-
 ### ⚙️ PHASE 2: Live Codebase and Pipeline Audit
-*Submit this prompt to verify the system's operational and structural state.*
+
+_Submit this prompt to verify the system's operational and structural state._
 
 ```
 We will now run a comprehensive audit of the active repository state.
 
 DIRECTIONS:
-1. Run `git status` to provide a clean repository report (but do not commit or push yet).
+1. Run `git status` to provide a clean repository report. Note that uncommitted changes in `contract/ASSETS.md` and `contract/CONTRACT.md` are intentional and reflect the most recent updates from the previous session. Do not flag these as issues requiring immediate resolution.
 2. Verify you are using the most recent specification of CSC by cross-referencing your findings with the authoritative blueprint at: https://github.com/ajaxstardust/CONTRACT-Style-Comments
 3. Scan the core codebase files for INLINE CONTRACT comments. Evaluate whether these inline comments are highly targeted steering mechanisms (compliant with the DufoSPY standard: https://dufospy.com/artificial-intelligence/contract-comments) or redundant, bloated comments that should be cleaned up.
-4. Verify the active status of all critical environment pipelines and database connections relevant to this project (such as Python virtual environments, Gunicorn proxies, local SQLite databases, Nginx/Apache bindings, or Node.js packages).
+4. Verify the active status of all critical environment pipelines and database connections relevant to this project (such as Python virtual environments, Gunicorn proxies, local SQLite databases, Nginx/Apache bindings, or Node.js packages). Python projects require `source ./env/bin/activate` to test pip.
 
 SUMMARY REPORT FORMAT:
 - Provide a concise 2-sentence summary of your overall discoveries.
 - State the top-three curiosities or concerns regarding the current operational state versus the ideal specification state.
 - List the verified status of all system pipelines and active local runtime boundaries.
+
+[ STOP ]
+
+Caveat:
+⚡ 2. Performance & Hardware Constraints
+Add hardware-specific runtime requirements directly to Phase 2 to optimize model output:
+
+"Optimize all code suggestions for [Your Framework, e.g., Laravel 12 / React 19] standards, and tailor execution efficiency for local CPU/GPU model processing."
 ```
 
----
-
-### 💡 Pro-Tips for "Contract-Style" Prompting
-
-#### ⚓ 1. The "Law" Anchor (Short-Circuiting Drift)
-If the LLM begins to hallucinate, introduce bloated code, or drift from the design system, use this **Short-Circuit Prompt**:
-> *"Check Section [X] of `contract/CONTRACT.md`. Does your last suggestion violate the established Law of this system? Realign your response with the invariants."*
-
-#### ⚡ 2. Performance & Hardware Constraints
-Add hardware-specific runtime requirements directly to Phase 2 to optimize model output:
-> *"Optimize all code suggestions for [Your Framework, e.g., Laravel 12 / React 19] standards, and tailor execution efficiency for local CPU/GPU model processing."*
-
----
-
 ### 📤 Session Closure (Stewardship Handshake on Exit)
-*Submit this prompt when wrapping up development to commit the session's learnings.*
+
+_Submit this prompt when wrapping up development to commit the session's learnings._
 
 ```
 Please take a moment as a project steward to reconcile the Project Specification documents under `./contract/`. Review the codebase edits from this session and update the spec files to reflect any new invariants, file structures, or resource targets introduced.
 
 CRITICAL DIRECTIVES:
 1. Maintain the Governance Trust Paradox: the Contract is not a semantic prose copy of git history. Git holds chronology; the Contract holds present-tense law.
-2. Ensure all updated LAST REVIEWED lines carry today's date formatted strictly as `YYYY-MM-DD-QUALIFIER` (e.g. YYYY-MM-DD-STEWARDSHIP) followed by your signature stamp `SIGNATURE: <agent-model-identity>`.
+2. **Governance Identifier Convention**:
+   - Ensure all updated `LAST REVIEWED` lines carry today's date formatted strictly as `YYYY-MM-DD-QUALIFIER` (e.g., `2026-06-05-STEWARDSHIP`).
+   - The `QUALIFIER` must be a semantic label (e.g., `STEWARDSHIP`, `TERPENE-PURITY`, `DB-SCHEMA-SYNC`) to prevent the model from misinterpreting dates as auto-incrementing sequences.
+   - **NEVER use a future date** unless explicitly documented at the point of use.
+   - Follow each date with your signature stamp: `SIGNATURE: <agent-model-identity>`.
 3. Adhere strictly to the Narrowest-Scope Update Rule:
-   - Logical invariants/boundaries changed -> Update `./contract/CONTRACT.md`
-   - Operational/run commands/file maps changed -> Update `./contract/QUICKSTART.md`
-   - Visual branding/styling/binary assets changed -> Update `./contract/ASSETS.md`
-   - Architectural relationships changed -> Update `./contract/WHY.md`
-   - Near-term priorities/prospective roadmaps changed -> Update `./contract/FUTURE.md`
+   - Logical invariants/boundaries changed → Update `./contract/CONTRACT.md`
+   - Operational/run commands/file maps changed → Update `./contract/QUICKSTART.md`
+   - Visual branding/styling/binary assets changed → Update `./contract/ASSETS.md`
+   - Architectural relationships changed → Update `./contract/WHY.md`
+   - Near-term priorities/prospective roadmaps changed → Update `./contract/FUTURE.md`
+4. Before committing, review the changes to ensure they accurately reflect the session's updates and adhere to the CSC principles.
+5. Execute `git add .` and `git commit` to stage and commit the changes. If a remote upstream exists, also execute `git push` to sync the changes.
+
+DEPLOYMENT CONSIDERATIONS:
+- **To RSYNC or not to RSYNC**: If this project also lives on a LIVE public server, perform a safe rsync to the LIVE server.
+  - Request proper credentials if you need them.
+  - Execute `rsync -n` (dry run) first, and verify with the user that the information is correct.
+  - Remove the `-n` flag and execute `rsync` only after confirmation.
+
+[ STOP ]
 ```
 
 ---
