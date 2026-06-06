@@ -195,4 +195,4 @@ DEPLOYMENT CONSIDERATIONS:
 
 ---
 
-> *This framework is a product of the **Missing Axiom** theory. For a deep systems-thinking deep dive into AI collaboration, read the **[manifesto article](https://whatsonyourbrain.com/contract-style-comments-part-4-governance-ownership-and-scope)**.*
+> *This framework is a product of the Contract-Style Comments for the AI Coding Agent / **Missing Axiom** theory, by Jeff Sabarese (ajaxStardust). For a deep systems-thinking deep dive into AI collaboration, read the **[manifesto article](https://whatsonyourbrain.com/contract-style-comments-part-4-governance-ownership-and-scope)**.*
