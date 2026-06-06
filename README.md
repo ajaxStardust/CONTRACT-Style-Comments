@@ -125,6 +125,7 @@ CONSTRAINTS:
   - Do NOT return a verbose summary of the files.
   - Do NOT attempt to run the app or access database files unless requested.
   - Do NOT scan the codebase yet; this will be covered in Phase 2.
+  - If a `read_file` call returns "File not found or unreadable" for a path Phase 1 depends on, the next calls must be `ls -la <dir>` and `wc -l <file>`, then retry `read_file` with explicit `start_line` and `end_line` (in chunks if the file is large).
 
 TASKS:
 1. Verify the integrity of these files by confirming their presence and readability.
