@@ -1,7 +1,8 @@
 # 🏛️ Contract-Style-Comments (CSC)
 
-[![The Agentic Trivium – Contract-Style Comments](https://img.youtube.com/vi/5a1NLhIiefY/maxresdefault.jpg)](https://youtu.be/1Fux-E4eE50?si=npSGfw4R5dvHly90)
-> ▶️ **[Watch the Explainer Video: The Agentic Trivium](https://youtu.be/1Fux-E4eE50?si=npSGfw4R5dvHly90)**
+[![The Agentic Trivium – Contract-Style Comments](https://img.youtube.com/vi/5a1NLhIiefY/maxresdefault.jpg)](https://www.youtube.com/playlist?list=PL4uFndsTW8Gcco8QCios5s9u4z7mnRLq-)
+> ▶️ **[Watch the Explainer Video: The Agentic Trivium](https://www.youtube.com/playlist?list=PL4uFndsTW8Gcco8QCios5s9u4z7mnRLq-)**
+
 
 Contract-Style-Comments (CSC) is a **domain-agnostic systems-thinking framework** that governs the interaction between human intent and stateless AI execution. It provides a structured, platform-independent boilerplate to ground AI coding agents in present-tense system law, operational truth, and presentation bounds.
 
