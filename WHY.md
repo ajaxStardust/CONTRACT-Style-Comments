@@ -46,6 +46,19 @@ Changes should have the minimal necessary impact on documentation. This rule pre
 
 ---
 
+## Transport-Layer Encoding (Practitioner Rule)
+
+When updating any governance artifact through a string-fragile transport — an AI agent tool call, a JSON payload, a shell heredoc, or any channel that interprets `:` `"` `` ` `` `—` as syntax — encode the full new file content as base64 in the transport and decode on receipt. The file on disk is **always plain, readable Markdown**; encoding is a transport concern, not a content concern.
+
+- INVARIANT: Governance artifacts on disk are plain Markdown. Base64 is a transport, never a storage format.
+- INVARIANT: An agent that uses a string-fragile transport MUST encode the payload as base64 before transmission and decode on receipt.
+- PROHIBITION: Do not commit base64-encoded governance artifacts. The artifact must be human-readable to a steward opening the file in any text editor.
+- POSTCONDITION: After a base64-transport edit, the on-disk file passes a `cat`/`head`/`tail`/`grep`/text-editor read as plain prose. Any reader can verify the edit by decoding the transport payload and comparing to the file.
+
+This rule prevents silent character corruption (em-dashes rendered as `â€"`, smart quotes stripped, backticks removed, colons misinterpreted) without altering what the artifact looks like once written. Recommended, not required: tools that handle Unicode and Markdown cleanly may skip it.
+
+---
+
 ## Enforceability & Falsifiability Boundary
 
 CSC is a governance methodology first. Its strength is semantic constraint and recoverable intent; its risk is unenforced prose. To keep contracts operational:
