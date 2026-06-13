@@ -43,6 +43,12 @@ It is designed as a universal tool for **all coding developers**—from web and 
 * **Static Libraries:** The compiler must link to statically registered binary targets under `/lib/arch64/`.
 * **Hardware Register Map:** Explicitly map physical visual register layouts or custom vector graphics stored in EEPROM space.
 
+### 📚 Domain Example D: Pedagogical & Multi-Agent Persona Assets
+* **Canonical Asset Registry:** Every persona portrait, cast card, and workflow diagram used to teach or coordinate multi-agent roles must be registered below.
+* **Role Binding Invariant:** Visual persona assets must map unambiguously to documented CSC roles (e.g., Worker, Conductor, Adjudicator) and must not introduce conflicting role names in governance files.
+* **Source Preservation:** Vector or editable raster sources for persona sets must be retained alongside rendered outputs so that future revisions preserve the visual identity without re-fabrication.
+* **Example cast:** A four-worker persona set (Stores-It, Solves-It, Builder, Rescues-It) plus an adjudicator persona (Cue) used to teach the Conductor-Worker pattern in a Spec-Driven Development context.
+
 ---
 
 ## Date-Based Identifier Rules (Universal)

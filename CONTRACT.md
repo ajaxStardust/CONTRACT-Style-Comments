@@ -52,6 +52,17 @@ Use explicit labels where possible so claims are easy to test, audit, and disput
 - **Invariant**: Do not add middleware to the health-check route that requires a database connection.
 - **Customization Tip**: For a CMS, add: "Admin login must remain accessible even during maintenance mode."
 
+### 4. Multi-Agent Orchestration Invariants
+- **Rule**: Define the control-plane and execution-plane boundaries when more than one stateless agent operates on the repository.
+- **INVARIANT**: Only the Orchestrator (Conductor) may modify Triumvirate governance artifacts (`CONTRACT.md`, `WHY.md`, `QUICKSTART.md`). Workers are prohibited from editing these files.
+- **INVARIANT**: A Worker may only modify files within its assigned silo as recorded in `DELEGATION.md`. Cross-silo edits require an explicit scope extension granted by the Orchestrator.
+- **INVARIANT**: No two active Workers shall be assigned overlapping write scopes simultaneously.
+- **INVARIANT**: Source-touching edits produced by Workers must be written as `.suggested` copies under `evidence/edited/` for Orchestrator or human review. They must not be applied directly to live source files at execute time.
+- **INVARIANT**: The Orchestrator must reject or escalate any Delta proposal that lacks reproducible evidence (e.g., `evidence/pow.json`, test output, diff, or probe result).
+- **PROHIBITION**: Workers must not self-adjudicate conflicts. A Worker that discovers a conflict with another Worker's output must raise the conflict to the Orchestrator rather than overwrite the conflicting evidence.
+- **PROHIBITION**: The Orchestrator must not simultaneously act as a Worker on the same ticket. The control plane and execution plane must remain separate for the duration of an orchestrated task.
+- **Customization Tip**: For a project using the example persona set, label the Orchestrator as "Cue" and the Worker roles as "Stores-It", "Solves-It", "Builder", and "Rescues-It". The labels are mnemonic handles; the authority model is defined by the invariants above.
+
 ---
 
 ## Governance
@@ -71,8 +82,8 @@ Use explicit labels where possible so claims are easy to test, audit, and disput
 
 ## Last Reviewed & Trigger
 
-- **LAST REVIEWED**: YYYY-MM-DD-QUALIFIER
-- **REVIEW TRIGGER**: Update this file whenever a core system invariant, architectural boundary, or critical logic chain is modified.
+- **LAST REVIEWED**: 2026-06-13-ORCHESTRATOR-GOVERNANCE  SIGNATURE: Cue (claude-sonnet-4-6)
+- **REVIEW TRIGGER**: Update this file whenever a core system invariant, architectural boundary, critical logic chain, or multi-agent orchestration rule is modified.
 
 **REVIEW TRIGGER Structure Example:**
 ```

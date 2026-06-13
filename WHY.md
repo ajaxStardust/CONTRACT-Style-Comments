@@ -83,10 +83,66 @@ Within an active session, the AI agent is not merely a coder — it is a **Gover
 
 ---
 
+## Persona Sets as Governance Mnemonics
+
+Complex multi-agent workflows introduce a coordination cost that is not purely technical. Stateless agents must repeatedly infer their role, scope, and relationship to other agents from the same present-tense governance documents. A stable **persona set** — a small, named cast of recurring worker archetypes plus an adjudicator — functions as a lightweight mnemonic layer that reinforces the Conductor-Worker boundary without altering the formal governance structure.
+
+Personae are not replacements for `DELEGATION.md`, `CONTRACT.md`, or the Conductor role. They are **social coordination artifacts**: stable, human-readable handles that reduce cold-start ambiguity and make cross-agent responsibilities memorable across sessions. When a persona set is accompanied by visual assets, those assets become governed resources under `ASSETS.md` with the same rigor as logos, OGP cards, or model weights.
+
+### Example binding
+
+A Spec-Driven Development workflow may bind four worker personae and one adjudicator to canonical CSC responsibilities:
+
+| Persona | CSC Responsibility | Scope |
+|---|---|---|
+| **Stores-It** | Archivist / memory keeper | Maintains context, records, and governance state |
+| **Solves-It** | Auditor / investigator | Verifies claims, checks cross-references, hunts drift |
+| **Builder** | Implementer | Executes changes within delegated scope |
+| **Rescues-It** | Repair agent | Handles recovery, incident response, and contract repair |
+| **Cue** | Adjudicator / Orchestrator | Resolves scope disputes and finalizes judgment; not a Worker |
+
+The mapping itself is an invariant of the teaching interface: if a persona is reassigned to a different responsibility, both the persona documentation and any visual assets must be updated together to prevent semantic drift.
+
+---
+
+## Multi-Agent Governance and the Orchestrator Role
+
+Stateless AI agents operating in parallel introduce a coordination problem that is not solved by better prompts. When multiple agents share a codebase, each agent loads the repository with no memory of what the others are doing. Without a control plane, parallel execution produces **agent collision**: overlapping file writes, contradictory invariants, and silent overwrites of shared state.
+
+CSC addresses this with a strict separation between the **execution plane** and the **control plane**:
+
+- **Workers** are stateless implementers. Each Worker owns a narrowly scoped **silo** recorded in `DELEGATION.md`. Workers may read governance files, propose changes, generate evidence, and write `.suggested` edits, but they do not approve their own work or modify files outside their silo.
+- **The Orchestrator** is the control plane. It does not perform implementation work on the same ticket it is adjudicating. It owns scope resolution, conflict arbitration, and final approval of cross-cutting changes.
+
+In the example persona set above, the Orchestrator is labeled **Cue**. This label is a mnemonic handle for the control-plane role; the role itself is defined by authority and responsibility, not by the label.
+
+### The Verification vs. Judgment Boundary
+
+Workers are responsible for **verification**: they run checks, produce diffs, capture logs, and marshal reproducible evidence. The Orchestrator is responsible for **judgment**: it decides whether the evidence is sufficient, whether a scope extension is justified, and whether conflicting Delta proposals can be safely merged.
+
+This boundary is non-negotiable. A Worker that self-adjudicates ceases to be a Worker; an Orchestrator that implements while adjudicating ceases to be an objective control plane.
+
+### Binding authority of the Orchestrator
+
+The Orchestrator is the only role authorized to:
+
+1. Modify Triumvirate governance artifacts (`CONTRACT.md`, `WHY.md`, `QUICKSTART.md`).
+2. Grant scope extensions outside a Worker's delegated silo.
+3. Resolve conflicts between two or more Workers' evidence or proposed edits.
+4. Approve the promotion of a `.suggested` edit to the live source file.
+
+All Orchestrator decisions should be recorded in `DELTALOG.md` with a timestamp and signature. This creates an audit trail that future sessions can read, dispute, and reconcile.
+
+### Falsifiability requirement
+
+The Orchestrator rejects any claim that cannot be challenged by evidence. A Delta proposal without a corresponding `evidence/pow.json`, test output, diff, or reproducible probe is not ready for adjudication. This keeps the control plane from becoming a bottleneck of subjective approvals and ensures that judgment is applied to facts rather than confidence.
+
+---
+
 ## Last Reviewed & Trigger
 
-- **LAST REVIEWED**: 2026-04-15
-- **REVIEW TRIGGER**: Update this file when the relationship between artifacts or the governance ownership policy changes.
+- **LAST REVIEWED**: 2026-06-13-ORCHESTRATOR-GOVERNANCE  SIGNATURE: Cue (claude-sonnet-4-6)
+- **REVIEW TRIGGER**: Update this file when the relationship between artifacts, the governance ownership policy, the persona-to-role binding, or the Orchestrator's authority boundary changes.
 
 ---
 

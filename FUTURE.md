@@ -48,6 +48,10 @@ Use this artifact to preserve intent discovered during collaboration (for exampl
    - Evaluate rendering performance on large datasets.
    - Document expected limits once measured.
 
+4. **Persona-Based Teaching Interfaces**
+   - Extend CSC onboarding with optional persona sets that bind agent roles to stable visual and narrative identities, reducing cold-start coordination friction in multi-agent workshops and distributed teams.
+   - Example: a four-worker persona set plus an adjudicator used to teach the Conductor-Worker pattern in a Spec-Driven Development context.
+
 ## Deferred / Discussion Items
 
 1. Default external data policy

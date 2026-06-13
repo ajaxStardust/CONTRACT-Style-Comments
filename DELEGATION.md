@@ -7,6 +7,28 @@ This artifact tracks the active assignment of responsibility across the multi-ag
 
 ---
 
+## Role Definitions
+
+### Orchestrator (Conductor)
+The control-plane role. The Orchestrator does not perform implementation work on the same ticket it is adjudicating. It owns:
+- Scope adjudication and conflict resolution.
+- Approval of cross-silo modifications.
+- Modification of Triumvirate governance artifacts (`CONTRACT.md`, `WHY.md`, `QUICKSTART.md`).
+- Final judgment on whether a Worker's evidence justifies a merge.
+
+In the example persona set used by this framework, the Orchestrator is labeled **Cue**. The label is a mnemonic; the role is defined by the authority above.
+
+### Workers
+Stateless implementers bound to a narrowly scoped **silo**. Workers:
+- Read governance files and operate within their delegated scope.
+- Propose changes, generate reproducible evidence, and write `.suggested` edits.
+- Must request a scope extension from the Orchestrator before touching files outside their silo.
+- Must not self-adjudicate conflicts with other Workers.
+
+In the example persona set, Worker roles are labeled **Stores-It**, **Solves-It**, **Builder**, and **Rescues-It**.
+
+---
+
 ## Current Assignments
 
 | Agent Identity | Responsibility | File Scope / Silo | Timestamp (UTC) | Status |
@@ -32,4 +54,4 @@ This artifact tracks the active assignment of responsibility across the multi-ag
 ---
 
 ## Last Updated
-- **LAST UPDATED**: 2026-06-10-ALIGNMENT SIGNATURE: Claude Code (Gemma 4)
+- **LAST UPDATED**: 2026-06-13-ORCHESTRATOR-GOVERNANCE  SIGNATURE: Cue (claude-sonnet-4-6)
