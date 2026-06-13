@@ -68,6 +68,24 @@ graph TD
 
 ---
 
+## 🐝 The Fab Swarm: Personas for Multi-Agent Governance
+
+CSC can be taught with or without characters, but a stable cast of roles makes the control-plane / execution-plane split memorable across sessions. The **Fab Swarm** is one example persona set: four Worker archetypes plus an adjudicator.
+
+![Meet the Bumbles — the Fab Swarm cast card](meet-the-bumbles/the-bumbles-quad.webp)
+
+| Persona | CSC Role | Responsibility |
+|---|---|---|
+| **Stores-It** | Worker | Archivist / memory keeper — holds context and records |
+| **Solves-It** | Worker | Detective / auditor — verifies claims and hunts drift |
+| **Builder** | Worker | Implementer — executes changes within delegated scope |
+| **Rescues-It** | Worker | Repair agent — handles recovery and contract repair |
+| **Cue** | Orchestrator / Conductor | Adjudicates scope, resolves conflicts, and finalizes judgment |
+
+The image is a teaching aid, not a toy. It exists because stateless agents (and the humans who orchestrate them) benefit from stable, repeatable handles for responsibilities that are otherwise easy to forget mid-session.
+
+---
+
 ## 🤝 The Agentic Handshake
 
 Using CSC changes your relationship with AI. You are no longer merely asking for code—you are **governing a collaborator**.
