@@ -137,7 +137,8 @@ Initialize Project Context using the Contract-Style-Comments (CSC) methodology. 
     ./contract/ASSETS.md (Presentation & Resource Invariants)
     ./contract/FUTURE.md (Roadmap & Scaling)
 
-DIRECTIONS:
+DIRECTIONS: 
+Deploy a swarm of sub-agents to complete the tasks: 
 > IMPORTANT: Please hold your concerns until Phase 2. This ensures that all governance artifacts are ingested before evaluating alignment, preventing premature conclusions based on partial context.
 
 CONSTRAINTS:
@@ -160,7 +161,8 @@ _Submit this prompt to verify the system's operational and structural state._
 ```
 We will now run a comprehensive audit of the active repository state.
 
-DIRECTIONS:
+DIRECTIONS: 
+Deploy a swarm of sub-agents to complete the tasks: 
 1. Run `git status` to provide a clean repository report. Note that uncommitted changes in `contract/ASSETS.md` and `contract/CONTRACT.md` are intentional and reflect the most recent updates from the previous session. Do not flag these as issues requiring immediate resolution.
 2. Verify you are using the most recent specification of CSC by cross-referencing your findings with the authoritative blueprint at: https://github.com/ajaxstardust/CONTRACT-Style-Comments
 3. Scan the core codebase files for INLINE CONTRACT comments. Evaluate whether these inline comments are highly targeted steering mechanisms (compliant with the DufoSPY standard: https://dufospy.com/artificial-intelligence/contract-comments) or redundant, bloated comments that should be cleaned up.
@@ -188,6 +190,7 @@ _Submit this prompt when wrapping up development to commit the session's learnin
 Please take a moment as a project steward to reconcile the Project Specification documents under `./contract/`. Review the codebase edits from this session and update the spec files to reflect any new invariants, file structures, or resource targets introduced.
 
 CRITICAL DIRECTIVES:
+Deploy a swarm of sub-agents to complete the tasks: 
 1. Maintain the Governance Trust Paradox: the Contract is not a semantic prose copy of git history. Git holds chronology; the Contract holds present-tense law.
 2. **Governance Identifier Convention**:
    - Ensure all updated `LAST REVIEWED` lines carry today's date formatted strictly as `YYYY-MM-DD-QUALIFIER` (e.g., `2026-06-05-STEWARDSHIP`).
