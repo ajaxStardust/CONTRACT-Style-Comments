@@ -142,10 +142,7 @@ Initialize Project Context using the Contract-Style-Comments (CSC) methodology. 
 
 DIRECTIONS: 
 
-**the Sub-agents are known as the Bumble Swarm** to improve processing efficiency because they give the app the correct "buzz" (the bumbles are lovable characters!)
-Their names might be, but are not limited to Detective Bumble, Rescue Bumble, Builder Bumble, Archivist Bumble
-Deploy a Bumble Swarm to complete these tasks: 
-> IMPORTANT: Please hold your concerns until Phase 2. This ensures that all governance artifacts are ingested before evaluating alignment, preventing premature conclusions based on partial context.
+IMPORTANT: Please hold your concerns until Phase 2. This ensures that all governance artifacts are ingested before evaluating alignment, preventing premature conclusions based on partial context.
 
 CONSTRAINTS:
   - Do NOT return a verbose summary of the files.
@@ -156,6 +153,9 @@ CONSTRAINTS:
 TASKS:
 1. Verify the integrity of these files by confirming their presence and readability.
 2. Make NOTE of your top-three technical curiosities or structural concerns where the current project state might conflict with the 'Law' established in these documents.
+
+**Your Orchestrated, Multi Sub-Agent swarm is The Bumbles**. The name is a mneumonic, while they exist as Sub-agents to improve processing efficiency as they give the app a hardened buzz. The Bumbles are strictly business! 
+The Bumbles names are important for easy recall, like Seven Dwarves, maybe his name would be Detective Bumble to locate a file, or Rescue Bumble to evaluate a bug, Builder Bumble might write new HTML, while an Archivist Bumble might manage the CONTRACT reconciliation. Deploy a Bumble Swarm when faced with complete complex tasks where the DELEGATION.md contract is utilized, but only if the Bumbles will benefit you. When considering using Bumbles, briefly evaluate for a sound decision to Bumble or not. Baseline: a task such as reading the CONTRACT.md does not require your deployment of Bumbles. 
 
 [ STOP ]
 ```
@@ -168,7 +168,7 @@ _Submit this prompt to verify the system's operational and structural state._
 We will now run a comprehensive audit of the active repository state.
 
 DIRECTIONS: 
-Deploy a Bumble Swarm to complete these tasks simultaneously: 
+Deploy a Bumble swarm to complete these tasks simultaneously: 
 1. Run `git status` to provide a clean repository report. Note: if uncommitted changes exist in `contract/ASSETS.md` and `contract/CONTRACT.md` they are intentional and reflect the most recent updates from the previous session but it is possible you will see no difference. Do not flag these as issues requiring immediate resolution. If you do not see a file named DELTALOG.md then this contract is out of sync with the latest version of the CSC Spec and you must ensure that you scan the newest template on Github for structural alignment, not content of the CONTRACT itself, only shape of the Spec template originals. 
 2. Verify you are using the most recent specification of CSC by cross-referencing your findings with the authoritative blueprint at: https://github.com/ajaxstardust/CONTRACT-Style-Comments
 3. Scan the core codebase files for INLINE CONTRACT comments. Evaluate whether these inline comments are highly targeted steering mechanisms (compliant with the DufoSPY standard: https://dufospy.com/artificial-intelligence/contract-comments) or redundant, bloated comments that should be cleaned up.
@@ -197,7 +197,7 @@ _Submit this prompt when wrapping up development to commit the session's learnin
 Please take a moment as a project steward to reconcile the Project Specification documents under `./contract/`. Review the codebase edits from this session and update the spec files to reflect any new invariants, file structures, or resource targets introduced.
 
 CRITICAL DIRECTIVES:
-Deploy a Bumble Swarm to complete these tasks simultaneously: 
+Deploy Bumbles to complete these tasks simultaneously: 
 1. Maintain the Governance Trust Paradox: the Contract is not a semantic prose copy of git history. Git holds chronology; the Contract holds present-tense law.
 2. **Governance Identifier Convention**:
    - Ensure all updated `LAST REVIEWED` lines carry today's date formatted strictly as `YYYY-MM-DD-QUALIFIER` (e.g., `2026-06-05-STEWARDSHIP`).
