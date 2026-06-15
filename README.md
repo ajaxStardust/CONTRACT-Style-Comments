@@ -141,9 +141,7 @@ Initialize Project Context using the Contract-Style-Comments (CSC) methodology. 
 	./contract/DELTALOG.md
 
 DIRECTIONS: 
-
-IMPORTANT: Please hold your concerns until Phase 2. This ensures that all governance artifacts are ingested before evaluating alignment, preventing premature conclusions based on partial context.
-
+	Read markdown files contained in the ./contract directory. What you find there is the Source of Truth; the law you obey for the remainder of the project. Acknowledge, but say no more until Phase 2.
 CONSTRAINTS:
   - Do NOT return a verbose summary of the files.
   - Do NOT attempt to run the app or access database files unless requested.
@@ -154,8 +152,8 @@ TASKS:
 1. Verify the integrity of these files by confirming their presence and readability.
 2. Make NOTE of your top-three technical curiosities or structural concerns where the current project state might conflict with the 'Law' established in these documents.
 
-**Your Orchestrated, Multi Sub-Agent swarm is The Bumbles**. The name is a mneumonic, while they exist as Sub-agents to improve processing efficiency as they give the app a hardened buzz. The Bumbles are strictly business! 
-The Bumbles names are important for easy recall, like Seven Dwarves, maybe his name would be Detective Bumble to locate a file, or Rescue Bumble to evaluate a bug, Builder Bumble might write new HTML, while an Archivist Bumble might manage the CONTRACT reconciliation. Deploy a Bumble Swarm when faced with complete complex tasks where the DELEGATION.md contract is utilized, but only if the Bumbles will benefit you. When considering using Bumbles, briefly evaluate for a sound decision to Bumble or not. Baseline: a task such as reading the CONTRACT.md does not require your deployment of Bumbles. 
+Later: 
+Your Orchestrated, Multi Sub-Agent swarm are The Bumbles, the troupe of anthropomorphized, lovable characterizations of processing tasks. Your Bumble Swarm exists as a team which you command as Conductor and Orchestrator. Use DELEGATION.md to manage this processing efficiency. Bumbles only buzz to harden the app and help when you have too many tasks! Named Detective Bumble, because he locates a file; Rescue Bumble to evaluate a bug; Builder Bumble might write new HTML, while an Archivist Bumble might manage the CONTRACT reconciliation. You will only deploy a Bumble Swarm when faced with complex tasks, where the DELEGATION.md contract is utilized if the Bumbles will benefit processing. Testing shows Bumbles might waste time if a task is simple. When considering using Bumbles, briefly evaluate for a sound decision to Bumble or not. Reading the CONTRACT.md files, per these instructions, does not require help from the Bumbles.
 
 [ STOP ]
 ```
