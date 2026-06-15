@@ -136,9 +136,14 @@ Initialize Project Context using the Contract-Style-Comments (CSC) methodology. 
     ./contract/QUICKSTART.md (Implementation Entry)
     ./contract/ASSETS.md (Presentation & Resource Invariants)
     ./contract/FUTURE.md (Roadmap & Scaling)
+	./contract/DELEGATION.md
+	./contract/DELTALOG.md
 
 DIRECTIONS: 
-Deploy a swarm of sub-agents to complete the tasks: 
+
+**the Sub-agents are known as the Bumble Swarm** to improve processing efficiency because they give the app the correct "buzz" (the bumbles are lovable characters!)
+Their names might be, but are not limited to Detective Bumble, Rescue Bumble, Builder Bumble, Archivist Bumble
+Deploy a Bumble Swarm to complete these tasks: 
 > IMPORTANT: Please hold your concerns until Phase 2. This ensures that all governance artifacts are ingested before evaluating alignment, preventing premature conclusions based on partial context.
 
 CONSTRAINTS:
@@ -162,16 +167,17 @@ _Submit this prompt to verify the system's operational and structural state._
 We will now run a comprehensive audit of the active repository state.
 
 DIRECTIONS: 
-Deploy a swarm of sub-agents to complete the tasks: 
-1. Run `git status` to provide a clean repository report. Note that uncommitted changes in `contract/ASSETS.md` and `contract/CONTRACT.md` are intentional and reflect the most recent updates from the previous session. Do not flag these as issues requiring immediate resolution.
+Deploy a Bumble Swarm to complete these tasks simultaneously: 
+1. Run `git status` to provide a clean repository report. Note: if uncommitted changes exist in `contract/ASSETS.md` and `contract/CONTRACT.md` they are intentional and reflect the most recent updates from the previous session but it is possible you will see no difference. Do not flag these as issues requiring immediate resolution. If you do not see a file named DELTALOG.md then this contract is out of sync with the latest version of the CSC Spec and you must ensure that you scan the newest template on Github for structural alignment, not content of the CONTRACT itself, only shape of the Spec template originals. 
 2. Verify you are using the most recent specification of CSC by cross-referencing your findings with the authoritative blueprint at: https://github.com/ajaxstardust/CONTRACT-Style-Comments
 3. Scan the core codebase files for INLINE CONTRACT comments. Evaluate whether these inline comments are highly targeted steering mechanisms (compliant with the DufoSPY standard: https://dufospy.com/artificial-intelligence/contract-comments) or redundant, bloated comments that should be cleaned up.
-4. Verify the active status of all critical environment pipelines and database connections relevant to this project (such as Python virtual environments, Gunicorn proxies, local SQLite databases, Nginx/Apache bindings, or Node.js packages). Python projects require `source ./env/bin/activate` to test pip.
+4. You may now test for such things as pipeline compile errors, and you may now query any data source (e.g. MySQL) with SELECT statements to investigate the schema. Verify the active status of all critical environment pipelines and database connections relevant to this project (such as Python virtual environments, Gunicorn proxies, local SQLite databases, Nginx/Apache bindings, or Node.js packages. e.g. Python projects typically require `source ./env/bin/activate` to use pip per system constraints.)
 
 SUMMARY REPORT FORMAT:
 - Provide a concise 2-sentence summary of your overall discoveries.
 - State the top-three curiosities or concerns regarding the current operational state versus the ideal specification state.
 - List the verified status of all system pipelines and active local runtime boundaries.
+- look for any relevant shell scripts for restarting the enviornment, and audit (e.g. ./restart-gunicorn.sh for a Python Flask environment)
 
 [ STOP ]
 
@@ -190,7 +196,7 @@ _Submit this prompt when wrapping up development to commit the session's learnin
 Please take a moment as a project steward to reconcile the Project Specification documents under `./contract/`. Review the codebase edits from this session and update the spec files to reflect any new invariants, file structures, or resource targets introduced.
 
 CRITICAL DIRECTIVES:
-Deploy a swarm of sub-agents to complete the tasks: 
+Deploy a Bumble Swarm to complete these tasks simultaneously: 
 1. Maintain the Governance Trust Paradox: the Contract is not a semantic prose copy of git history. Git holds chronology; the Contract holds present-tense law.
 2. **Governance Identifier Convention**:
    - Ensure all updated `LAST REVIEWED` lines carry today's date formatted strictly as `YYYY-MM-DD-QUALIFIER` (e.g., `2026-06-05-STEWARDSHIP`).
@@ -207,10 +213,10 @@ Deploy a swarm of sub-agents to complete the tasks:
 5. Execute `git add .` and `git commit` to stage and commit the changes. If a remote upstream exists, also execute `git push` to sync the changes.
 
 DEPLOYMENT CONSIDERATIONS:
-- **To RSYNC or not to RSYNC**: If this project also lives on a LIVE public server, perform a safe rsync to the LIVE server.
+- **To RSYNC or not to RSYNC**: If this project also lives on a LIVE public server, request authorization to perform a safe rsync to the LIVE server.
   - Request proper credentials if you need them.
   - Execute `rsync -n` (dry run) first, and verify with the user that the information is correct.
-  - Remove the `-n` flag and execute `rsync` only after confirmation.
+  - Remove the `-n` flag and execute `rsync` only after confirmation with the User.
 
 [ STOP ]
 ```
