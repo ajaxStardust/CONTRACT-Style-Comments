@@ -103,8 +103,9 @@ Using CSC changes your relationship with AI. You are no longer merely asking for
    ```bash
    git clone https://github.com/ajaxstardust/CONTRACT-Style-Comments.git ./contract
    ```
+   If this is the very first use of CSC in your project, it is a good idea to treat the LLM with special attention on this step. Explain to it that the template needs changing for alignment with your current codebase. 
 
-2. **Customize Your Rules:**
+2. **Tell the LLM to Customize the CONTRACT.md for This Project:**
    Open the files under `./contract/` and replace the placeholder scaffolding with your project's active invariants, file maps, and asset requirements.
 
 3. **Anchor Your AI Agent:**
