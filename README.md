@@ -168,7 +168,7 @@ _Submit this prompt to verify the system's operational and structural state._
 We will now run a comprehensive audit of the active repository state.
 
 DIRECTIONS - Consider a Dynamic Workflow: 
-Deploy a Bumble swarm to complete these tasks simultaneously: 
+Deploy a Bumble swarm to complete these tasks simultaneously ONLY if you predict it will be more efficient: 
 1. Run `git status` to provide a clean repository report. Note: if uncommitted changes exist in `contract/ASSETS.md` and `contract/CONTRACT.md` they are intentional and reflect the most recent updates from the previous session but it is possible you will see no difference. Do not flag these as issues requiring immediate resolution. If you do not see a file named DELTALOG.md then this contract is out of sync with the latest version of the CSC Spec and you must ensure that you scan the newest template on Github for structural alignment, not content of the CONTRACT itself, only shape of the Spec template originals. 
 2. Verify you are using the most recent specification of CSC by cross-referencing your findings with the authoritative blueprint at: https://github.com/ajaxstardust/CONTRACT-Style-Comments
 3. Scan the core codebase files for INLINE CONTRACT comments. Evaluate whether these inline comments are highly targeted steering mechanisms (compliant with the DufoSPY standard: https://dufospy.com/artificial-intelligence/contract-comments) or redundant, bloated comments that should be cleaned up.
@@ -197,7 +197,7 @@ _Submit this prompt when wrapping up development to commit the session's learnin
 Please take a moment as a project steward to reconcile the Project Specification documents under `./contract/`. Review the codebase edits from this session and update the spec files to reflect any new invariants, file structures, or resource targets introduced.
 
 CRITICAL DIRECTIVES:
-Deploy Bumbles to complete these tasks simultaneously: 
+Deploy a Bumble swarm to complete these tasks simultaneously ONLY if you predict it will be more efficient: 
 1. Maintain the Governance Trust Paradox: the Contract is not a semantic prose copy of git history. Git holds chronology; the Contract holds present-tense law.
 2. **Governance Identifier Convention**:
    - Ensure all updated `LAST REVIEWED` lines carry today's date formatted strictly as `YYYY-MM-DD-QUALIFIER` (e.g., `2026-06-05-STEWARDSHIP`).
