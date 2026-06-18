@@ -226,5 +226,5 @@ DEPLOYMENT CONSIDERATIONS:
 
 ---
 
-> *This framework is a product of the Contract-Style Comments for the AI Coding Agent / **Missing Axiom** theory, by Jeff Sabarese (ajaxStardust). For a deep systems-thinking deep dive into AI collaboration, read the **[manifesto article](https://hackernoon.com/u/ajaxstardust)**.* 
+> *This framework is a product of the Contract-Style Comments for the AI Coding Agent / **Missing Axiom** theory, by Jeff Sabarese (ajaxStardust). For a deep systems-thinking deep dive into AI collaboration, read the **[manifesto article](https://hackernoon.com/why-agentic-software-development-needs-documentation-stewardship)**.*
 
