@@ -130,6 +130,7 @@ Providing a personal introduction—such as framing the `./contract/` framework 
 _Submit this prompt at the start of a session to establish strict spec ingestion._
 
 ```
+Human-in-the-Loop has reviewed the CONTRACT files and wants you to use most recent file change dates and audit for your own governance.
 Initialize Project Context using the Contract-Style-Comments (CSC) methodology. Read the following Markdown files located in the project's `./contract/` directory using line-number indexing to ensure full ingestion of the active system Specification:
 
     ./contract/WHY.md (Intent & Philosophy)
