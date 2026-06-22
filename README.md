@@ -46,6 +46,12 @@ graph TD
     style F fill:#2a3f5f,color:#fff,stroke:#fff
 ```
 
+## 📋 Quick Start Guide
+
+**New to CSC?** Begin with the [CHECKLIST.md](CHECKLIST.md) — a decision routing guide that helps you quickly determine which governance file to update for common scenarios.
+
+---
+
 ### 1. [CONTRACT.md](CONTRACT.md) — The Law (Invariants)
 *   **Purpose:** Defines the system's hard invariants, architectural boundaries, and absolute prohibitions.
 *   **Systems View:** What the system *is* and what must *never* break. Changes the least.
@@ -98,12 +104,14 @@ Using CSC changes your relationship with AI. You are no longer merely asking for
 
 ## 🚀 Getting Started (2-Minute Setup)
 
+**First time?** Start with the [CHECKLIST.md](CHECKLIST.md) to understand which governance file to update for your specific needs.
+
 1. **Clone the Boilerplate:**
    Clone this repository directly into a `./contract/` folder in the root of your project:
    ```bash
    git clone https://github.com/ajaxstardust/CONTRACT-Style-Comments.git ./contract
    ```
-   If this is the very first use of CSC in your project, it is a good idea to treat the LLM with special attention on this step. Explain to it that the template needs changing for alignment with your current codebase. 
+   If this is the very first use of CSC in your project, it is a good idea to treat the LLM with special attention on this step. Explain to it that the template needs changing for alignment with your current codebase.
 
 2. **Tell the LLM to Customize the CONTRACT.md for This Project:**
    Open the files under `./contract/` and replace the placeholder scaffolding with your project's active invariants, file maps, and asset requirements.
