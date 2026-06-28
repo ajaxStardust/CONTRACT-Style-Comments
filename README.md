@@ -1,6 +1,6 @@
 # 🏛️ Contract-Style-Comments (CSC)
 
-[![The Agentic Trivium – Contract-Style Comments](https://img.youtube.com/vi/5a1NLhIiefY/maxresdefault.jpg)](https://www.youtube.com/playlist?list=PL4uFndsTW8Gcco8QCios5s9u4z7mnRLq-)
+[![The Agentic Trivium – Contract-Style Comments](https://i.ytimg.com/vi_webp/flVrGyu2KjA/maxresdefault.webp)](https://www.youtube.com/playlist?list=PL4uFndsTW8Gcco8QCios5s9u4z7mnRLq-)
 > ▶️ **[Watch the Explainer Video: The Agentic Trivium](https://www.youtube.com/playlist?list=PL4uFndsTW8Gcco8QCios5s9u4z7mnRLq-)**
 
 
