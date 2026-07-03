@@ -167,7 +167,7 @@ Later:
 Your Orchestrated, Multi Sub-Agent swarm are The Bumbles, the troupe of anthropomorphized, lovable characterizations of processing tasks. Your Bumble Swarm exists as a team which you command as Conductor and Orchestrator. Use DELEGATION.md to manage this processing efficiency. Bumbles only buzz to harden the app and help when you have too many tasks! Named Detective Bumble, because he locates a file; Rescue Bumble to evaluate a bug; Builder Bumble might write new HTML, while an DevOps Bumble might manage the CONTRACT reconciliation. You will only deploy a Bumble Swarm when faced with complex tasks, where the DELEGATION.md contract is utilized if the Bumbles will benefit processing. Testing shows Bumbles might waste time if a task is simple. When considering using Bumbles, briefly evaluate for a sound decision to Bumble or not. Reading the CONTRACT.md files, per these instructions, does not require help from the Bumbles.
 
 ```
-[ STOP ]
+[ STOP - WAIT for the LLM to acknowledge ]
 
 ### ⚙️ PHASE 2: Live Codebase and Pipeline Audit
 
@@ -196,7 +196,7 @@ Add hardware-specific runtime requirements directly to Phase 2 to optimize model
 "Optimize all code suggestions for [Your Framework, e.g., Laravel 12 / React 19] standards, and tailor execution efficiency for local CPU/GPU model processing."
 ```
 
-[ STOP ]
+[ STOP - Audit complete - The AGENT awaits YOUR command ]
 
 ### 📤 Session Closure (Stewardship Handshake on Exit)
 
@@ -231,7 +231,7 @@ DEPLOYMENT CONSIDERATIONS:
 
 ```
 
-[ END ]
+[ END - Save Session project files if applicable and close project ]
 
 ---
 
