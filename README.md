@@ -177,7 +177,8 @@ _Submit this prompt to verify the system's operational and structural state._
 We will now run a comprehensive audit of the active repository state.
 
 DIRECTIONS - Consider a Dynamic Workflow: 
-Deploy a Bumble swarm to complete these tasks simultaneously ONLY if you predict it will be more efficient: 
+Deploy a Bumble swarm to complete these tasks simultaneously ONLY if you predict it will be more efficient:
+Upon any code edits, changes in binary assets, or other modifications which affect the project and this contract, update the narrowest owning contract-file (the Narrowest Scope Rule) before applying the modification then, if the project is a website, verify the affected entry point with cURL before asking the User to test in a web browser.
 1. Run `git status` to provide a clean repository report. Note: if uncommitted changes exist in `contract/ASSETS.md` and `contract/CONTRACT.md` they are intentional and reflect the most recent updates from the previous session but it is possible you will see no difference. Do not flag these as issues requiring immediate resolution. If you do not see a file named DELTALOG.md then this contract is out of sync with the latest version of the CSC Spec and you must ensure that you scan the newest template on Github for structural alignment, not content of the CONTRACT itself, only shape of the Spec template originals. 
 2. Verify you are using the most recent specification of CSC by cross-referencing your findings with the authoritative blueprint at: https://github.com/ajaxstardust/CONTRACT-Style-Comments
 3. Scan the core codebase files for INLINE CONTRACT comments. Evaluate whether these inline comments are highly targeted steering mechanisms (compliant with the DufoSPY standard: https://dufospy.com/artificial-intelligence/contract-comments) or redundant, bloated comments that should be cleaned up.
