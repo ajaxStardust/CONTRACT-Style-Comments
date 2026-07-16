@@ -104,8 +104,6 @@ Using CSC changes your relationship with AI. You are no longer merely asking for
 
 ## 🚀 Getting Started (2-Minute Setup)
 
-**First time?** Start with the [CHECKLIST.md](CHECKLIST.md) to understand which governance file to update for your specific needs.
-
 1. **Clone the Boilerplate:**
    Clone this repository directly into a `./contract/` folder in the root of your project:
    ```bash
