@@ -48,9 +48,7 @@ graph TD
 
 ## 📋 Quick Start Guide
 
-**New to CSC?** Begin with the [CHECKLIST.md](CHECKLIST.md) — a decision routing guide that helps you quickly determine which governance file to update for common scenarios.
-
----
+Overview of the files which your agent will read. This is the core of the framework. Everything else is less important than your agent ingesting and following the laws contained in the following contract files:
 
 ### 1. [CONTRACT.md](CONTRACT.md) — The Law (Invariants)
 *   **Purpose:** Defines the system's hard invariants, architectural boundaries, and absolute prohibitions.
