@@ -57,6 +57,33 @@ It is designed as a universal tool for **all coding developers**—from web and 
 
 ---
 
+## Asset Lifecycle Classification (Deploy Boundary — Universal)
+
+> **Modify this section to tag every resource directory with its deploy lifecycle class.** This axis is orthogonal to the *type* classification (visual/binary/generated) used in the Domain Examples above: type governs how an asset is produced and served, lifecycle governs whether it travels with a code deploy. See `CONTRACT.md` §5 (Asset Lifecycle & Deploy Boundary) for the governing invariant.
+
+| Class | Meaning | Deployed with code? | Typical examples |
+|---|---|---|---|
+| **SHIP** | Version-controlled source asset, shipped with the application | YES | CSS, JS, brand images, favicons, compiled static binaries, OGP cards |
+| **GENERATED** | Runtime-produced artifact, owned by a domain record | NEVER | user uploads, rendered audio/video, generated thumbnails, ML inference outputs |
+| **EPHEMERAL** | Caches, logs, temp files with no durable owner | NEVER | cache dirs, build temp, session temp |
+
+### Lifecycle Invariants (boilerplate — make these specific to your project)
+- **INVARIANT**: Each resource directory MUST be tagged SHIP, GENERATED, or EPHEMERAL in the registry table below. Untagged directories are a boundary violation.
+- **INVARIANT**: A deploy sync MUST exclude GENERATED and EPHEMERAL directories explicitly *by subdirectory name*. It MUST NEVER use a parent-directory exclude that drops SHIP assets alongside GENERATED ones.
+- **PROHIBITION**: Co-locating SHIP and GENERATED assets under a single excluded parent is a Separation of Concerns violation. If a shared parent is unavoidable, the deploy procedure must exclude by *subdirectory*, never the parent.
+
+### Resource Registry (with Lifecycle column — replace with your project's rows)
+
+| Asset | Path | Lifecycle | Purpose |
+|---|---|---|---|
+| _e.g._ Main CSS | `static/css/main.css` | SHIP | Global stylesheet |
+| _e.g._ Main JS | `static/js/main.js` | SHIP | UI interactions |
+| _e.g._ Favicon | `static/images/favicon.png` | SHIP | Browser tab icon |
+| _e.g._ User uploads | `static/uploads/` | GENERATED | Runtime user content |
+| _e.g._ Rendered media | `static/media/` | GENERATED | Runtime-produced artifacts |
+
+---
+
 ## Governance
 
 1. **Stewardship:** The active AI agent is the steward of this file and must update the registry before completing any task that adds, removes, or alters a static resource, visual layout, or binary variant.

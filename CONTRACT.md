@@ -63,6 +63,14 @@ Use explicit labels where possible so claims are easy to test, audit, and disput
 - **PROHIBITION**: The Orchestrator must not simultaneously act as a Worker on the same ticket. The control plane and execution plane must remain separate for the duration of an orchestrated task.
 - **Customization Tip**: For a project using the example persona set, label the Orchestrator as "Cue" and the Worker roles as "Stores-It", "Solves-It", "Builder", and "Rescues-It". The labels are mnemonic handles; the authority model is defined by the invariants above.
 
+### 5. Asset Lifecycle & Deploy Boundary
+- **Rule**: Every static/binary resource directory MUST be classified by deploy lifecycle so that a code deploy never silently drops shipped assets or clobbers runtime-generated data.
+- **INVARIANT**: Each resource directory MUST be tagged as exactly one of: **SHIP** (version-controlled, deployed with code), **GENERATED** (runtime-produced, owned by a record, never deployed), or **EPHEMERAL** (caches/logs/temp, never deployed). The registry of tags lives in `ASSETS.md`.
+- **INVARIANT**: A deployment sync (rsync, SCP, CI artifact upload, or equivalent) MUST exclude GENERATED and EPHEMERAL directories explicitly *by subdirectory name*. It MUST NEVER exclude a parent directory that also contains SHIP assets.
+- **PROHIBITION**: A parent-directory exclude (e.g., `--exclude='static/'` or `--exclude='public/'`) that drops SHIP assets (CSS/JS/images) alongside GENERATED assets (uploads/media) is a boundary violation — a Separation of Concerns failure in the deploy boundary. Name the GENERATED subdirectories individually instead.
+- **Customization Tip**: For a web app with a shared `static/` parent housing both `static/css/` (SHIP) and `static/uploads/` (GENERATED), the safe exclude set is `--exclude='static/uploads/'`, never `--exclude='static/'`. Record the classification in `ASSETS.md` and the safe command in `QUICKSTART.md`.
+- **Law-vs-Guidance Note**: This invariant is stated with `MUST`/`PROHIBITION`, not "should" or "for example". Stateless agents treat soft guidance as permission to ignore; the deploy boundary must be law.
+
 ---
 
 ## Governance

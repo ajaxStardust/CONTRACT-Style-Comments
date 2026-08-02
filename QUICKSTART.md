@@ -104,6 +104,34 @@ Before asking humans for browser screenshots or DevTools dumps, run first-party 
 
 ---
 
+## 🚀 Deploy Procedure (Asset Lifecycle Boundary)
+
+When deploying from staging to live (or local → remote via rsync/SCP/CI), the sync MUST respect the **Asset Lifecycle Boundary** (`CONTRACT.md` §5, `ASSETS.md` Asset Lifecycle Classification): SHIP assets travel with the code; GENERATED and EPHEMERAL assets are excluded *by subdirectory*.
+
+### Boundary-safe rsync pattern (replace paths with your project's)
+
+```bash
+# Exclude GENERATED and EPHEMERAL subdirs BY NAME. Never exclude a parent
+# that also holds SHIP assets (e.g., never --exclude='static/').
+rsync -avz --checksum \
+  --exclude='node_modules/' \
+  --exclude='.env' \
+  --exclude='static/uploads/' \
+  --exclude='static/media/' \
+  --exclude='__pycache__/' \
+  --exclude='.git/' \
+  ./  user@live-host:/var/www/app/
+```
+
+### Boundary rules (law, not guidance)
+- **MUST**: Exclude each GENERATED/EPHEMERAL subdirectory explicitly by name. These are runtime-owned; deploying them clobbers remote user data or ships gigabytes needlessly.
+- **MUST**: Ship SHIP assets (CSS/JS/images/binaries) — they are NOT excluded and travel with the code.
+- **PROHIBITION**: Never use a parent-directory exclude (e.g., `--exclude='static/'` or `--exclude='public/'`). It drops SHIP assets alongside GENERATED ones — the Separation of Concerns violation that leaves a deploy unstyled or broken. If you catch yourself writing it, stop and name the GENERATED subdirectories instead.
+- **MUST NOT** use `--delete` unless intentionally reconciling the remote tree; it can wipe remote-only GENERATED files with no local counterpart.
+- **MUST**: After the sync, run a Proven Check that SHIP assets landed on the remote (file exists + byte-identical checksum) and that no parent-directory exclude appears in the command.
+
+---
+
 ## ⚖️ The Narrowest-Scope Rule (Operational)
 
 In the CSC framework, this file owns **operational truth**.
