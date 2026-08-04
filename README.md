@@ -137,7 +137,7 @@ The magic SSH prompt to coerce the LLM into operating on a remote server. Typica
 
 ```
 please establish a remote connection, like so
-`ssh user@remote.host "cd /www/wwwroot/my-project-folder"`
+ssh user@remote.host "cd /www/wwwroot/my-project-folder"
 
 verify the folder exists and is not empty.
 IMPORTANT: For the remainder of this session, despite having to execute each command via SSH, pretend or think of it as our "REMOTE project pipeline" for it is where you will issue all commands unless explicitly specified otherwise henceforth (e.g. you wont be issuing commands in \$HOME for example) 
