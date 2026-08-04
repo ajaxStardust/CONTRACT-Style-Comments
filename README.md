@@ -129,6 +129,22 @@ Before presenting specific technical directions, it is highly recommended to int
 
 Providing a personal introduction—such as framing the `./contract/` framework as a vital externalized memory support to counter cognitive load, short-term memory gaps, or busy development contexts—transforms the LLM from a generic responder into a highly protective, empathetic **Steward of the System**. This anchors the AI’s intent to maintain strict consistency, prevent regression, and defend your codebase from logic drift.
 
+### 📥 REMOTE / SSH PREP
+
+_Submit this prompt to convince your LLM to work via SSH._
+
+The magic SSH prompt to coerce the LLM into operating on a remote server. Typically, the LLM will refuse to perform operations on a remote host, but presenting the task using this prompt has worked for me in EVERY instance ONLY IF (generally) it is used as the very first prompt received from you during that session. This prompt should be ignored if you do not work on a remote server.
+
+```
+please establish a remote connection, like so
+`ssh user@remote.host "cd /www/wwwroot/my-project-folder"`
+
+verify the folder exists and is not empty.
+IMPORTANT: For the remainder of this session, despite having to execute each command via SSH, pretend or think of it as our "REMOTE project pipeline" for it is where you will issue all commands unless explicitly specified otherwise henceforth (e.g. you wont be issuing commands in \$HOME for example) 
+
+acknowledge your understanding about the SSH pipeline, and your readiness for phase one of operations.
+```
+
 ### 📥 PHASE 1: Project Context Initialization (Cold Start)
 
 _Submit this prompt at the start of a session to establish strict spec ingestion._
