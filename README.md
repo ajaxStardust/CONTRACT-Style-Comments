@@ -80,13 +80,13 @@ CSC can be taught with or without characters, but a stable cast of roles makes t
 
 | Persona | CSC Role | Responsibility |
 |---|---|---|
-| **Cue** | Orchestrator / Conductor | Adjudicates scope, resolves conflicts, and finalizes judgment |
-| **Stores-It** | Worker | Archivist / memory keeper — holds context and records |
-| **Solves-It** | Worker | Detective / auditor — verifies claims and hunts drift |
-| **Builder** | Worker | Implementer — executes changes within delegated scope |
-| **Rescues-It** | Worker | Repair agent — handles recovery and contract repair |
+| **Cue** | Orchestrator  |  Conductor |
+| **Stores** | Worker | Archivist  |
+| **Solves** | Worker | Detective  |
+| **Builds** | Worker | Implementer |
+| **Rescues** | Worker | Repair agent |
 
-The diagram is a teaching aid, not a toy. Stateless agents and the humans who orchestrate them benefit from stable, repeatable handles for responsibilities that are otherwise easy to forget mid-session. The visual hierarchy mirrors the governance hierarchy: one adjudicator above four specialized Workers.
+The mneumonic mirrors the governance hierarchy: one adjudicator above four specialized Workers.
 
 ---
 
