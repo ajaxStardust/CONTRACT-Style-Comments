@@ -74,7 +74,7 @@ Overview of the files which your agent will read. This is the core of the framew
 
 ## 🐝 The Fab Swarm: Personas for Multi-Agent Governance
 
-> The mneumonic means to demonstrate the CSC governance hierarchy: one adjudicator above four specialized Workers. The **Fab Swarm** is one example persona set: four Worker archetypes plus an adjudicator.
+The mneumonic demonstrates the CSC agent governance hierarchy: one adjudicator above four specialized Workers. The **Fab Swarm** is one example persona set: four Worker archetypes plus an adjudicator.
 
 ![The Fab Swarm — control-plane and execution-plane roles](the-fab-swarm-cast-card.png)
 
