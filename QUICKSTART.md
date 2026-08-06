@@ -75,11 +75,42 @@ To get started, here are pre-filled examples for popular frameworks. Replace wit
 
 ## 🧪 Proven Checks (Verification Loop)
 
-A system is only as reliable as its verification process. Every session must conclude with a "Proven Check" to ensure the `CONTRACT.md` remains intact.
+A system is only as reliable as its ability to prove it still works. The Proven Checks section is the **Verification Steward** of `QUICKSTART.md` — it encodes the contract's claims as executable checks.
 
-1.  **Automated Tests**: Run `npm test` or `pytest` and verify 100% pass rate.
-2.  **State Verification**: Verify that a specific input (e.g., `X`) results in the expected output (e.g., `Y`) without violating any invariants.
-3.  **Governance Check**: Ensure that if a scope-affecting change was made, the matching documentation artifact has been updated.
+### The Verification Pattern
+
+Every project using CSC MUST implement this pattern (see `CONTRACT.md` §6):
+
+1. **`scripts/smoke_test.py`** — A standalone verification script that encodes the contract's claims as executable assertions. It uses the project's native test infrastructure (Flask test client, `curl` probes, build checks) and requires zero new dependencies.
+2. **`scripts/post_deploy.sh`** — A wrapper that chains restart + smoke test into a single deploy verification command.
+3. **Exit code discipline** — `0` = all checks pass, `1` = failures detected. Scriptable in any automation chain.
+
+### What the Smoke Test Covers (Template)
+
+The smoke test is project-specific, but the pattern is universal. Every smoke test SHOULD include these categories:
+
+| Category | What It Validates |
+|---|---|
+| **App Boot** | The application factory / entry point completes without error |
+| **Model/Data Layer** | All data models import cleanly; database connection alive |
+| **Component Registration** | All registered components (blueprints, routes, plugins) are present |
+| **Function Signatures** | Critical functions have the expected parameters (contract enforcement) |
+| **File Existence** | Required config files, templates, and assets exist on disk |
+| **Route Health** | Public routes return 200; auth-required routes return 302 |
+| **Template Rendering** | Rendered HTML contains expected content (macro presence, DOM IDs) |
+| **Contract Annotation Count** | Inline `# CONTRACT:` markers are above the minimum threshold |
+
+### Usage
+
+```bash
+# After any code change:
+./env/bin/python scripts/smoke_test.py          # fast (~3s, test client)
+./env/bin/python scripts/smoke_test.py --live   # also hit live HTTPS
+
+# Or use the post-deploy wrapper:
+bash scripts/post_deploy.sh                     # restart + test
+bash scripts/post_deploy.sh --live              # restart + test + live
+```
 
 ### Falsifiability Checklist (apply to critical claims)
 
@@ -154,7 +185,7 @@ In the CSC framework, this file owns **operational truth**.
 
 ## 🕒 Last Reviewed & Trigger
 
--   **LAST REVIEWED**: 2026-04-15
+-   **LAST REVIEWED**: YYYY-MM-DD-QUALIFIER
 -   **REVIEW TRIGGER**: Update this file whenever the project structure changes, new tools are introduced, or a more effective verification method is developed.
 
 ---

@@ -139,10 +139,20 @@ The Orchestrator rejects any claim that cannot be challenged by evidence. A Delt
 
 ---
 
+## Why Verification Enforcement Belongs in the Framework
+
+The CSC framework makes strong claims: INV-XX invariants, PROHIBITIONs, MUST-level deploy boundaries. But a claim that cannot be challenged by evidence is guidance, not law. The framework's own CONTRACT.md says this explicitly — yet the original spec provided no mechanism to generate that evidence.
+
+The Verification Enforcement layer (`CONTRACT.md` §6, `QUICKSTART.md` Proven Checks, `scripts/smoke_test.py`) closes this gap. It transforms governance from aspirational prose into executable assertions. The smoke test is the contract's teeth — it runs after every change and proves the invariants still hold.
+
+This is not optional overhead. A contract without enforcement is a suggestion. The verification script is what makes CSC a *governance system* rather than a *documentation style*.
+
+---
+
 ## Last Reviewed & Trigger
 
-- **LAST REVIEWED**: 2026-06-13-ORCHESTRATOR-GOVERNANCE  SIGNATURE: Cue (claude-sonnet-4-6)
-- **REVIEW TRIGGER**: Update this file when the relationship between artifacts, the governance ownership policy, the persona-to-role binding, or the Orchestrator's authority boundary changes.
+- **LAST REVIEWED**: YYYY-MM-DD-QUALIFIER
+- **REVIEW TRIGGER**: Update this file when the relationship between artifacts, the governance ownership policy, the verification enforcement pattern, or the Orchestrator's authority boundary changes.
 
 ---
 

@@ -71,6 +71,14 @@ Use explicit labels where possible so claims are easy to test, audit, and disput
 - **Customization Tip**: For a web app with a shared `static/` parent housing both `static/css/` (SHIP) and `static/uploads/` (GENERATED), the safe exclude set is `--exclude='static/uploads/'`, never `--exclude='static/'`. Record the classification in `ASSETS.md` and the safe command in `QUICKSTART.md`.
 - **Law-vs-Guidance Note**: This invariant is stated with `MUST`/`PROHIBITION`, not "should" or "for example". Stateless agents treat soft guidance as permission to ignore; the deploy boundary must be law.
 
+### 6. Verification Enforcement (The Evidence Layer)
+- **Rule**: Every strong contract claim must be challengeable by evidence. A claim that cannot be tested is guidance, not law.
+- **INVARIANT**: Every strong contract claim (INV-XX) in this file MUST map to at least one executable check — either in `QUICKSTART.md`'s Proven Checks section or in `scripts/smoke_test.py`. If a claim cannot be challenged by evidence (tests, probes, logs, reproducible checks), it is non-binding prose and must be downgraded to guidance.
+- **INVARIANT**: A `scripts/smoke_test.py` (or project-equivalent verification script) MUST exist at the project root. This script encodes the contract's claims as executable assertions and is the system's **Verification Steward**.
+- **INVARIANT**: After any code change, deploy, or restart, the smoke test MUST be run before the change is considered complete. A change that passes the smoke test is "Proven"; a change that fails is not ready to ship.
+- **Customization Tip**: The verification script is project-specific. For Python/Flask, use Flask's test client. For Node.js, use `curl` probes against the dev server. For a React SPA, use build verification + route smoke. The medium varies; the pattern — encode claims as executable checks — is universal.
+- **Law-vs-Guidance Note**: This is `MUST`, not "should". A contract without enforcement is a suggestion. The smoke test closes the governance loop.
+
 ---
 
 ## Governance
@@ -90,7 +98,7 @@ Use explicit labels where possible so claims are easy to test, audit, and disput
 
 ## Last Reviewed & Trigger
 
-- **LAST REVIEWED**: 2026-06-13-ORCHESTRATOR-GOVERNANCE  SIGNATURE: Cue (claude-sonnet-4-6)
+- **LAST REVIEWED**: YYYY-MM-DD-QUALIFIER  SIGNATURE: [maintainer identity]
 - **REVIEW TRIGGER**: Update this file whenever a core system invariant, architectural boundary, critical logic chain, or multi-agent orchestration rule is modified.
 
 **REVIEW TRIGGER Structure Example:**
