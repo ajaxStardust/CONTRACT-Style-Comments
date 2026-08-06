@@ -78,7 +78,7 @@ CSC can be taught with or without characters, but a stable cast of roles makes t
 
 ![The Fab Swarm — control-plane and execution-plane roles](the-fab-swarm-cast-card.png)
 
-| Persona | CSC Role | Responsibility |
+|   | CSC Role | Responsibility |
 |---|---|---|
 | **Cue** | Orchestrator  |  Conductor |
 | **Stores** | Worker | Archivist  |
