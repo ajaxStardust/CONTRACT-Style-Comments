@@ -221,7 +221,7 @@ Deploy a Bumble swarm to complete these tasks simultaneously ONLY if you predict
    - Visual branding/styling/binary assets changed → Update `./contract/ASSETS.md`
    - Architectural relationships changed → Update `./contract/WHY.md`
    - Near-term priorities/prospective roadmaps changed → Update `./contract/FUTURE.md`
-4. If you are working via SSH, encode the markdown as base64 to circumvent special-character in text processing errors, then decode remotely as needed.
+4. Should special-characters be an obstacle in writing files, experiment with base64 to circumvent text processing errors. If this method proves effective, then decode remotely as needed. Because base64 encode/decode is time consuming, this is NOT a recommended default, but might be a solution if problems are encountered. 
 5. Before committing, review the changes to ensure they accurately reflect the session's updates and adhere to the CSC principles.
 6. Execute `git add .` and `git commit` to stage and commit the changes. If a remote upstream exists, also execute `git push` to sync the changes.
 
