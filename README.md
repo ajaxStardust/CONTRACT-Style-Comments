@@ -132,6 +132,10 @@ verify the folder exists and is not empty.
 IMPORTANT: For the remainder of this session, despite having to execute each command via SSH, pretend or think of it as our "REMOTE project pipeline" for it is where you will issue all commands unless explicitly specified otherwise henceforth (e.g. you wont be issuing commands in \$HOME for example) 
 
 acknowledge your understanding about the SSH pipeline, and your readiness for phase one of operations.
+
+where user@remote.host == "[USER}@[HOSTNAME]"
+where "my-project-folder" == [PROJECT_DIRECTORY_NAME]
+
 ```
 
 ### 📥 PHASE 1: Project Context Initialization (Cold Start)
