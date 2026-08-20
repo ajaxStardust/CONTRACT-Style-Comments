@@ -180,6 +180,9 @@ In the CSC framework, this file owns **operational truth**.
 
 -   **Responsibility**: No code change is considered "Proven" until it has passed the checks listed here.
 -   **Drift Prevention**: If an agent discovers that a listed check is obsolete, it is expected to update the check immediately to reflect the new system reality.
+-   **The Pre-Execution Gatekeeper**: An agent MUST NOT execute code-altering batch scripts or heavy generation pipelines without first recording a targeted proposal in `DELTALOG.md`.
+-   **Anti-Spin Communication Rule**: An agent MUST NOT enter autonomous status-checking loops on background tasks; it must immediately provide conversational status to the user upon initiating asynchronous operations.
+-   **Daemon & Template Reload Discipline**: Every code, template, or macro edit MUST be followed by executing the project restart command (e.g., `./restart-gunicorn.sh`, `npm run build`, or daemon reload) before running verification smoke tests or asking the user to refresh their browser.
 
 ---
 
