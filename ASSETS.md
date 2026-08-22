@@ -72,6 +72,18 @@ It is designed as a universal tool for **all coding developers**—from web and 
 - **INVARIANT**: A deploy sync MUST exclude GENERATED and EPHEMERAL directories explicitly *by subdirectory name*. It MUST NEVER use a parent-directory exclude that drops SHIP assets alongside GENERATED ones.
 - **PROHIBITION**: Co-locating SHIP and GENERATED assets under a single excluded parent is a Separation of Concerns violation. If a shared parent is unavoidable, the deploy procedure must exclude by *subdirectory*, never the parent.
 
+### Production Backup Storage Boundary
+
+Backups are recovery artifacts, not deploy inputs. A project that has durable database state or generated assets MUST register its backup root below.
+
+| Asset | Path | Lifecycle | Purpose |
+|---|---|---|---|
+| _e.g._ Production database backups | `/var/backups/my-project/` | EPHEMERAL | Timestamped, access-restricted recovery dumps and validation manifests; stored outside the repository and excluded from deploys |
+
+- **INVARIANT**: Backup roots MUST be outside version control, source/deploy trees, and GENERATED asset directories. They MUST be excluded from every deploy/sync mechanism.
+- **INVARIANT**: A backup may contain sensitive user data and MUST use platform-appropriate access restrictions. Its metadata may be logged, but credentials and dump contents MUST NOT be committed or included in governance records.
+- **PROHIBITION**: A backup directory must not be treated as a generated-media cache, a convenient source of deployable fixtures, or an automatic-restore source.
+
 ### Resource Registry (with Lifecycle column — replace with your project's rows)
 
 | Asset | Path | Lifecycle | Purpose |

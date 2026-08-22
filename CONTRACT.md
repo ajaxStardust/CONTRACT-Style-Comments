@@ -79,6 +79,16 @@ Use explicit labels where possible so claims are easy to test, audit, and disput
 - **Customization Tip**: The verification script is project-specific. For Python/Flask, use Flask's test client. For Node.js, use `curl` probes against the dev server. For a React SPA, use build verification + route smoke. The medium varies; the pattern — encode claims as executable checks — is universal.
 - **Law-vs-Guidance Note**: This is `MUST`, not "should". A contract without enforcement is a suggestion. The smoke test closes the governance loop.
 
+### 7. Production State Backup & Restore Boundary
+- **Rule**: Before a session mutates production-persistent state or generated assets with durable user value, create a verified, restorable backup. Code history cannot reconstruct database rows, user uploads, generated-media mappings, or other runtime state.
+- **PRECONDITION**: Before executing a production database migration, bulk update/delete, batch synthesis/render, data import, or generated-asset replacement, the steward MUST create a timestamped backup of every affected durable store. Read-only audits, code-only edits, and non-production tests do not require a production backup.
+- **INVARIANT**: The backup MUST be stored outside the repository, deploy source tree, generated-media directory, and normal rsync/CI deploy paths. It MUST use restrictive permissions appropriate to the platform (for example, `0600` for database dumps containing user data).
+- **POSTCONDITION**: The backup MUST be validated before the state-changing operation begins. For PostgreSQL custom-format dumps, `pg_restore -l <dump>` MUST succeed; use the equivalent non-destructive integrity/listing check for other databases or storage systems.
+- **INVARIANT**: The execution record MUST identify the backup path or backup-system reference, creation timestamp, checksum when feasible, validation result, retention policy, and the specific mutation it protects. Record this evidence in `DELTALOG.md` or the project's deployment/audit log; never record credentials.
+- **INVARIANT**: Retention MUST include a documented, project-appropriate minimum (for example, seven daily and four weekly recovery points). A backup policy without a retention window is incomplete.
+- **PROHIBITION**: A restore MUST NOT be performed automatically, in place, or merely because a backup exists. A restore requires explicit Human-in-the-Loop approval after a dry-run/listing or isolated restore demonstrates the intended recovery scope.
+- **Customization Tip**: Pair database dumps with a manifest of affected generated assets when records reference files. Restoring database rows without their referenced media is not a complete recovery.
+
 ---
 
 ## Governance

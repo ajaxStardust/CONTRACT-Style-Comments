@@ -135,6 +135,42 @@ Before asking humans for browser screenshots or DevTools dumps, run first-party 
 
 ---
 
+## 💾 Production State Backup Runbook
+
+Before a session performs a production-persistent mutation (database migration, bulk update/delete, import, batch generation, or durable media replacement), follow the **Production State Backup & Restore Boundary** in `CONTRACT.md` §7. This is not required for read-only audits, code-only changes, or non-production tests.
+
+### Required sequence
+
+1. Define the exact state and generated assets the mutation can affect.
+2. Create a timestamped backup **outside** the repository, deployment source tree, generated-media directories, and deploy sync paths.
+3. Restrict backup permissions (for example, `chmod 600` for database dumps containing user data).
+4. Run a non-destructive validation before mutation.
+5. Record the path/reference, timestamp, checksum when feasible, validation result, retention policy, and protected operation in `DELTALOG.md` or the project audit log.
+6. Do not restore without explicit Human-in-the-Loop approval and evidence that the restore scope is correct.
+
+### PostgreSQL example
+
+Replace placeholders with project-specific values. Do not put credentials in shell history, source control, or governance logs.
+
+```bash
+backup_root=/var/backups/my-project
+stamp=$(date -u +%Y-%m-%dT%H%M%SZ)
+mkdir -p "$backup_root"
+umask 077
+
+pg_dump --format=custom --file="$backup_root/database-$stamp.dump" "$DATABASE_URL"
+pg_restore -l "$backup_root/database-$stamp.dump" > "$backup_root/database-$stamp.manifest.txt"
+sha256sum "$backup_root/database-$stamp.dump" > "$backup_root/database-$stamp.dump.sha256"
+```
+
+Expected: `pg_restore -l` succeeds before the protected mutation begins. Keep a documented retention policy (for example, seven daily and four weekly recovery points).
+
+### Restore safety
+
+Restoring in place is destructive. First list the archive contents or restore to an isolated database, confirm the target tables/assets with the Human-in-the-Loop, then obtain explicit approval for any production restore.
+
+---
+
 ## 🚀 Deploy Procedure (Asset Lifecycle Boundary)
 
 When deploying from staging to live (or local → remote via rsync/SCP/CI), the sync MUST respect the **Asset Lifecycle Boundary** (`CONTRACT.md` §5, `ASSETS.md` Asset Lifecycle Classification): SHIP assets travel with the code; GENERATED and EPHEMERAL assets are excluded *by subdirectory*.
