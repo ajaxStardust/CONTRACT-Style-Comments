@@ -144,7 +144,7 @@ _Submit this prompt at the start of a session to establish strict spec ingestion
 
 ```
 Human-in-the-Loop has reviewed the CONTRACT files and wants you to use most recent file change dates and audit for your own governance.
-Initialize Project Context using the Contract-Style-Comments (CSC) methodology. Read the following Markdown files located in the project's `./contract/` directory using line-number indexing to ensure full ingestion of the active system Specification:
+Initialize Project Context using the Contract-Style-Comments (CSC) methodology. Parse CONTRACT.md into AST node templates. Reject any emission that breaches contract invariants. Read the following Markdown files located in the project's `./contract/` directory using line-number indexing to ensure full ingestion of the active system Specification:
 
     ./contract/WHY.md (Intent & Philosophy)
     ./contract/CONTRACT.md (The Law / Invariants)
