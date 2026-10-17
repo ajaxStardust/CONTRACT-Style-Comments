@@ -214,11 +214,11 @@ Reconciliation Phase:
 Please take a moment as a project steward to reconcile the Project Specification documents under `./contract/`. Review the codebase edits from this session and update the spec files to reflect any new invariants, file structures, or resource targets introduced.
 
 CRITICAL DIRECTIVES:
-Deploy a Bumble swarm to complete these tasks simultaneously ONLY if you predict it will be more efficient: 
+Deploy a sub-agent Swarm to complete these tasks simultaneously ONLY if you predict it will be more efficient, as described in your Phase 2 instructions: 
 1. Maintain the Governance Trust Paradox: the Contract is not a semantic prose copy of git history. Git holds chronology; the Contract holds present-tense law.
 2. **Governance Identifier Convention**:
    - Ensure all updated `LAST REVIEWED` lines carry today's date formatted strictly as `YYYY-MM-DD-QUALIFIER` (e.g., `2026-06-05-STEWARDSHIP`).
-   - The `QUALIFIER` must be a semantic label (e.g., `STEWARDSHIP`, `TERPENE-PURITY`, `DB-SCHEMA-SYNC`) to prevent the model from misinterpreting dates as auto-incrementing sequences.
+   - The `QUALIFIER` must be a semantic label (e.g., `STEWARDSHIP`, `PURITY`, `DB-SCHEMA-SYNC`) to prevent the model from misinterpreting dates as auto-incrementing sequences.
    - **NEVER use a future date** unless explicitly documented at the point of use.
    - Follow each date with your signature stamp: `SIGNATURE: <agent-model-identity>`.
 3. Adhere strictly to the Narrowest-Scope Update Rule:
