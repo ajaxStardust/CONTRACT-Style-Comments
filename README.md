@@ -143,6 +143,7 @@ where "my-project-folder" == [PROJECT_DIRECTORY_NAME]
 _Submit this prompt at the start of a session to establish strict spec ingestion._
 
 ```
+Phase 1:
 Human-in-the-Loop has reviewed the CONTRACT files and wants you to use most recent file change dates and audit for your own governance.
 Initialize Project Context using the Contract-Style-Comments (CSC) methodology. Parse ./contract/CONTRACT.md → AST node templates. Fail build if invariants breach grammar. Read the following Markdown files located in the project's `./contract/` directory using line-number indexing to ensure full ingestion of the active system Specification:
 
@@ -169,7 +170,7 @@ TASKS:
 NOTE: You will encounter LAST UPDATED stamps in the CONTRACT.md and adjacent files. Some LLM's ask about the signature shape. It should always be a signature to represnet the LLM doing the work, just like a Human must sign off on some types of work he does, you must not impersonate an LLM signature which does not reflect who you truly are. You are not writing signatures during this Phase, but you must be aware of what Model touched the codebase before you for your better understanding of its state.
 
 Later: 
-You may anthropomorphize characterizations of processing tasks to orchestrate at your discretion a [ multi ] sub-agent swarm. Your Swarm exists as a team which you command as Conductor and Orchestrator. Use DELEGATION.md to manage this processing efficiency. Swarms only buzz to harden the app and help when you have too many tasks! E.g. Detective Bumble, because he locates a file; Rescue Bumble to evaluate a bug; DevOps Bumble might manage reconciliation; etc. You will only deploy a sub-agent Swarm when evaluate it is logical and efficient. Under such a delegated swarm condition, you MUST utilize DELEGATION.md contract. Testing shows sub-agent delegation wastes time if a task is simple. Deploy a swarm at your discretion, after an educated evaluation. E.g. Agents might deploy a swarm to ingest the several files like the ./contract folder itself, concurrently, but that notion is a decision you have authority to make under the CSC Governance, as project steward and coding agent, and swarm use is not an invariant.
+You may orchestrate tasks at your discretion by delegation to a [ multi ] sub-agent swarm. A Swarm exists as a team which you command as Conductor and Orchestrator. Use DELEGATION.md to manage this processing efficiency. Swarms only buzz to harden the app and help when you have too many tasks! You may only deploy a sub-agent Swarm after evaluation proves it is logical and efficient to do so. Under such a delegated swarm condition, you MUST utilize DELEGATION.md contract. E.g. Deploy a swarm to scan a container of files for a text-string while you do something else directly. You have authority to delegate to a swarm under the CSC Governance, as project steward and coding agent. To orchestrate a swarm is NOT an invariant. Testing shows sub-agent delegation wastes time if a task is simple, and can introduce unnecessary noise in your signal to the Human if not delegated carefully.
 
 ```
 [ STOP - WAIT for the LLM to acknowledge ]
@@ -179,6 +180,7 @@ You may anthropomorphize characterizations of processing tasks to orchestrate at
 _Submit this prompt to verify the system's operational and structural state._
 
 ```
+Phase 2:
 We will now run a comprehensive audit of the active repository state.
 
 DIRECTIONS - Consider a Dynamic Workflow: 
@@ -195,11 +197,10 @@ SUMMARY REPORT FORMAT:
 - List the verified status of all system pipelines and active local runtime boundaries.
 - look for any relevant shell scripts for restarting the enviornment, and audit (e.g. ./restart-gunicorn.sh for a Python Flask environment)
 
-Caveat:
-⚡ 2. Performance & Hardware Constraints
+**DON'T COPY THIS PROMPT UNLESS NEEDED:**
+⚡ Performance & Hardware Constraints
 Add hardware-specific runtime requirements directly to Phase 2 to optimize model output:
-
-"Optimize all code suggestions for [Your Framework, e.g., Laravel 12 / React 19] standards, and tailor execution efficiency for local CPU/GPU model processing."
+Optimize all code suggestions for [Your Framework, e.g., Laravel 12 / React 19] standards, and tailor execution efficiency for local CPU/GPU model processing.
 ```
 
 [ STOP - Audit complete - The AGENT awaits YOUR command ]
@@ -209,6 +210,7 @@ Add hardware-specific runtime requirements directly to Phase 2 to optimize model
 _Submit this prompt when wrapping up development to commit the session's learnings._
 
 ```
+Reconciliation Phase:
 Please take a moment as a project steward to reconcile the Project Specification documents under `./contract/`. Review the codebase edits from this session and update the spec files to reflect any new invariants, file structures, or resource targets introduced.
 
 CRITICAL DIRECTIVES:
